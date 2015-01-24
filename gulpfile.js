@@ -15,8 +15,8 @@ require('laravel-elixir-browser-sync');
 
 elixir(function(mix) {
     mix
-    .sass('app.scss')
-    .coffee('app.coffee')
+    .sass()
+    .coffee()
     .browserSync([
       'app/**/*',
       'public/**/*',
