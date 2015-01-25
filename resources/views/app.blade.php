@@ -1,25 +1,16 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sidequest</title>
 
-	<link href="/css/app.css" rel="stylesheet">
+	@include('base.head')
 
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<body>
 
-</head>
-<body>
+		@yield('content')
 
-	@yield('content')
+		@include('base.scripts')
 
-	@include('base.scripts')
-	
-	@include('services.google-analytics')
-	@include('services.heap-analytics')
+		@include('services.google-analytics')
+		@include('services.heap-analytics')
 
-</body>
+	</body>
 </html>
