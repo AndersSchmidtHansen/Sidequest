@@ -16,11 +16,11 @@ return [
 
 	'mailgun' => [
 		'domain' => '',
-		'secret' => '',
+		'secret' => env('SERVICE_MAILGUN_SECRET'),
 	],
 
 	'mandrill' => [
-		'secret' => '',
+		'secret' => env('SERVICE_MANDRILL_SECRET'),
 	],
 
 	'ses' => [
@@ -31,7 +31,7 @@ return [
 
 	'stripe' => [
 		'model'  => 'User',
-		'secret' => '',
+		'secret' => env('SERVICE_STRIPE_SECRET'),
 	],
 
 ];
