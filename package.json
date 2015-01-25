@@ -1,8 +1,9 @@
 {
   "devDependencies": {
-    "gulp": "^3.8.8",
+    "global": "^4.3.0",
+    "gulp": "^3.8.10",
     "laravel-elixir": "*",
     "laravel-elixir-browser-sync": "^0.1.2",
-    "sassdoc": "beta"
+    "sassdoc": "^2.0.0-rc.21"
   }
 }
