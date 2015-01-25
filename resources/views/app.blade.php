@@ -4,8 +4,12 @@
 	@include('base.head')
 
 	<body>
+		
+		@include('partials.navigation')
 
 		@yield('content')
+
+		@include('base.footer')
 
 		@include('base.scripts')
 
