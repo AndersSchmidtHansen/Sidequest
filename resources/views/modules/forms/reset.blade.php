@@ -1,5 +1,3 @@
-<div>Reset Password</div>
-
 @include('errors.check')
 
 <form class="form-horizontal" role="form" method="POST" action="/password/reset">

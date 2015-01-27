@@ -35,7 +35,6 @@ class AuthController extends Controller {
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
-
 	/**
 	*	Log the user out of the application.
 	* 

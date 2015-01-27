@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => env('EMAIL_GLOBAL_FROM_ADDRESS'), 'name' => env('EMAIL_GLOBAL_FROM_NAME')],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
 	|
 	*/
 
-	'username' => null,
+	'username' => env('EMAIL_SERVER_USERNAME'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 	|
 	*/
 
-	'password' => null,
+	'password' => env('EMAIL_SERVER_PASSWORD'),
 
 	/*
 	|--------------------------------------------------------------------------

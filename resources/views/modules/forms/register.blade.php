@@ -1,5 +1,3 @@
-<div>Register</div>
-
 @include('errors.check')
 
 <form class="form-horizontal" role="form" method="POST" action="/auth/register">
