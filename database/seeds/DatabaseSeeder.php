@@ -33,7 +33,7 @@ class UserTableSeeder extends Seeder
 		$userData = [
 			'name' =>	'John Doe',
 			'email' => 'foo@bar.com',
-			'password' => Hash::make('secret')
+			'password' => bcrypt('secret')
 		];
 
 		User::create($userData);
