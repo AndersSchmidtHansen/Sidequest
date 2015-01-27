@@ -5,7 +5,7 @@
 
 	<body>
 		
-		@include('partials.navigation')
+		@include('modules.navigation')
 
 		@yield('content')
 

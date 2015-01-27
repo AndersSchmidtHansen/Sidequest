@@ -11,13 +11,18 @@
 |
 */
 
+// Static Pages
 get('/', 'StaticPageController@index');
 get('about', 'StaticPageController@about');
 get('contact', 'StaticPageController@contact');
 
+// Dynamic Pages
 get('home', 'HomeController@index');
 
+// User Authentication & Management
 Route::controllers([
 	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+	'password' => 'Auth\PasswordController'
 ]);
+
+get('logout', 'Auth\AuthController@getLogout');

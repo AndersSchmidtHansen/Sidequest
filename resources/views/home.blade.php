@@ -14,4 +14,6 @@
 		</div>
 	</div>
 </div>
+
+<a href="/logout">Sign Out</a>
 @endsection
