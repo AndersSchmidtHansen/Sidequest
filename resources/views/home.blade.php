@@ -15,5 +15,5 @@
 	</div>
 </div>
 
-<a href="/logout">Sign Out</a>
+<a href="/auth/logout">Sign Out</a>
 @endsection

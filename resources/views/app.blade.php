@@ -11,6 +11,7 @@
 
 		@include('base.footer')
 		@include('base.scripts')
+		<script src="/js/app.js"></script>
 
 		@include('services.google-analytics')
 		@include('services.heap-analytics')

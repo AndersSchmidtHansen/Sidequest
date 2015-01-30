@@ -36,4 +36,16 @@ class StaticPageController extends Controller {
     return view('pages.contact', compact('title'));
   }
 
+  public function termsOfUse()
+  {
+    $title = 'Terms of use';
+    return view('pages.terms-of-use', compact('title'));
+  }
+
+  public function privacyPolicy()
+  {
+    $title = 'Privacy Policy';
+    return view('pages.privacy-policy', compact('title'));
+  }
+  
 }
