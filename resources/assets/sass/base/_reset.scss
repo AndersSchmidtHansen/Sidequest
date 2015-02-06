@@ -1,0 +1,23 @@
+/*
+ |--------------------------------------------------------------------------
+ | Global Style Reset
+ |--------------------------------------------------------------------------
+ |
+ */
+
+html { 
+  box-sizing: border-box;
+  position: relative; 
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}

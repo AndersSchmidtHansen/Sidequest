@@ -72,7 +72,7 @@ class AdminController extends Controller {
 
     $icons_touch_images_path = base_path() . '/public/img/icons-touch';
 
-    $meta_images = [
+    $icons_touch_images = [
       'application_shortcut_icon_196x196'   => "shortcut-icon-196x196.png",
       'application_favicon_ico_32x32'       => "shortcut-icon.ico",
       'application_favicon_png_32x32'       => "shortcut-icon.png",
@@ -85,7 +85,7 @@ class AdminController extends Controller {
       'apple_touch_startup_image_1536x2008' => "apple-touch-startup-image-1536x2008.png"  
     ];
 
-    saveUploadedImages($meta_images, $icons_touch_images_path);
+    saveUploadedImages($icons_touch_images, $icons_touch_images_path);
 
     return redirect()->back();
 

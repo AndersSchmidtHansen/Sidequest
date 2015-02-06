@@ -1,0 +1,81 @@
+/*
+ |--------------------------------------------------------------------------
+ | Admin Specific Page Styles
+ |--------------------------------------------------------------------------
+ |
+ */
+
+.page--admin {
+
+  aside {
+    background-color: #fff;
+    box-shadow: 3px 0 9px 0 rgba(0, 0, 0, .10);
+    height: 100%;
+    position: fixed;
+    width: 5.5rem;
+
+    nav {
+      height: 100%;
+    }
+  }
+
+  main {
+    padding: 3rem 3rem 3rem 8.5rem;
+    width: 100%;
+  }
+
+
+  .nav__item {
+    color: #393939;
+    display: block;
+    padding: 1.5rem 0;
+    transition: background-color .28s ease-in-out;
+
+    &:first-child {
+      background-color: #f45c0a;
+      color: #fcfcfc;
+    }
+
+    &:first-child:hover {
+      background-color: darken(#f45c0a, 5%);
+      color: lighten(#fcfcfc, 2%);
+    }
+
+    &:hover {
+      background-color: #f8f8ff;
+      color: lighten(#393939, 10%);
+    }
+
+    &.bottom {
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      position: absolute;
+      right: 0;
+      z-index: 200;
+    }    
+
+  }
+
+
+  .full-height {
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  .tooltip {
+    .tooltip-inner {
+      max-width: 250px;
+      min-width: 75px;
+      padding: .8rem 1rem;
+    }
+  }
+
+  .top-layer {
+    z-index: 100;
+  }
+
+
+}
+
+
