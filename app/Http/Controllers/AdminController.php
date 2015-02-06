@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use App\ApplicationSetting;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use Request;
 
 class AdminController extends Controller {
 
@@ -20,8 +20,28 @@ class AdminController extends Controller {
 
   public function getIndex()
   {
-    $title = 'Admin Dashboard'; 
-    return view('admin.index', compact('title'));
+    $title = 'Admin Dashboard';
+    $settings = ApplicationSetting::findOrFail(1);
+
+    return view('admin.index', compact('title', 'settings'));
+    
+  }
+
+  public function postUpdateSettings()
+  {
+
+    $setting = ApplicationSetting::findOrFail(1);
+    
+    $input = Request::except('_token');
+
+    foreach($input as $key => $value) {
+      $setting[$key] = $value;
+    }
+
+    $setting->save();
+
+    return redirect()->back();
+
   }
   
 }

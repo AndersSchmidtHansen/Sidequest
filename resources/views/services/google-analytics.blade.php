@@ -1,8 +1,8 @@
-@if( env('SERVICE_GOOGLE_ANALYTICS_API_KEY') )
+@if( $app_settings->service_google_analytics_api_key )
 <!-- Google Analytics -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', "{{ env('SERVICE_GOOGLE_ANALYTICS_API') }}"]);
+  _gaq.push(['_setAccount', "{{ $app_settings->service_google_analytics_api_key }}"]);
   _gaq.push(['_trackPageview']);
 
   (function() {

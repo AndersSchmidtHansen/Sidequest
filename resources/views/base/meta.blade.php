@@ -2,8 +2,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 
-@if( env('SERVICE_GOOGLE_SITE_VERIFICATION_KEY') )
-<meta name="google-site-verification" content="{{ env('SERVICE_GOOGLE_SITE_VERIFICATION_KEY') }}" />
+@if( $app_settings->service_google_site_verification_key )
+<meta name="google-site-verification" content="{{ $app_settings->service_google_site_verification_key }}" />
 @endif
 
 {{-- 
@@ -19,23 +19,23 @@
 --}}
 
 {{-- App IDs --}}
-@if( env('SOCIAL_FACEBOOK_APP_ID') )
-<meta property="fb:app_id" content="{{ env('SOCIAL_FACEBOOK_APP_ID') }}">
+@if( $app_settings->social_facebook_app_id )
+<meta property="fb:app_id" content="{{ $app_settings->social_facebook_app_id }}">
 @endif
-@if( env('SOCIAL_TWITTER_APP_ID') )
-<meta name="twitter:app:id:iphone" content="{{ env('SOCIAL_TWITTER_APP_ID') }}">
-<meta name="twitter:app:id:ipad" content="{{ env('SOCIAL_TWITTER_APP_ID') }}">
+@if( $app_settings->social_twitter_app_id )
+<meta name="twitter:app:id:iphone" content="{{ $app_settings->social_twitter_app_id }}">
+<meta name="twitter:app:id:ipad" content="{{ $app_settings->social_twitter_app_id }}">
 @endif
-@if( env('SOCIAL_GOOGLE_PLAY_APP_ID') )
-<meta name="twitter:app:id:googleplay" content="{{ env('SOCIAL_GOOGLE_PLAY_APP_ID') }}">
+@if( $app_settings->social_google_play_app_id )
+<meta name="twitter:app:id:googleplay" content="{{ $app_settings->social_google_play_app_id }}">
 @endif
 
 {{-- App Name --}}
-@if( env('APP_NAME') )
-<meta property="og:site_name" content="{{ env('APP_NAME') }}">
-<meta name="twitter:app:name:iphone" content="{{ env('APP_NAME') }}">
-<meta name="twitter:app:name:ipad" content="{{ env('APP_NAME') }}">
-<meta name="twitter:app:name:googleplay" content="{{ env('APP_NAME') }}">
+@if( $app_settings->name )
+<meta property="og:site_name" content="{{ $app_settings->name }}">
+<meta name="twitter:app:name:iphone" content="{{ $app_settings->name }}">
+<meta name="twitter:app:name:ipad" content="{{ $app_settings->name }}">
+<meta name="twitter:app:name:googleplay" content="{{ $app_settings->name }}">
 @endif
 
 {{-- Current Page URL --}}
@@ -43,8 +43,8 @@
 <meta name="twitter:url" content="{{ URL::full() }}">
 
 {{-- Current Page Title --}}
-<meta property="og:title" content="{{ $title or env('APP_NAME') }} @if(isset($title))— {{ env('APP_NAME') }} @endif">
-<meta name="twitter:title" content="{{ $title or env('APP_NAME') }} @if(isset($title))— {{ env('APP_NAME') }} @endif">
+<meta property="og:title" content="{{ $title or $app_settings->name }} @if(isset($title))— {{ $app_settings->name }} @endif">
+<meta name="twitter:title" content="{{ $title or $app_settings->name }} @if(isset($title))— {{ $app_settings->name }} @endif">
 
 {{-- Current Page Description --}}
 @if( isset($description) )
@@ -63,7 +63,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:widgets:csp" content="on">
-<meta name="twitter:site" content="{{ env('SOCIAL_TWITTER_HANDLE') }}">
+<meta name="twitter:site" content="{{ $app_settings->social_twitter_handle }}">
 
 
 {{-- 
@@ -83,7 +83,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="{{ env('APP_NAME') }}">
+<meta name="apple-mobile-web-app-title" content="{{ $app_settings->name }}">
 
 {{-- Apple Touch Images for iOS --}}
 <link rel="apple-touch-icon" 

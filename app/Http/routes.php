@@ -28,10 +28,9 @@ Route::controllers([
   'admin' => 'AdminController'
 ]);
 
-
 // Email Testing Routes
 get('test/email', function(){ return view('emails.layout'); });
 get('test/email/password-reset', function(){ return view('emails.password'); });
-get('test/email/new-sign-up', function(){ 
-  return view('emails.signup')->with('email_title', 'Thanks for choosing ' . env('APP_NAME') . '!'); 
+get('test/email/new-sign-up', function()  { 
+  return view('emails.signup'); 
 });

@@ -54,7 +54,10 @@ return [
 	|
 	*/
 
-	'from' => ['address' => env('EMAIL_GLOBAL_FROM_ADDRESS'), 'name' => env('EMAIL_GLOBAL_FROM_NAME')],
+	'from' => [
+		'address' => isset($app_settings->email_global_from_address) ?: '', 
+		'name' 		=> isset($app_settings->email_global_from_name) ?: ''
+	],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +83,7 @@ return [
 	|
 	*/
 
-	'username' => env('EMAIL_SERVER_USERNAME'),
+	'username' => isset($app_settings->email_server_username) ?: '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +96,7 @@ return [
 	|
 	*/
 
-	'password' => env('EMAIL_SERVER_PASSWORD'),
+	'password' => isset($app_settings->email_server_password) ?: '',
 
 	/*
 	|--------------------------------------------------------------------------

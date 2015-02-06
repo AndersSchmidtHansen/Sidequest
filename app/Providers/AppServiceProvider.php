@@ -1,6 +1,8 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\ApplicationSetting;
+use View;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -11,7 +13,10 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
+	
+	  // Share Application Settings with all Controllers
+	  // and Views.
+	  View::share('app_settings', ApplicationSetting::findOrFail(1));
 	}
 
 	/**

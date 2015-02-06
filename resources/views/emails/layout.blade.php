@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width" />
 
-      <title>{{ $email_title or env('APP_NAME') }}</title>
+      <title>{{ $email_title or $app_settings->name }}</title>
 
       <style type="text/css">
 
@@ -99,7 +99,7 @@
                   <br />
 
                   <div>All the best,</div>
-                  <div style="font-weight:bold;">The {{ env('APP_NAME') }} Team</div>
+                  <div style="font-weight:bold;">The {{ $app_settings->name }} Team</div>
               </td>
             </tr>
           </table> {{-- END CONTAINER TABLE --}}
@@ -113,13 +113,13 @@
 
                   <img src="{{ $email_footer_image_source or 'http://placehold.it/50x50/34495e/ffffff&text=Sidequest' }}" width="50" height="50" style="display:block; margin-bottom:25px;" />
                   
-                  <div style="font-weight:bold;">{{ env('APP_NAME') }}</div>
-                  @if ( env('APP_COMPANY_ADDRESS') )
-                  <div>{{ env('APP_COMPANY_ADDRESS') }}</div>
+                  <div style="font-weight:bold;">{{ $app_settings->name }}</div>
+                  @if ( $app_settings->company_address )
+                  <div>{{ $app_settings->company_address }}</div>
                   @endif
                   <br />
-                  @if ( env('APP_COMPANY_CUSTOMER_SUPPORT_EMAIL') )
-                  <div>Need any help? Contact us at <a href="mailto:{{ env('APP_COMPANY_CUSTOMER_SUPPORT_EMAIL') }}" style="color:#3498db;">{{ env('APP_COMPANY_CUSTOMER_SUPPORT_EMAIL') }}</a></div>
+                  @if ( $app_settings->customer_support_email )
+                  <div>Need any help? Contact us at <a href="mailto:{{ $app_settings->customer_support_email }}" style="color:#3498db;">{{ $app_settings->customer_support_email }}</a></div>
                   @endif
 
               </td>
@@ -132,10 +132,10 @@
 
     <div itemscope itemtype="http://schema.org/EmailMessage">
       <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="{{ env('APP_NAME') }}"/>
+        <meta itemprop="name" content="{{ $app_settings->name }}"/>
         <link itemprop="url" href="{{ URL::full() }}"/>
-        @if( env('SOCIAL_GOOGLE_PLUS_ID') )
-        <link itemprop="url/googlePlus" href="https://plus.google.com/{{ env('SOCIAL_GOOGLE_PLUS_ID') }}" />
+        @if( $app_settings->social_google_plus_id )
+        <link itemprop="url/googlePlus" href="https://plus.google.com/{{ $app_settings->social_google_plus_id }}" />
         @endif
       </div>
     </div>

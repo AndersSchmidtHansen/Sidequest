@@ -4,7 +4,6 @@
 	@include('base.head')
 
 	<body>
-		
 		@include('modules.navigation')
 
 		@yield('content')

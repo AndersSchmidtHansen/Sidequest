@@ -1,4 +1,4 @@
-@if( env('SERVICE_OLARK_API_KEY') )
+@if( $app_settings->service_olark_api_key )
 <!-- Olark Customer Support -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){
@@ -17,5 +17,5 @@ var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
 b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
 loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
 /* custom configuration goes here (www.olark.com/documentation) */
-olark.identify("{{ env('SERVICE_OLARK_API_KEY') }}");/*]]>*/</script>
+olark.identify("{{ $app_settings->service_olark_api_key }}");/*]]>*/</script>
 @endif
