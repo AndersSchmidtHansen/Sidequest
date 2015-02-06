@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ca7fa54e58c02db06c778663877ca68c",
+    "hash": "e5cd08923515b6d77e4ec7de29664298",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -455,6 +455,63 @@
             "time": "2015-01-26 23:07:39"
         },
         {
+            "name": "laravel/cashier",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/cashier.git",
+                "reference": "53783d9947b2459e4fb540b8b04e09eb6e66a5d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/cashier/zipball/53783d9947b2459e4fb540b8b04e09eb6e66a5d4",
+                "reference": "53783d9947b2459e4fb540b8b04e09eb6e66a5d4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "~5.0",
+                "illuminate/support": "~5.0",
+                "nesbot/carbon": "~1.0",
+                "php": ">=5.4.0",
+                "stripe/stripe-php": "~1.9",
+                "symfony/http-kernel": "~2.3"
+            },
+            "require-dev": {
+                "illuminate/routing": "~5.0",
+                "illuminate/view": "~5.0",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Laravel\\Cashier\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "Laravel Cashier provides an expressive, fluent interface to Stripe's subscription billing services.",
+            "keywords": [
+                "billing",
+                "laravel",
+                "stripe"
+            ],
+            "time": "2015-01-27 19:18:49"
+        },
+        {
             "name": "laravel/framework",
             "version": "dev-master",
             "source": {
@@ -585,12 +642,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "0fd4d3d2dd97d5b1c937d4bb8f42f7a3776cf782"
+                "reference": "4929157803d55a7ee93b6e8168c11bae42bffec9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/0fd4d3d2dd97d5b1c937d4bb8f42f7a3776cf782",
-                "reference": "0fd4d3d2dd97d5b1c937d4bb8f42f7a3776cf782",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4929157803d55a7ee93b6e8168c11bae42bffec9",
+                "reference": "4929157803d55a7ee93b6e8168c11bae42bffec9",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +717,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-02-04 20:51:56"
+            "time": "2015-02-06 16:19:49"
         },
         {
             "name": "monolog/monolog",
@@ -780,16 +837,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42"
+                "reference": "bb87460c995d97fe55b39e65f6ffb7f64b0a941e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5cb6e71055f7b0b57956b73d324cc4de31278f42",
-                "reference": "5cb6e71055f7b0b57956b73d324cc4de31278f42",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bb87460c995d97fe55b39e65f6ffb7f64b0a941e",
+                "reference": "bb87460c995d97fe55b39e65f6ffb7f64b0a941e",
                 "shasum": ""
             },
             "require": {
@@ -822,7 +879,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2014-09-26 02:52:02"
+            "time": "2015-02-06 05:07:29"
         },
         {
             "name": "nikic/php-parser",
@@ -981,6 +1038,54 @@
                 "shell"
             ],
             "time": "2015-02-03 19:31:20"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v1.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "022c3f21ec1e4141b46738bd5e7ab730d04f78cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/022c3f21ec1e4141b46738bd5e7ab730d04f78cc",
+                "reference": "022c3f21ec1e4141b46738bd5e7ab730d04f78cc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "simpletest/simpletest": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/Stripe/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "time": "2015-01-22 05:01:46"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1555,12 +1660,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-core.git",
-                "reference": "17daf312eed370cb9cf7c470ca4a0cc1d546b34c"
+                "reference": "f9d173db065a09aa05a05d07d6861eb258abf162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/17daf312eed370cb9cf7c470ca4a0cc1d546b34c",
-                "reference": "17daf312eed370cb9cf7c470ca4a0cc1d546b34c",
+                "url": "https://api.github.com/repos/symfony/security-core/zipball/f9d173db065a09aa05a05d07d6861eb258abf162",
+                "reference": "f9d173db065a09aa05a05d07d6861eb258abf162",
                 "shasum": ""
             },
             "require": {
@@ -1609,7 +1714,7 @@
             ],
             "description": "Symfony Security Component - Core Library",
             "homepage": "http://symfony.com",
-            "time": "2015-02-05 06:58:17"
+            "time": "2015-02-05 15:54:07"
         },
         {
             "name": "symfony/translation",
@@ -2304,12 +2409,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b1459cb7158438f2345aefb481f5b239127addfe"
+                "reference": "2b1e1e267d0286538b1762aa2c79a96ae1e583c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b1459cb7158438f2345aefb481f5b239127addfe",
-                "reference": "b1459cb7158438f2345aefb481f5b239127addfe",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2b1e1e267d0286538b1762aa2c79a96ae1e583c8",
+                "reference": "2b1e1e267d0286538b1762aa2c79a96ae1e583c8",
                 "shasum": ""
             },
             "require": {
@@ -2342,7 +2447,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.6.x-dev"
+                    "dev-master": "4.7.x-dev"
                 }
             },
             "autoload": {
@@ -2368,7 +2473,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-02-03 14:14:24"
+            "time": "2015-02-06 05:41:08"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
