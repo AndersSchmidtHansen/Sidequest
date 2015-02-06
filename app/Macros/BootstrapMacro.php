@@ -9,7 +9,7 @@
   |
   */
 
-  $form = $this->app['form'];
+  $html = $this->app['html'];
 
   /*
   |--------------------------------------------------------------------------
@@ -18,7 +18,7 @@
   |
   */
 
-  $form->macro('panelOpen', function($heading)
+  $html->macro('panelOpen', function($heading)
   {
       $html = "";
       $html .= "<div class='panel panel-default'>";
@@ -27,12 +27,12 @@
       return $html;
   });
 
-  $form->macro('panelClose', function()
+  $html->macro('panelClose', function()
   {
       return "</div>";
   });
 
-  $form->macro('panelBodyOpen', function()
+  $html->macro('panelBodyOpen', function()
   {
       $html = "";
       $html .= "<div class='panel-body'>";
@@ -40,7 +40,7 @@
       return $html;
   });
 
-  $form->macro('panelBodyClose', function()
+  $html->macro('panelBodyClose', function()
   {
       return "</div>";
   });
@@ -52,7 +52,7 @@
   |
   */
 
-  $form->macro('accordionOpen', function($heading, $open = false, $icon = '')
+  $html->macro('accordionOpen', function($heading, $open = false, $icon = '')
   {
 
       $id = Str::slug($heading);
@@ -79,7 +79,7 @@
       return $html;
   });
 
-  $form->macro('accordionClose', function()
+  $html->macro('accordionClose', function()
   {
       return "</div></div></div>";
   });  
