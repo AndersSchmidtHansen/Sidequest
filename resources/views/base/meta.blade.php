@@ -87,31 +87,31 @@
 
 {{-- Apple Touch Images for iOS --}}
 <link rel="apple-touch-icon" 
-      sizes="152x152" href="{{ asset('img/apple-touch-images/apple-touch-icon.png') }}">
+      sizes="152x152" href="{{ asset('img/icons-touch/apple-touch-icon.png') }}">
 
-<link href="{{ asset('img/apple-touch-images/apple-touch-startup-image-640x920.png') }}"
+<link href="{{ asset('img/icons-touch/apple-touch-startup-image-640x920.png') }}"
       media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image">
 
-<link href="{{ asset('img/apple-touch-images/apple-touch-startup-image-640x1096.png') }}"
+<link href="{{ asset('img/icons-touch/apple-touch-startup-image-640x1096.png') }}"
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image">
 
-<link href="{{ asset('img/apple-touch-images/apple-touch-startup-image-750x1334.png') }}" 
+<link href="{{ asset('img/icons-touch/apple-touch-startup-image-750x1334.png') }}" 
       media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image">
 
-<link href="{{ asset('img/apple-touch-images/apple-touch-startup-image-1242x2208.png') }}" 
+<link href="{{ asset('img/icons-touch/apple-touch-startup-image-1242x2208.png') }}" 
       media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
       rel="apple-touch-startup-image">
 
-<link href="{{ asset('img/apple-touch-images/apple-touch-startup-image-1536x2008.png') }}"
+<link href="{{ asset('img/icons-touch/apple-touch-startup-image-1536x2008.png') }}"
       media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image">                      
 
 {{-- Shortcut Icons --}}
-<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/shortcut-icons/shortcut-icon.ico') }}">
-<link rel="shortcut icon" href="{{ asset('img/shortcut-icons/shortcut-icon.png') }}">
-<link rel="shortcut icon" sizes="196x196" href="{{ asset('img/shortcut-icons/shortcut-icon-196x196.png') }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/icons-touch/shortcut-icon.ico') }}">
+<link rel="shortcut icon" href="{{ asset('img/icons-touch/shortcut-icon.png') }}">
+<link rel="shortcut icon" sizes="196x196" href="{{ asset('img/icons-touch/shortcut-icon-196x196.png') }}">
 
 <style>html { -webkit-text-size-adjust: 100%; }</style>
