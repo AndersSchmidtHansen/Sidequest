@@ -3,6 +3,7 @@
 use App\ApplicationSetting;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 use Request;
 
 class AdminController extends Controller {
@@ -18,8 +19,14 @@ class AdminController extends Controller {
   |
   */
 
+  public function __construct()
+  {
+    $this->middleware('admin');
+  }
+
   public function getIndex()
   {
+
     $title = 'Admin Dashboard';
     $settings = ApplicationSetting::findOrFail(1);
 
