@@ -25,7 +25,8 @@ get('home', 'HomeController@index');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
-  'admin' => 'AdminController'
+  'admin' => 'AdminController',
+  'user' => 'UserController'
 ]);
 
 // Email Testing Routes
