@@ -16,11 +16,11 @@ return [
 
 	'mailgun' => [
 		'domain' => '',
-		'secret' => isset($app_settings->service_mailgun_api_key) ?: '',
+		'secret' => env('SERVICE_MAILGUN_API_KEY'),
 	],
 
 	'mandrill' => [
-		'secret' => isset($app_settings->service_mandrill_api_key) ?: '',
+		'secret' => env('SERVICE_MANDRILL_API_KEY'),
 	],
 
 	'ses' => [
@@ -31,7 +31,7 @@ return [
 
 	'stripe' => [
 		'model'  => 'User',
-		'secret' => isset($app_settings->service_stripe_api_key) ?: '',
+		'secret' => env('SERVICE_STRIPE_SECRET_API_KEY'),
 	],
 
 ];

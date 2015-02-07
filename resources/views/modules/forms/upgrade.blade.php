@@ -1,11 +1,11 @@
 @include('errors.check')
 
-<form class="form-horizontal" role="form" method="POST" action="/user/upgrade/{{Auth::user()->id}}">
+<form class="form-horizontal" role="form" method="POST" action="/user/upgrade/{{ Auth::user()->id }}">
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+  
  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_ikUJBrT2f2tMdQ8FSnq2MJC0"
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button hidden"
+    data-key="{{ $app_settings->service_stripe_api_key_publishable }}"
     data-amount="2000"
     data-email="{{ Auth::user()->email }}"
     data-name="PRO Account"

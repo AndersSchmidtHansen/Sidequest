@@ -16,7 +16,9 @@ class AppServiceProvider extends ServiceProvider {
 	
 	  // Share Application Settings with all Controllers
 	  // and Views.
-	  View::share('app_settings', ApplicationSetting::findOrFail(1));
+	  $app_settings = ApplicationSetting::findOrFail(1);
+	  View::share('app_settings', $app_settings);
+
 	}
 
 	/**
@@ -32,7 +34,8 @@ class AppServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind(
 			'Illuminate\Contracts\Auth\Registrar',
-			'App\Services\Registrar'
+			'App\Services\Registrar',
+			'App\ApplicationSetting'
 		);
 	}
 

@@ -24,9 +24,7 @@ class CreateApplicationSettingsTable extends Migration {
 			$table->string('company_address');
 
 			// Service API Keys
-			$table->string('service_mailgun_api_key');
-			$table->string('service_mandrill_api_key');
-			$table->string('service_stripe_api_key');
+			$table->string('service_stripe_api_key_publishable');
 			$table->string('service_google_analytics_api_key');
 			$table->string('service_google_site_verification_key');
 			$table->string('service_heap_analytics_api_key');
@@ -38,12 +36,6 @@ class CreateApplicationSettingsTable extends Migration {
 			$table->string('social_twitter_handle');
 			$table->string('social_google_plus_id');
 			$table->string('social_google_play_app_id');
-
-			// Notifications & Emails
-			$table->string('email_global_from_name');
-			$table->string('email_global_from_address');
-			$table->string('email_server_username');
-			$table->string('email_server_password');
 			
 			$table->timestamps();
 
