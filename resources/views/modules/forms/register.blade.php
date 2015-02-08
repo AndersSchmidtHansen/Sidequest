@@ -29,4 +29,6 @@
       <button type="submit">Register</button>
     </div>
   </div>
+
+  <small>By signing up you agree to our <a href="/terms-of-use">Terms of Use</a> and <a href="/privacy-policy">Privacy Policy</a>.</small>
 </form>
