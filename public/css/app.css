@@ -148,6 +148,8 @@ html, body {
   padding: .8rem 1rem; }
 .page--admin .top-layer {
   z-index: 100; }
+.page--admin label small {
+  color: #7a7a7a; }
 
 /*
  |--------------------------------------------------------------------------

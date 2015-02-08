@@ -6,8 +6,6 @@
       {!! Html::panelOpen('Application Settings') !!}
         {!! Html::panelBodyOpen() !!}
 
-          <div class="panel-group">
-
             {!! Html::accordionOpen('General Settings', false, 'wrench') !!}
               {!! Form::textField('name', 'Application Name', null, ['class' => 'form-control']) !!}
 
@@ -30,14 +28,13 @@
 
             {!! Html::accordionOpen('API Keys', false, 'key') !!}
 
-              {!! Form::textField('service_stripe_api_key_publishable', 'Stripe API Key (Publishable)', null, ['class' => 'form-control']) !!}
+              {!! Form::textField('service_stripe_api_key_publishable', 'Stripe API Key (Publishable)', null, ['class' => 'form-control'], 'Don\'t forget to set your secret Stripe key in the .env file as well.') !!}
               {!! Form::textField('service_google_analytics_api_key', 'Google Analytics API Key', null, ['class' => 'form-control', 'placeholder' => 'UA-XXXX-XX']) !!}
               {!! Form::textField('service_google_site_verification_key', 'Google Site Verification Key', null, ['class' => 'form-control']) !!}
               {!! Form::textField('service_heap_analytics_api_key', 'Heap Analytics API Key', null, ['class' => 'form-control']) !!}
               {!! Form::textField('service_olark_api_key', 'Olark API Key', null, ['class' => 'form-control']) !!}
 
             {!! Html::accordionClose() !!}
-
 
             {!! Html::accordionOpen('Web App Enhancements', false, 'tablet') !!}
               
@@ -85,8 +82,6 @@
 
             {!! Html::accordionClose() !!}
 
-
-
             {!! Html::accordionOpen('Company Details', false, 'building') !!}
               
               {!! Form::textField('company_address', 'Company Address', null, ['class' => 'form-control']) !!}
@@ -94,15 +89,18 @@
 
             {!! Html::accordionClose() !!}
 
-          </div>
+
+            {!! Html::accordionOpen('Payment Widget', true, 'credit-card') !!}
+              
+              {!! Form::textField('payment_widget_company_name', 'Widget Title', $app_settings->name, ['class' => 'form-control'], 'Often the name of your company or website.') !!}
+              {!! Form::textField('payment_widget_description', 'Description', null, ['class' => 'form-control', 'placeholder' => 'Monthly Subscription ($20.00)'], 'A description of the product or service being purchased.') !!}              
+              {!! Form::textField('payment_widget_plan_price', 'Price Amount', null, ['class' => 'form-control', 'placeholder' => '2000'], 'The amount (in cents) that\'s shown to the user. Example: $20 equals 2000.') !!}
+              {!! Form::textField('payment_widget_button_text', 'Widget Button Text', null, ['class' => 'form-control', 'placeholder' => 'Upgrade to PRO'], 'The text to be shown on the default blue button.') !!}
+              {!! Form::textField('payment_widget_purchase_button_text', 'Purchase Button Text', null, ['class' => 'form-control', 'placeholder' => 'Pay $20'], 'The label of the payment button in the Checkout form (e.g. “Subscribe”, “Pay $20”, etc.).') !!}                                          
+            {!! Html::accordionClose() !!}
 
         {!! Html::panelBodyClose() !!}
       {!! Html::panelClose() !!}
-
-    {!! Form::submit('Update Settings', ['class' => 'btn btn-default btn-success']) !!}
   {!! Form::close() !!}
-
-
-
 
 @endsection

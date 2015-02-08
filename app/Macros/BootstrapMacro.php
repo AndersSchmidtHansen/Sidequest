@@ -18,11 +18,18 @@
   |
   */
 
-  $html->macro('panelOpen', function($heading)
-  {
+  $html->macro('panelOpen', function($heading, $hasSaveButton = true, $saveButtonText = 'Save')
+  { 
+      $save_button = "";
+
+      if($hasSaveButton)
+      {
+        $save_button = "<input class='btn btn-default btn-xs btn-success pull-right' type='submit' value='$saveButtonText'>";
+      }
+
       $html = "";
       $html .= "<div class='panel panel-default'>";
-      $html .= "<div class='panel-heading' role='tab'>$heading</div>";
+      $html .= "<div class='panel-heading' role='tab'>$heading $save_button</div>";
 
       return $html;
   });
@@ -35,14 +42,14 @@
   $html->macro('panelBodyOpen', function()
   {
       $html = "";
-      $html .= "<div class='panel-body'>";
+      $html .= "<div class='panel-body'><div class='panel-group'>";
 
       return $html;
   });
 
   $html->macro('panelBodyClose', function()
   {
-      return "</div>";
+      return "</div></div>";
   });
 
   /*
