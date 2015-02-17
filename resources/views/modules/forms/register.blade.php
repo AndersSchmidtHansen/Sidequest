@@ -4,6 +4,13 @@
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
   <div class="form-group">
+    <label>Name</label>
+    <div>
+      <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+    </div>
+  </div>
+
+  <div class="form-group">
     <label>E-Mail Address</label>
     <div>
       <input type="email" class="form-control" name="email" value="{{ old('email') }}">
