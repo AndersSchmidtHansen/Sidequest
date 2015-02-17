@@ -1,5 +1,4 @@
-<form method="POST" action="/user/upgrade/{{ Auth::user()->id }}">
-  
+<form method="POST" action="/user/upgrade">
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
   
  <script

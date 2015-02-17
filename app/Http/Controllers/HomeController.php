@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use Auth;
+
 class HomeController extends Controller {
 
 	/*
@@ -31,7 +33,8 @@ class HomeController extends Controller {
 	public function index()
 	{
 		$title = 'Dashboard';
-		return view('home', compact('title'));
+		$user = Auth::user();
+		return view('home', compact('title', 'user'));
 	}
 
 }

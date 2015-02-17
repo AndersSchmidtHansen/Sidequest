@@ -2,13 +2,11 @@
 
 @section('content')
 
-@if( Auth::user()->subscribed() )
+@if( $user->stripeIsActive() )
   You are PRO, congrats
-
-  <h4>Your plan</h4>
-  <h4>Your invoices</h4>
-  <h4>Your card information</h4>
-  <h4>Downgrade your account</h4>
+  @include('modules.forms.account')
+@elseif( $user->stripeIsActive() && $user->cancelled() )
+  Even if you cancelled, your PRO account will first expire at {{ $user->getSubscriptionEndDate() }}
 @else
   @include('modules.forms.upgrade')
 @endif
