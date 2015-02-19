@@ -44,6 +44,8 @@ class CreateApplicationSettingsTable extends Migration {
 			$table->string('payment_widget_button_text');
 			$table->string('payment_widget_purchase_button_text');
 			
+			// Subscription Details
+			$table->string('subscription_plans_name');
 			$table->timestamps();
 
 		});

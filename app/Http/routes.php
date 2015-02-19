@@ -23,10 +23,11 @@ get('home', 'HomeController@index');
 
 // User Authentication & Management
 Route::controllers([
-	'auth'        => 'Auth\AuthController',
-	'password'    => 'Auth\PasswordController',
-  'admin'       => 'AdminController',
-  'user'        => 'UserController'
+	'auth'         => 'Auth\AuthController',
+	'password'     => 'Auth\PasswordController',
+  'admin'        => 'AdminController',
+  'user'         => 'UserController',
+  'subscription' => 'SubscriptionController'
 ]);
 
 // Email Testing Routes

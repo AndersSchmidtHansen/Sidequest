@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use Auth;
+use App\ApplicationSetting;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller {
 
@@ -34,7 +36,15 @@ class HomeController extends Controller {
 	{
 		$title = 'Dashboard';
 		$user = Auth::user();
-		return view('home', compact('title', 'user'));
+		$subscriptions = [];
+		$subscription_names = explode(',', ApplicationSetting::findOrFail(1)->subscription_plans_name);
+
+		foreach( $subscription_names as $subscription_name )
+		{
+			$subscriptions[Str::slug($subscription_name, "_")] = $subscription_name;
+		}
+		
+		return view('home', compact('title', 'user', 'subscriptions'));
 	}
 
 }

@@ -22,13 +22,14 @@ class AdminController extends Controller {
   public function __construct()
   {
     $this->middleware('admin');
+    $this->settings = ApplicationSetting::findOrFail(1);
   }
 
   public function getIndex()
   {
 
     $title = 'Admin Dashboard';
-    $settings = ApplicationSetting::findOrFail(1);
+    $settings = $this->settings;
 
     return view('admin.index', compact('title', 'settings'));
     
@@ -37,7 +38,7 @@ class AdminController extends Controller {
   public function postUpdateSettings()
   {
 
-    $setting = ApplicationSetting::findOrFail(1);
+    $setting = $this->settings;
 
     $exceptions = [
       '_token',
@@ -96,6 +97,42 @@ class AdminController extends Controller {
 
     return redirect()->back();
 
+  }
+
+  public function getImportSubscriptionPlans()
+  {
+    $plans = [];
+    $plan_names = [];
+    $ch = curl_init();
+    
+    curl_setopt_array($ch, [
+      CURLOPT_RETURNTRANSFER => 1,
+      CURLOPT_URL => 'https://api.stripe.com/v1/plans?key=' . env('SERVICE_STRIPE_SECRET_API_KEY'),
+      CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . env('SERVICE_STRIPE_SECRET_API_KEY')]
+    ]);
+
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    $result = json_decode($result);
+
+    foreach( $result->data as $plan )
+    {
+      $plans[] = $plan;
+    }
+
+    foreach( $plans as $plan )
+    {
+      array_push($plan_names, $plan->name);
+    }
+
+    $plan_names = implode(',', $plan_names);
+
+    $this->settings->subscription_plans_name = $plan_names;
+
+    $this->settings->save();
+
+    return redirect()->back();
   }
   
 }

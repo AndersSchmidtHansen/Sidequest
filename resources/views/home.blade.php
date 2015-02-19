@@ -2,13 +2,12 @@
 
 @section('content')
 
-@if( $user->stripeIsActive() )
-  You are PRO, congrats
+@if( $user->subscribed() )
+  <p>You are subscribed, thanks!</p>
   @include('modules.forms.account')
-@elseif( $user->stripeIsActive() && $user->cancelled() )
-  Even if you cancelled, your PRO account will first expire at {{ $user->getSubscriptionEndDate() }}
 @else
-  @include('modules.forms.upgrade')
+  <p>Looks like you're not subscribed. Why not join now?</p>
+  @include('modules.forms.join')
 @endif
 
 
