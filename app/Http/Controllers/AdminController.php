@@ -19,6 +19,8 @@ class AdminController extends Controller {
   |
   */
 
+  protected $settings;
+
   public function __construct()
   {
     $this->middleware('admin');

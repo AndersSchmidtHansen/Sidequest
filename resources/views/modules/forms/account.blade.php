@@ -17,22 +17,7 @@
 
 {!! Form::open(['url' => '/subscription/update-credit-card']) !!}
   
-  <div class="form-group">
-    <label>
-      <div>Card Number</div>
-      <input type="text" size="20" data-stripe="number" />
-    </label>
-  </div>
-
-  <div class="form-group">
-    <label>
-      <div>CVC</div>
-      <input type="text" size="4" data-stripe="cvc" />
-    </label>
-  </div>
-
-  {!! Form::selectMonth('exp_month') !!}
-  {!! Form::selectRange('exp_year', 2015, 2030) !!}
+  @include('modules.forms.credit-card')
 
   <div class="form-group">
     {!! Form::submit('Update card info') !!}

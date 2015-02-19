@@ -5,11 +5,13 @@
 
 	<body>
 		@include('modules.navigation')
+		@include('modules.sessions.notice')
 
 		@yield('content')
 
 		@include('base.footer')
 		@include('base.scripts')
+		@yield('additional-scripts')
 		<script src="/js/app.js"></script>
 
 		@include('services.google-analytics')

@@ -17,18 +17,18 @@ class SubscriptionController extends Controller {
   
   public function postJoin()
   {
-
-  }
-
-  public function postUpgrade()
-  {
-    $token = Input::get('stripeToken');
-    
-    $this->user->subscription('monthly')->create($token,[
+    $this->user
+    ->subscription(Input::get('plan'))
+    ->create(Input::get('token'),[
       'email' => $this->user->email,
       'description' => $this->user->name
     ]);
 
+    return redirect()->back()->with('notice', 'You are now subscribed!');
+  }
+
+  public function postUpgrade()
+  {
     return redirect()->back();
   }
 
