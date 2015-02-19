@@ -36,8 +36,15 @@ class SubscriptionController extends Controller {
   {
     $this->user->subscription()->cancel();
 
-    return redirect()->back();
+    return redirect()->back()->with('notice', 'Sorry to see you go.');
   }
+
+  public function postResume()
+  {
+    $this->user->subscription($this->user->stripe_plan)->resume();
+
+    return redirect()->back()->with('notice', 'Happy to see you back!');
+  }  
 
   public function postUpdateCreditCard()
   {

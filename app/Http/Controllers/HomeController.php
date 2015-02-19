@@ -37,14 +37,20 @@ class HomeController extends Controller {
 		$title = 'Dashboard';
 		$user = Auth::user();
 		$subscriptions = [];
+		$current_plan = "";
 		$subscription_names = explode(',', ApplicationSetting::findOrFail(1)->subscription_plans_name);
 
 		foreach( $subscription_names as $subscription_name )
 		{
 			$subscriptions[Str::slug($subscription_name, "_")] = $subscription_name;
+			
+			if($user->stripe_plan == Str::slug($subscription_name, "_"))
+			{
+				$current_plan .= $subscription_name;
+			}
 		}
 		
-		return view('home', compact('title', 'user', 'subscriptions'));
+		return view('home', compact('title', 'user', 'subscriptions', 'current_plan'));
 	}
 
 }
