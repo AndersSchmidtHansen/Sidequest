@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" role="document">
 
 	@include('base.head')
 

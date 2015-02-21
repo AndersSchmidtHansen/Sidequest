@@ -1,6 +1,6 @@
 {!! Html::accordionOpen('Subscriptions & Payment Widget', false, 'credit-card') !!}
 
-{!! Form::textField('subscriptions_plans', 'Subscription Plans', $app_settings->subscription_plans_name, ['class' => 'form-control', 'disabled' => 'disabled'], '<a href="admin/import-subscription-plans">Import plans from Stripe</a>.') !!}
+{!! Form::textField('subscriptions_plans', 'Subscription Plans', $app_settings->subscription_plans_name, ['class' => 'form-control', 'disabled' => 'disabled'], '<a href="{{ url("admin/import-subscription-plans") }}">Import plans from Stripe</a>.') !!}
 
 <hr>
 

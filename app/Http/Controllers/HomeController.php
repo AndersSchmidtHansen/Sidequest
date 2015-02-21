@@ -32,7 +32,7 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function getIndex()
 	{
 		$title = 'Dashboard';
 		$user = Auth::user();
@@ -50,7 +50,12 @@ class HomeController extends Controller {
 			}
 		}
 		
-		return view('home', compact('title', 'user', 'subscriptions', 'current_plan'));
+		return view('home.index', compact('title', 'user', 'subscriptions', 'current_plan'));
+	}
+
+	public function getTest()
+	{
+		return view('home.test');
 	}
 
 }

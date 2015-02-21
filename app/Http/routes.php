@@ -19,16 +19,14 @@ get('contact', 'StaticPageController@contact');
 get('terms-of-use', 'StaticPageController@termsOfUse');
 get('privacy-policy', 'StaticPageController@privacyPolicy');
 
-// Dynamic Pages
-get('home', 'HomeController@index');
-
-// User Authentication & Management
+// Authentication & Dynamic Page Management
 Route::controllers([
 	'auth'         => 'Auth\AuthController',
 	'password'     => 'Auth\PasswordController',
   'admin'        => 'AdminController',
   'user'         => 'UserController',
-  'subscription' => 'SubscriptionController'
+  'subscription' => 'SubscriptionController',
+  'home'         => 'HomeController'
 ]);
 
 // Email Testing Routes

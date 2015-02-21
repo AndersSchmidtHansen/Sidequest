@@ -19,8 +19,6 @@
   @include('modules.forms.join')
 @endif
 
-
-<a href="/auth/logout">Sign Out</a>
 @endsection
 
 @section('additional-scripts')

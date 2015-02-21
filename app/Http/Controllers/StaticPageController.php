@@ -18,7 +18,7 @@ class StaticPageController extends Controller {
   | a way that also allows for SEO using title and descriptions.
   |
   */
-
+ 
   public function index()
   { 
     $title = 'Embark';
