@@ -25,15 +25,17 @@ class AdminController extends Controller {
   {
     $this->middleware('admin');
     $this->settings = ApplicationSetting::findOrFail(1);
+    $this->user = Auth::user();
   }
 
   public function getIndex()
   {
 
     $title = 'Admin Dashboard';
+    $user = $this->user;
     $settings = $this->settings;
 
-    return view('admin.index', compact('title', 'settings'));
+    return view('admin.index', compact('title', 'settings', 'user'));
     
   }
 
@@ -52,7 +54,8 @@ class AdminController extends Controller {
       'apple_touch_startup_image_1536x2008',
       'application_shortcut_icon_196x196',
       'application_favicon_ico_32x32',
-      'application_favicon_png_32x32'
+      'application_favicon_png_32x32',
+      'company_logo'
     ];
 
     $input = Request::except($exceptions);
@@ -67,8 +70,8 @@ class AdminController extends Controller {
 
 
     /**
-    * Handle uploading meta images such as shortcut icons and
-    * Apple touch images
+    * Handle uploading meta images such as shortcut icons,
+    * Apple touch images and other assets
     */
     function saveUploadedImages($images = [], $destinationPath)
     {
@@ -80,19 +83,21 @@ class AdminController extends Controller {
       }
     }
 
-    $icons_touch_images_path = base_path() . '/public/img/icons-touch';
+    $icons_touch_images_path = base_path() . '/public/img';
 
     $icons_touch_images = [
-      'application_shortcut_icon_196x196'   => "shortcut-icon-196x196.png",
-      'application_favicon_ico_32x32'       => "shortcut-icon.ico",
-      'application_favicon_png_32x32'       => "shortcut-icon.png",
+      'application_shortcut_icon_196x196'   => 'shortcut-icon-196x196.png',
+      'application_favicon_ico_32x32'       => 'shortcut-icon.ico',
+      'application_favicon_png_32x32'       => 'shortcut-icon.png',
 
-      'apple_touch_icon_152x152'            => "apple-touch-icon.png",
-      'apple_touch_startup_image_640x920'   => "apple-touch-startup-image-640x920.png",
-      'apple_touch_startup_image_640x1096'  => "apple-touch-startup-image-640x1096.png",
-      'apple_touch_startup_image_750x1334'  => "apple-touch-startup-image-750x1334.png",
-      'apple_touch_startup_image_1242x2208' => "apple-touch-startup-image-1242x2208.png",
-      'apple_touch_startup_image_1536x2008' => "apple-touch-startup-image-1536x2008.png"  
+      'apple_touch_icon_152x152'            => 'apple-touch-icon.png',
+      'apple_touch_startup_image_640x920'   => 'apple-touch-startup-image-640x920.png',
+      'apple_touch_startup_image_640x1096'  => 'apple-touch-startup-image-640x1096.png',
+      'apple_touch_startup_image_750x1334'  => 'apple-touch-startup-image-750x1334.png',
+      'apple_touch_startup_image_1242x2208' => 'apple-touch-startup-image-1242x2208.png',
+      'apple_touch_startup_image_1536x2008' => 'apple-touch-startup-image-1536x2008.png',
+
+      'company_logo'                        => 'company_logo.svg'
     ];
 
     saveUploadedImages($icons_touch_images, $icons_touch_images_path);

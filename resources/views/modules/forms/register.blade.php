@@ -1,34 +1,37 @@
 @include('errors.check')
 
-<form class="form-horizontal" role="form" method="POST" action="/auth/register">
-  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+{!! Form::open(['url' => '/auth/register', 'role' => 'form']) !!}
 
   <div class="form-group">
-    <label>Name</label>
-    <div>
-      <input type="text" class="form-control" name="name" value="{{ old('name') }}">
-    </div>
+    <label>Name
+      <div>
+        <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+      </div>
+    </label>
   </div>
 
   <div class="form-group">
-    <label>E-Mail Address</label>
-    <div>
-      <input type="email" class="form-control" name="email" value="{{ old('email') }}">
-    </div>
+    <label>E-Mail Address
+      <div>
+        <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+      </div>
+    </label>
   </div>
 
   <div class="form-group">
-    <label>Password</label>
-    <div>
-      <input type="password" class="form-control" name="password">
-    </div>
+    <label>Password
+      <div>
+        <input type="password" class="form-control" name="password">
+      </div>
+    </label>
   </div>
 
   <div class="form-group">
-    <label>Confirm Password</label>
-    <div>
-      <input type="password" class="form-control" name="password_confirmation">
-    </div>
+    <label>Confirm Password
+      <div>
+        <input type="password" class="form-control" name="password_confirmation">
+      </div>
+    </label>
   </div>
 
   <div class="form-group">
@@ -38,4 +41,5 @@
   </div>
 
   <small>By signing up you agree to our <a href="/terms-of-use">Terms of Use</a> and <a href="/privacy-policy">Privacy Policy</a>.</small>
-</form>
+
+{!! Form::close() !!}

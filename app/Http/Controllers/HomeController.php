@@ -53,9 +53,4 @@ class HomeController extends Controller {
 		return view('home.index', compact('title', 'user', 'subscriptions', 'current_plan'));
 	}
 
-	public function getTest()
-	{
-		return view('home.test');
-	}
-
 }
