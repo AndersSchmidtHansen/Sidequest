@@ -15,6 +15,11 @@ class SubscriptionController extends Controller {
     $this->user = Auth::user();
   }
   
+  /**
+   * Handles subscribing the user to a plan for the first time.
+   * 
+   * @return void
+   */
   public function postJoin()
   {
     $this->user
@@ -27,11 +32,11 @@ class SubscriptionController extends Controller {
     return redirect()->back()->with('notice', 'You are now subscribed!');
   }
 
-  public function postUpgrade()
-  {
-    return redirect()->back();
-  }
-
+  /**
+   * Handles cancelling a user's subscription.
+   * 
+   * @return void
+   */
   public function postCancel()
   {
     $this->user->subscription()->cancel();
@@ -39,6 +44,11 @@ class SubscriptionController extends Controller {
     return redirect()->back()->with('notice', 'Sorry to see you go.');
   }
 
+  /**
+   * Handles resuming a user's subscription after cancelling.
+   * 
+   * @return void
+   */
   public function postResume()
   {
     $this->user->subscription($this->user->stripe_plan)->resume();
@@ -46,6 +56,11 @@ class SubscriptionController extends Controller {
     return redirect()->back()->with('notice', 'Happy to see you back!');
   }  
 
+  /**
+   * Handles updating the user's current credit card with new information.
+   * 
+   * @return void
+   */
   public function postUpdateCreditCard()
   {
     $token = Input::get('token');
@@ -54,13 +69,17 @@ class SubscriptionController extends Controller {
     return redirect()->back()->with('notice', 'Your credit card information has been updated!');
   }
 
+  /**
+   * Handles swapping the user's plan for a different one
+   * 
+   * @return void
+   */
   public function postSwapPlan()
   {
     $input = Input::get('plan_to_swap_to');
     $this->user->subscription($input)->swap();
     
     return redirect()->back();
-
   }
 
 }
