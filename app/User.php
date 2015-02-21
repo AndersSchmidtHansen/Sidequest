@@ -40,4 +40,17 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $dates = ['trial_ends_at', 'subscription_ends_at'];
 	
+	/**
+	 * Check if the user has admin rights or not.
+	 * 
+	 * @return boolean
+	 */
+	public function isAdmin()
+	{
+		if( $this['admin'] == 1 )
+		{
+			return true;
+		}
+		return false;
+	}
 }
