@@ -48,10 +48,10 @@ class SubscriptionController extends Controller {
 
   public function postUpdateCreditCard()
   {
-    $token = '';
+    $token = Input::get('token');
     $this->user->updateCard($token);
 
-    return redirect()->back();
+    return redirect()->back()->with('notice', 'Your credit card information has been updated!');
   }
 
   public function postSwapPlan()
