@@ -24,6 +24,12 @@ class StaticPageController extends Controller {
     return view('welcome', compact('title'));
   }
 
+  public function pricing()
+  { 
+    $title = 'Pricing';
+    return view('pages.pricing', compact('title'));
+  }
+
 	public function about()
   { 
     $title = 'About';
