@@ -30,13 +30,18 @@ class AdminController extends Controller {
 
   public function getIndex()
   {
-
     $title = 'Admin Dashboard';
     $user = $this->user;
     $settings = $this->settings;
 
     return view('admin.index', compact('title', 'settings', 'user'));
     
+  }
+
+  public function getUserManagement()
+  {
+    $title = 'User Management';
+    return view('admin.user-management', compact('title'));
   }
 
   public function postUpdateSettings()

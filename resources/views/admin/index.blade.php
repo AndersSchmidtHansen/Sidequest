@@ -1,7 +1,6 @@
 @extends('admin.layout')
 
 @section('content')
-  <p>Welcome {{ $user->name }}</p>
 
   {!! Form::model($settings, ['url' => 'admin/update-settings', 'files' => true]) !!}
       

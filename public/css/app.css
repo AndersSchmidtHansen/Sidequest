@@ -123,7 +123,7 @@ html, body {
   display: block;
   padding: 1.5rem 0;
   transition: background-color .28s ease-in-out; }
-  .page--admin .nav__item:first-child {
+  .page--admin .nav__item.active {
     background-color: #f45c0a;
     color: #fcfcfc; }
   .page--admin .nav__item:first-child:hover {

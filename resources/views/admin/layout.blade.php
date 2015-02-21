@@ -6,11 +6,11 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
   <body class="page page--admin clearfix">
-    
+      
       <aside class="sidebar full-height top-layer text-center">
         <nav>
-          <a href="/admin" class="nav__item" rel="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i></a>
-          <a href="/admin/users" class="nav__item" rel="tooltip" data-placement="right" title="Users"><i class="fa fa-users"></i></a>
+          <a href="/admin" class="nav__item {{ Html::active('admin') }}" rel="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i></a>
+          <a href="/admin/user-management" class="nav__item {{ Html::active('admin/user-management') }}" rel="tooltip" data-placement="right" title="Users"><i class="fa fa-users"></i></a>
           <a href="/auth/logout" class="nav__item bottom" rel="tooltip" data-placement="right" title="Sign out"><i class="fa fa-sign-out"></i></a> 
         </nav>
       </aside>

@@ -17,6 +17,12 @@
   |--------------------------------------------------------------------------
   |
   */
+ 
+  $html->macro('active', function($path, $active = 'active')
+  {
+    return Request::is($path) ? $active : '';
+
+  });
 
   $html->macro('panelOpen', function($heading, $hasSaveButton = true, $saveButtonText = 'Save')
   { 

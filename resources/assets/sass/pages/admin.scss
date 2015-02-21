@@ -31,7 +31,7 @@
     padding: 1.5rem 0;
     transition: background-color .28s ease-in-out;
 
-    &:first-child {
+    &.active {
       background-color: #f45c0a;
       color: #fcfcfc;
     }
