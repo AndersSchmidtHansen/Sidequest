@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\ApplicationSetting;
+use Auth;
 use Illuminate\Http\Request;
 
 class StaticPageController extends Controller {
