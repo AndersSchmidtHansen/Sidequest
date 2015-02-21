@@ -57,7 +57,6 @@ class SubscriptionController extends Controller {
   public function postSwapPlan()
   {
     $input = Input::get('plan_to_swap_to');
-    
     $this->user->subscription($input)->swap();
     
     return redirect()->back();
