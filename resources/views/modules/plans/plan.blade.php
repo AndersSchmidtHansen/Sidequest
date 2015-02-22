@@ -5,13 +5,18 @@
     <small class="per">
     / {{ $plan->interval }}  
     </small>
+    
+    @if( $plan->description !== "" )
+      <p class="plan__description">{!! $plan->description !!}</p>
+    @endif 
+    
+    @if( $plan->features !== "" )
+      <ul class="plan__features">
+          @foreach( explode(',', $plan->features) as $feature )
+            <li>{!! $feature !!}</li>
+          @endforeach
+      </ul>
+    @endif
 
-    <ul class="plan__features">
-      @if( $plan->features !== "" )
-        @foreach( explode(',', $plan->features) as $feature )
-          <li>{{ $feature }}</li>
-        @endforeach
-      @endif
-    </ul>
   </div>
 </div>
