@@ -30,7 +30,7 @@ class AdminController extends Controller {
 
   public function getIndex()
   {
-    $title = 'Admin Dashboard';
+    $title = 'Settings';
     $user = $this->user;
     $settings = $this->settings;
 

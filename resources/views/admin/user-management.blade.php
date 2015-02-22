@@ -2,6 +2,6 @@
 
 @section('content')
 
-User Management
+  <h1>{{ $title }}</h1>
 
 @endsection

@@ -1,7 +1,8 @@
 {!! Html::accordionOpen('Company Details', true, 'building') !!}
-  
+
   <div class="form-group">
   {!! Form::label('company_logo','Company Logo (.SVG)') !!}
+  {!! Html::fileExists('img/company_logo.svg') !!}
   {!! Form::file('company_logo', ['accept' => 'image/svg']) !!}
   </div>
 

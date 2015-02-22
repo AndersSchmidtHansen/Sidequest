@@ -13,17 +13,34 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Panel
+  | Helpers
   |--------------------------------------------------------------------------
   |
   */
  
+  $html->macro('fileExists', function($file_name)
+  { 
+    if( file_exists($file_name) )
+    { 
+      return "<span class='label label-success'><i class='fa fa-check'></i> Uploaded</span>";
+    }
+    return '';
+
+  });
+
   $html->macro('active', function($path, $active = 'active')
   {
     return Request::is($path) ? $active : '';
 
   });
 
+  /*
+  |--------------------------------------------------------------------------
+  | Panel
+  |--------------------------------------------------------------------------
+  |
+  */
+ 
   $html->macro('panelOpen', function($heading, $hasSaveButton = true, $saveButtonText = 'Save')
   { 
       $save_button = "";
