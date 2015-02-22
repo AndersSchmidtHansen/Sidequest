@@ -1,7 +1,11 @@
 {!! Form::open(['url' => '/subscription/join', 'role' => 'payment-form', 'data-gateway-publishable-key' => $app_settings->service_stripe_api_key_publishable]) !!}
     
     <div>Select a plan</div>
-    {!! Form::select('plan', $subscriptions) !!}
+    <select name="plan" id="plan">
+      @foreach($plans as $plan)
+        <option value="{{ $plan->plan_id }}">{{ $plan->name }}</option>
+      @endforeach
+    </select>
 
     @include('modules.forms.credit-card')
     

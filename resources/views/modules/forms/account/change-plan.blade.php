@@ -4,7 +4,12 @@
   
   <label>
     <div>Change your plan</div>
-    {!! Form::select('plan_to_swap_to', $subscriptions, $user->stripe_plan) !!}
+    <select name="plan_to_swap_to" id="plan_to_swap_to">
+      @foreach($plans as $plan)
+        <option value="{{ $plan->plan_id }}" @if($user->stripe_plan == $plan->plan_id) selected @endif >{{ $plan->name }}</option>
+      @endforeach
+    </select>
+    
   </label>
 
   <div class="form-group">

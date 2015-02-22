@@ -18,7 +18,7 @@ class CreatePlansTable extends Migration {
 			$table->string('plan_id');
 			$table->string('name');
 			$table->text('description');
-			$table->float('amount');
+			$table->integer('amount');
 			$table->string('currency');
 			$table->string('interval');
 			$table->text('features');

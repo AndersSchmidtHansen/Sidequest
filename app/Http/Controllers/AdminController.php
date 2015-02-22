@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\ApplicationSetting;
+use App\Plan;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
@@ -26,6 +27,7 @@ class AdminController extends Controller {
     $this->middleware('admin');
     $this->settings = ApplicationSetting::findOrFail(1);
     $this->user = Auth::user();
+    $this->plan = new Plan;
   }
 
   public function getIndex()
@@ -46,7 +48,8 @@ class AdminController extends Controller {
   public function getPlans()
   {
     $title = 'Plans';
-    return view('admin.plans', compact('title'));
+    $plans = Plan::all();
+    return view('admin.plans', compact('title', 'plans'));
   }
 
   public function postUpdateSettings()
@@ -133,9 +136,17 @@ class AdminController extends Controller {
 
     $result = json_decode($result);
 
-    foreach( $result->data as $plan )
+    foreach( $result->data as $plan_data )
     {
-      $plans[] = $plan;
+      $plans[] = $plan_data;
+      
+      $plan = $this->plan->firstOrCreate([
+        'plan_id'   => $plan_data->id,
+        'name'      => $plan_data->name,
+        'amount'    => $plan_data->amount,
+        'currency'  => $plan_data->currency,
+        'interval'  => $plan_data->interval
+      ]);
     }
 
     foreach( $plans as $plan )
@@ -146,10 +157,14 @@ class AdminController extends Controller {
     $plan_names = implode(',', $plan_names);
 
     $this->settings->subscription_plans_name = $plan_names;
-
     $this->settings->save();
 
     return redirect()->back();
+  }
+
+  public function postPlans()
+  {
+    return "Saved plans to database";
   }
   
 }

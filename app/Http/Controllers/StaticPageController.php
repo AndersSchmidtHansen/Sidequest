@@ -19,11 +19,15 @@ class StaticPageController extends Controller {
   | a way that also allows for SEO using title and descriptions.
   |
   */
+
+  public function __construct(CookieJar $cookieJar, Request $request)
+  {
+    $cookieJar->queue(cookie('hasSeenCookieNotice', true));
+  }
  
-  public function index(CookieJar $cookieJar, Request $request)
+  public function index()
   { 
     $title = 'Embark';
-    $cookieJar->queue(cookie('hasSeenCookieNotice', true));
     return view('welcome', compact('title'));
   }
 

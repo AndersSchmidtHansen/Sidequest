@@ -2,21 +2,20 @@
 
   @if( Request::is('home', 'home/*') )
     <a href="/" class="logo">
-      <img src="/img/company_logo.svg" width="200" alt="{{ $app_settings->name }} Logo" />
+      @include('modules.logo')
     </a>
     <strong>{{ Auth::user()->name }} ▾</strong>
     <a href="#">Help</a>
   @else
     <a href="/" class="logo">
-      <img src="/img/company_logo.svg" width="200" alt="{{ $app_settings->name }} Logo" />
+      @include('modules.logo')
     </a>
-    <a href="{{ url('/features') }}">Features</a>
     <a href="{{ url('/pricing') }}">Pricing</a>
     <a href="#">Support & Docs ▾</a>
 
     @if( Auth::guest() )
     <a href="#">Sign Up Free</a>
-    <a href="#">Log In</a>
+    <a href="#">Sign In</a>
     @elseif( Auth::check() )
     <a href="{{ url('/home') }}">Dashboard</a>
     <a href="{{ url('/auth/logout') }}">Sign Out</a>
