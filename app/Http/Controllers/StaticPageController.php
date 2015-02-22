@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\ApplicationSetting;
+use App\Plan;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Cookie\CookieJar;
@@ -34,7 +35,8 @@ class StaticPageController extends Controller {
   public function pricing()
   { 
     $title = 'Pricing';
-    return view('pages.pricing', compact('title'));
+    $plans = Plan::all();
+    return view('pages.pricing', compact('title', 'plans'));
   }
 
 	public function about()

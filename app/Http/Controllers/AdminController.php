@@ -152,9 +152,13 @@ class AdminController extends Controller {
     return redirect()->back();
   }
 
-  public function postPlans()
+  public function postUpdatePlan($id)
   {
-    return "Saved plans to database";
+    $plan = Plan::find($id);
+    $plan->description = Request::input('plan_description');
+    $plan->features = Request::input('plan_features');
+    $plan->save();
+    return redirect()->back();
   }
 
   public function postDeletePlan($id)

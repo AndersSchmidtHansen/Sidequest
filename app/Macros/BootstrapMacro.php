@@ -77,17 +77,25 @@
       return "</div>";
   });
 
-  $html->macro('panelBodyOpen', function()
+  $html->macro('panelBodyOpen', function($withPanelGroup = true)
   {
       $html = "";
-      $html .= "<div class='panel-body'><div class='panel-group'>";
+      $html .= "<div class='panel-body'>";
+      
+      if( $withPanelGroup ){
+        $html .= "<div class='panel-group'>";
+      }
 
       return $html;
   });
 
-  $html->macro('panelBodyClose', function()
-  {
-      return "</div></div>";
+  $html->macro('panelBodyClose', function($withPanelGroup = true)
+  { 
+      if($withPanelGroup) {
+        return "</div></div>";
+      } else {
+        return "</div>";
+      }
   });
 
   /*
