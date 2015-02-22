@@ -1,0 +1,1 @@
+<small>© {{ date('Y') }} {{ $app_settings->name }}. All rights reserved.</small>

@@ -4,6 +4,7 @@
 	@include('base.head')
 
 	<body>
+		@include('modules.warnings.cookies')
 		@include('modules.navigation')
 		@include('modules.sessions.notice')
 

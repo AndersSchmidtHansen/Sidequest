@@ -35,13 +35,18 @@ class AdminController extends Controller {
     $settings = $this->settings;
 
     return view('admin.index', compact('title', 'settings', 'user'));
-    
   }
 
-  public function getUserManagement()
+  public function getUsers()
   {
-    $title = 'User Management';
-    return view('admin.user-management', compact('title'));
+    $title = 'Users';
+    return view('admin.users', compact('title'));
+  }
+
+  public function getPlans()
+  {
+    $title = 'Plans';
+    return view('admin.plans', compact('title'));
   }
 
   public function postUpdateSettings()

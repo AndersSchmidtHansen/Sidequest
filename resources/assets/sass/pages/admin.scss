@@ -5,6 +5,16 @@
  |
  */
 
+// Typography
+h1,
+h2 {
+  &:first-of-type {
+    margin-top: 0;
+    margin-bottom: 1.618rem;
+  }
+}
+
+// Content
 .page--admin {
 
   aside {
@@ -34,11 +44,6 @@
     &.active {
       background-color: #f45c0a;
       color: #fcfcfc;
-    }
-
-    &:first-child:hover {
-      background-color: darken(#f45c0a, 5%);
-      color: lighten(#fcfcfc, 2%);
     }
 
     &:hover {

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\ApplicationSetting;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Cookie\CookieJar;
 
 class StaticPageController extends Controller {
 
@@ -19,9 +20,10 @@ class StaticPageController extends Controller {
   |
   */
  
-  public function index()
+  public function index(CookieJar $cookieJar, Request $request)
   { 
     $title = 'Embark';
+    $cookieJar->queue(cookie('hasSeenCookieNotice', true));
     return view('welcome', compact('title'));
   }
 

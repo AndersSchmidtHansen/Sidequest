@@ -107,6 +107,10 @@ html, body {
  |--------------------------------------------------------------------------
  |
  */
+h1:first-of-type, h2:first-of-type {
+  margin-top: 0;
+  margin-bottom: 1.618rem; }
+
 .page--admin aside {
   background-color: #fff;
   box-shadow: 3px 0 9px 0 rgba(0, 0, 0, 0.1);
@@ -126,9 +130,6 @@ html, body {
   .page--admin .nav__item.active {
     background-color: #f45c0a;
     color: #fcfcfc; }
-  .page--admin .nav__item:first-child:hover {
-    background-color: #dc5309;
-    color: white; }
   .page--admin .nav__item:hover {
     background-color: #f8f8ff;
     color: #535353; }

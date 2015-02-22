@@ -25,13 +25,28 @@
       return "<span class='label label-success'><i class='fa fa-check'></i> Uploaded</span>";
     }
     return '';
-
   });
 
   $html->macro('active', function($path, $active = 'active')
   {
     return Request::is($path) ? $active : '';
+  });
 
+  /*
+  |--------------------------------------------------------------------------
+  | Navigation
+  |--------------------------------------------------------------------------
+  |
+  */
+ 
+  $html->macro('navItem', function($route = '', $title = '',  $icon = 'cog', $class = '', $active = 'active')
+  {
+    $html = "";
+    $active = Request::is(ltrim($route, '/')) ? $active : '';
+
+    $html .= "<a href='$route' class='nav__item $class $active' rel='tooltip' data-placement='right' title='$title'><i class='fa fa-$icon'></i></a>";
+
+    return $html;
   });
 
   /*

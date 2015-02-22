@@ -1,4 +1,4 @@
-{!! Html::accordionOpen('Company Details', true, 'building') !!}
+{!! Html::accordionOpen('Company Details', false, 'building') !!}
 
   <div class="form-group">
   {!! Form::label('company_logo','Company Logo (.SVG)') !!}

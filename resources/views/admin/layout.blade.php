@@ -9,9 +9,12 @@
       
       <aside class="sidebar full-height top-layer text-center">
         <nav role="navigation">
-          <a href="/admin" class="nav__item {{ Html::active('admin') }}" rel="tooltip" data-placement="right" title="Settings"><i class="fa fa-cog"></i></a>
-          <a href="/admin/user-management" class="nav__item {{ Html::active('admin/user-management') }}" rel="tooltip" data-placement="right" title="Users"><i class="fa fa-users"></i></a>
-          <a href="/auth/logout" class="nav__item bottom" rel="tooltip" data-placement="right" title="Sign out"><i class="fa fa-sign-out"></i></a> 
+
+          {!! Html::navItem('/admin', 'Settings', 'cog') !!}
+          {!! Html::navItem('/admin/users', 'Users', 'users') !!}
+          {!! Html::navItem('/admin/plans', 'Plans', 'birthday-cake') !!}
+          {!! Html::navItem('/auth/logout', 'Sign out', 'sign-out', 'bottom') !!}
+
         </nav>
       </aside>
 
@@ -19,10 +22,7 @@
       @yield('content')
       </main>
    
-
-    @include('base.footer')
     @include('base.scripts')
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="/js/admin/admin.js"></script>
 
   </body>
