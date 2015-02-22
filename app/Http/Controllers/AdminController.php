@@ -149,22 +149,19 @@ class AdminController extends Controller {
       ]);
     }
 
-    foreach( $plans as $plan )
-    {
-      array_push($plan_names, $plan->name);
-    }
-
-    $plan_names = implode(',', $plan_names);
-
-    $this->settings->subscription_plans_name = $plan_names;
-    $this->settings->save();
-
     return redirect()->back();
   }
 
   public function postPlans()
   {
     return "Saved plans to database";
+  }
+
+  public function postDeletePlan($id)
+  {
+    $plan = Plan::find($id);
+    $plan->delete();
+    return redirect('admin/plans');
   }
   
 }

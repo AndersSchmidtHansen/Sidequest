@@ -5,10 +5,14 @@
   <h1>{{ $title }}</h1>
 
   @if( count($plans) )
+    <p>Changed something else than description and features? <a href="./import-subscription-plans">Re-import now</a>.</p>
+    <div class="row">
     @foreach( $plans as $plan )
-      <h4>{{ $plan->name }}</h4>
-      <p>{{ $plan->amount }}</p> 
+      <div class="col-sm-4">
+      @include('admin.modules.plans.plan')
+      </div>
     @endforeach
+    </div>
   @else
     <p>You haven't imported your Stripe plans yet... <a href="./import-subscription-plans">Import now</a>.</p>
   @endif

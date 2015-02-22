@@ -1,10 +1,4 @@
-{!! Html::accordionOpen('Subscriptions & Payment Widget', false, 'credit-card') !!}
-
-{!! Form::textField('subscriptions_plans', 'Subscription Plans', $app_settings->subscription_plans_name, ['class' => 'form-control', 'disabled' => 'disabled'], '<a href="admin/import-subscription-plans">Import plans from Stripe</a>.') !!}
-
-<hr>
-
-<h4>Only if you're using the Stripe Payment Widget</h4>
+{!! Html::accordionOpen('Payment Widget', false, 'credit-card') !!}
 
 {!! Form::textField('payment_widget_company_name', 'Widget Title', $app_settings->name, ['class' => 'form-control'], 'Often the name of your company or website.') !!}
 {!! Form::textField('payment_widget_description', 'Description', null, ['class' => 'form-control', 'placeholder' => 'Monthly Subscription ($20.00)'], 'A description of the product or service being purchased.') !!}              
