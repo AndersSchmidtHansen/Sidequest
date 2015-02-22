@@ -1,6 +1,12 @@
 {!! Form::open(['url' => '/subscription/swap-plan']) !!}
   <h4>Your plan</h4>
-  <p>You are on the <strong>{{ $current_plan or '' }}</strong> plan.</p>
+  <p>You are on the <strong>
+    @foreach($plans as $plan)
+      @if($user->stripe_plan == $plan->plan_id) 
+        {{ $plan->name }} 
+      @endif
+    @endforeach
+  </strong> plan.</p>
   
   <label>
     <div>Change your plan</div>
