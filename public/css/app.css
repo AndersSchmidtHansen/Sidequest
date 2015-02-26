@@ -152,21 +152,18 @@ h1:first-of-type, h2:first-of-type {
 .page--admin label small {
   color: #7a7a7a; }
 
-pre {
+.logger {
   min-height: 5rem;
-  padding: 0; }
-  pre a {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    padding: 0.809rem;
-    line-height: 1.618;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-radius: 0 0 0 .8rem; }
-    pre a:hover, pre a:active, pre a:visited {
-      color: #fff; }
+  padding: 1.618rem; }
+  .logger .logger__line:not(:last-child) {
+    margin-bottom: 1.618rem; }
+  .logger .logger__line-number:after {
+    content: ":"; }
+
+.scrollable {
+  overflow-y: auto; }
+  .scrollable[data-max-height="450"] {
+    max-height: 45rem; }
 
 /*
  |--------------------------------------------------------------------------
