@@ -137,6 +137,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Laravel\Cashier\CashierServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -196,7 +197,8 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form'			=> 'Illuminate\Html\FormFacade',
-		'Html'			=> 'Illuminate\Html\HtmlFacade'
+		'Html'			=> 'Illuminate\Html\HtmlFacade',
+		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
 
 	],
 
