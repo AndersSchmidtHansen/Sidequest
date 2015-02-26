@@ -1,7 +1,7 @@
 {!! Html::panelOpen("<strong>".$plan->name."</strong>", false) !!}
   {!! Html::panelBodyOpen(false) !!}
     
-    {!! Form::open(['url' => '/admin/update-plan/'.$plan->id]) !!}
+    {!! Form::open(['url' => '/admin/update-cached-plan/'.$plan->id]) !!}
       <div class="form-group">
         <strong>Price</strong>
         <span class="pull-right">{{ number_format($plan->amount / 100, 2) }} {{ strtoupper($plan->currency) }}</span>
@@ -27,7 +27,7 @@
       <hr>
     {!! Form::close() !!}
 
-    {!! Form::open(['url' => '/admin/delete-plan/'.$plan->id]) !!}
+    {!! Form::open(['url' => '/admin/delete-cached-plan/'.$plan->id]) !!}
       <button class="btn btn-xs btn-block btn-danger">Delete plan from cache</button>
     {!! Form::close() !!}
 

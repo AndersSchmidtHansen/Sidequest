@@ -1,11 +1,12 @@
 <?php namespace App\Http\Controllers;
 
-use App\ApplicationSetting;
-use App\Plan;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Auth;
 use Request;
+use App\Plan;
+use App\Http\Requests;
+use App\ApplicationSetting;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\PlanController;
 
 class AdminController extends Controller {
 
@@ -21,6 +22,8 @@ class AdminController extends Controller {
   */
 
   protected $settings;
+  protected $user;
+  protected $plan;
 
   public function __construct()
   {
@@ -121,49 +124,23 @@ class AdminController extends Controller {
 
   public function getImportSubscriptionPlans()
   {
-    $plans = [];
-    $plan_names = [];
-    $ch = curl_init();
-    
-    curl_setopt_array($ch, [
-      CURLOPT_RETURNTRANSFER => 1,
-      CURLOPT_URL => 'https://api.stripe.com/v1/plans?key=' . env('SERVICE_STRIPE_SECRET_API_KEY'),
-      CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . env('SERVICE_STRIPE_SECRET_API_KEY')]
-    ]);
-
-    $result = curl_exec($ch);
-    curl_close($ch);
-
-    $result = json_decode($result);
-
-    foreach( $result->data as $plan_data )
-    {
-      $plans[] = $plan_data;
-      
-      $plan = $this->plan->firstOrCreate([
-        'plan_id'   => $plan_data->id,
-        'name'      => $plan_data->name,
-        'amount'    => $plan_data->amount,
-        'currency'  => $plan_data->currency,
-        'interval'  => $plan_data->interval
-      ]);
-    }
-
+    $plan = new PlanController;
+    $plan->importPlans();
     return redirect()->back();
   }
 
-  public function postUpdatePlan($id)
+  public function postUpdateCachedPlan($id)
   {
-    $plan = Plan::find($id);
+    $plan = $this->plan->find($id);
     $plan->description = Request::input('plan_description');
     $plan->features = Request::input('plan_features');
     $plan->save();
     return redirect()->back();
   }
 
-  public function postDeletePlan($id)
+  public function postDeleteCachedPlan($id)
   {
-    $plan = Plan::find($id);
+    $plan = $this->plan->find($id);
     $plan->delete();
     return redirect('admin/plans');
   }
