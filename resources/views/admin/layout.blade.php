@@ -13,6 +13,7 @@
           {!! Html::navItem('/admin', 'Settings', 'cog') !!}
           {!! Html::navItem('/admin/users', 'Users', 'users') !!}
           {!! Html::navItem('/admin/plans', 'Plans', 'birthday-cake') !!}
+          {!! Html::navItem('/admin/developer-zone', 'Developer Zone', 'code') !!}
           {!! Html::navItem('/auth/logout', 'Sign out', 'sign-out', 'bottom') !!}
 
         </nav>

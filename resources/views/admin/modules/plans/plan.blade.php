@@ -28,8 +28,12 @@
     {!! Form::close() !!}
 
     {!! Form::open(['url' => '/admin/delete-cached-plan/'.$plan->id]) !!}
-      <button class="btn btn-xs btn-block btn-danger">Delete plan from cache</button>
+      <button class="btn btn-xs btn-danger">Delete from cache</button>
     {!! Form::close() !!}
+    <br>
+    {!! Form::open(['url' => '/admin/delete-stripe-plan/'.$plan->plan_id]) !!}
+      <button class="btn btn-xs btn-danger">Delete from Stripe</button>
+    {!! Form::close() !!}    
 
   {!! Html::panelBodyClose(false) !!}
 {!! Html::panelClose() !!}

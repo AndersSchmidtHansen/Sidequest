@@ -55,6 +55,13 @@ class AdminController extends Controller {
     return view('admin.plans', compact('title', 'plans'));
   }
 
+  public function getDeveloperZone()
+  {
+    $title = 'Developer Zone';
+    return view('admin.developer-zone', compact('title'));
+  }
+
+
   public function postUpdateSettings()
   {
 
@@ -153,6 +160,17 @@ class AdminController extends Controller {
   public function postDeleteCachedPlan(PlanController $plan, $plan_id = null)
   {
     $plan->deleteCachedPlan($plan_id);
+    return redirect()->back();
+  }
+
+  /**
+   * Handles deleting a plan on Stripe.
+   * 
+   * @return void
+   */
+  public function postDeleteStripePlan(PlanController $plan, $plan_stripe_id = null)
+  {
+    $plan->deletePlanFromStripe($plan_stripe_id);
     return redirect()->back();
   }
   

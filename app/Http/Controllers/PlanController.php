@@ -8,6 +8,17 @@ use Stripe, Stripe_Plan, Stripe_Error;
 
 class PlanController extends Controller {
 
+  /*
+  |--------------------------------------------------------------------------
+  | Plan Controller
+  |--------------------------------------------------------------------------
+  |
+  | Subscription plans should also be easy to integrate into the application
+  | in such a way that you can present plans to users, delete them, update
+  | them and so forth. Since polling Stripe is slow, we cache plans here.
+  |
+  */
+
   protected $stripe_key;
 
   public function __construct()
@@ -35,6 +46,11 @@ class PlanController extends Controller {
 
   }
 
+  /**
+   * Handles updating a cached plan.
+   * 
+   * @return void
+   */
   public function updateCachedPlan($plan_id)
   {
     $plan = $this->plan->find($plan_id);
@@ -43,10 +59,28 @@ class PlanController extends Controller {
     $plan->save();    
   }
 
+  /**
+   * Handles deleting a plan from cache.
+   *  
+   * @return void
+   */
   public function deleteCachedPlan($plan_id)
   {
     $plan = $this->plan->find($plan_id);
     $plan->delete();
+  }
+
+  /**
+   * Handles deleting a plan from both Stripe and cache.
+   *
+   * @return void
+   */
+  public function deletePlanFromStripe($plan_stripe_id)
+  {
+    $plan = $this->stripe_plan->retrieve($plan_stripe_id);
+    $cached_plan = $this->plan->where('plan_id', '=', $plan_stripe_id);
+    $plan->delete();
+    $cached_plan->delete();
   }
 
 }
