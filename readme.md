@@ -3,7 +3,7 @@ Sidequest - The (WIP) SaaS-in-a-box
 
 Sidequest was created, and maintained by [Anders Schmidt Hansen](https://github.com/AndersSchmidtHansen), in order to provide the fastest way possible from an idea to a functional SaaS (Software as a Service) product. It focuses on more than just the developer, it focuses on the entire team behind the SaaS. It aims to become *"what I wish I had available when I first started [Pitcherific](http://pitcherific.com/)"*, and a little bit more.
 
-Sidequest can be considered a continuation of Laravel; where it stops, this layer on top of Laravel 5 takes things a couple of steps further. While it is currently a "work-in-progress", Sidequest aims to make following available to the technical co-founder (and the rest of his team!):
+Sidequest can be considered a continuation of Laravel; where it stops, this layer on top of Laravel 5 takes things a couple of steps further. While it is currently a "work-in-progress", Sidequest aims to make the following available to the technical co-founder (and the rest of his team!):
 
 1. **A complete user management flow:**
    * Registering a user
