@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use Log;
 use Auth;
+use Artisan;
 use Request;
 use App\Plan;
 use App\Http\Requests;
@@ -58,7 +60,9 @@ class AdminController extends Controller {
   public function getDeveloperZone()
   {
     $title = 'Developer Zone';
-    return view('admin.developer-zone', compact('title'));
+    $logs = file(storage_path() . '/logs/laravel.log');
+    
+    return view('admin.developer-zone', compact('title', 'logs'));
   }
 
 
@@ -127,6 +131,17 @@ class AdminController extends Controller {
 
     return redirect()->back();
 
+  }
+
+  /**
+   * Handles clearing the laravel.log file.
+   *
+   * @return  void
+   */
+  public function getClearLogs()
+  {
+    Artisan::call('clear:logs');
+    return redirect()->back();
   }
 
   /**

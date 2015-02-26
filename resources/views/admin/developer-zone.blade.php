@@ -7,9 +7,7 @@
   {!! Html::panelOpen('<strong>Log</strong>', false) !!}
     {!! Html::panelBodyOpen(false) !!}
       
-      <code>
-        
-      </code>
+      <pre><a href="./clear-logs">Clear</a>@foreach( $logs as $log => $line )<strong>{{ $log }}</strong>: {{ $line }}@endforeach</pre>
 
     {!! Html::panelBodyClose(false) !!}
   {!! Html::panelClose() !!}
