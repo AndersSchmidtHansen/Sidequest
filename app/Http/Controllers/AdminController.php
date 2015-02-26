@@ -84,11 +84,12 @@ class AdminController extends Controller {
 
     $setting->save();
 
-
     /**
-    * Handle uploading meta images such as shortcut icons,
-    * Apple touch images and other assets
-    */
+     * Handle uploading meta images such as shortcut icons,
+     * Apple touch images and other assets.
+     * 
+     * @return void
+     */
     function saveUploadedImages($images = [], $destinationPath)
     {
       foreach ($images as $key => $value) {
@@ -122,27 +123,37 @@ class AdminController extends Controller {
 
   }
 
-  public function getImportSubscriptionPlans()
+  /**
+   * Handles importing Stripe plans into cache.
+   * 
+   * @return void
+   */
+  public function getImportSubscriptionPlans(PlanController $plan)
   {
-    $plan = new PlanController;
-    $plan->importPlans();
+    $plan->importPlansToCache();
     return redirect()->back();
   }
 
-  public function postUpdateCachedPlan($id)
+  /**
+   * Handles updating a cached plan.
+   * 
+   * @return void
+   */
+  public function postUpdateCachedPlan(PlanController $plan, $plan_id = null)
   {
-    $plan = $this->plan->find($id);
-    $plan->description = Request::input('plan_description');
-    $plan->features = Request::input('plan_features');
-    $plan->save();
+    $plan->updateCachedPlan($plan_id);
     return redirect()->back();
   }
 
-  public function postDeleteCachedPlan($id)
+  /**
+   * Handles deleting a cached plan.
+   * 
+   * @return void
+   */
+  public function postDeleteCachedPlan(PlanController $plan, $plan_id = null)
   {
-    $plan = $this->plan->find($id);
-    $plan->delete();
-    return redirect('admin/plans');
+    $plan->deleteCachedPlan($plan_id);
+    return redirect()->back();
   }
   
 }
