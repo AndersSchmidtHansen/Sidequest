@@ -72,7 +72,7 @@ Getting started is straight-forward, especially if you have [Laravel Homestead](
 9. Exit your `ssh` (the Virtual Machine), go to your folder and run `gulp watch`.
 10. You're golden.
 
-11. (Optional): Log in with username `admin` and password `secret` (remember to delete this user or change it when going online!), navigate to `admin/` and play around.
+11. (Optional): Log in with username `admin@sidequest.io` and password `secret` (remember to delete this user or change it when going online!), navigate to `admin/` and play around.
 
 ### How do I get Stripe ready?
 

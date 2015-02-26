@@ -34,8 +34,8 @@ class UserTableSeeder extends Seeder
 		DB::table('users')->delete();
 
 		$data = [
-			'name' 			=> 'Anders Schmidt Hansen',
-			'email' 		=> 'me@andersschmidt.com',
+			'name' 			=> 'Finn Mertens',
+			'email' 		=> 'admin@sidequest.io',
 			'password' 	=> bcrypt('secret'),
 			'admin' 		=> 1
 		];
