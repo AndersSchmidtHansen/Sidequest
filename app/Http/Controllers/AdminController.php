@@ -82,8 +82,7 @@ class AdminController extends Controller {
     ];
 
     $input = Request::except($exceptions);
-    
-    // Handle common settings
+
     foreach($input as $key => $value)
     {
       $setting[$key] = $value;

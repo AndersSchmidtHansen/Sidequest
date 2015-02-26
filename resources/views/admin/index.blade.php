@@ -6,7 +6,7 @@
   
   {!! Form::model($settings, ['url' => 'admin/update-settings', 'files' => true]) !!}
       
-      {!! Html::panelOpen('Application Settings') !!}
+      {!! Html::panelOpen('<strong>Application Settings</strong>') !!}
         {!! Html::panelBodyOpen() !!}
 
               @include('admin.modules.general-settings')
