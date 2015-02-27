@@ -24,6 +24,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
 
 3. **A complete email delivery flow:**
    * A pre-prepared and sane standard for e-mail layouts (using a variation of the HTML5 Email Boilerplate) (✔)
+   * A working integration with [Mandrill](https://mandrill.com/) (✔)
    * more to come...
 
 4. **A complete administrative flow:**
