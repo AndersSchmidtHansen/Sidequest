@@ -77,6 +77,13 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Mandatory Apple Touch Images and Icons are loaded (✔)
    * more to come...
 
+7. **A complete "oh right, those legal pages..." flow**: (⌚)
+   * A basic Privacy Policy page (✔)
+   * A basic Terms of Conditions page (✔)
+   * A cookie policy notice that appears (and disappears) when a guest first visits the site (✔)
+   * Editing of before-mentioned content in the Administration Panel (⌚)
+   * more to come...
+
 ## Installation (Currently only for testing, NOT PRODUCTION!)
 
 Getting started is straight-forward, especially if you have [Laravel Homestead](http://laravel.com/docs/master/homestead) installed. So assuming that you've got it set up, just do the following:
