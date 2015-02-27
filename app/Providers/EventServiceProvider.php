@@ -1,5 +1,8 @@
 <?php namespace App\Providers;
 
+use App\Events\UserSignedUp;
+use App\Handlers\Events\SendWelcomeEmail;
+
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -14,6 +17,11 @@ class EventServiceProvider extends ServiceProvider {
 		'event.name' => [
 			'EventListener',
 		],
+
+		UserSignedUp::class => [
+			SendWelcomeEmail::class,
+		],
+
 	];
 
 	/**

@@ -31,6 +31,8 @@ class AdminController extends Controller {
     $this->middleware('admin');
     $this->settings = ApplicationSetting::findOrFail(1);
     $this->plan = new Plan;
+
+    parent::__construct();
   }
 
   public function getIndex()

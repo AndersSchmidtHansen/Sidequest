@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class SubscriptionController extends Controller {
 
+  public function __construct()
+  {
+    $this->middleware('auth');
+
+    parent::__construct();
+  }
+
   /**
    * Handles subscribing the user to a plan for the first time.
    * 

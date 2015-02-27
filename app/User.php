@@ -1,5 +1,8 @@
 <?php namespace App;
 
+use Event;
+use App\Events\UserSignedUp;
+
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -39,7 +42,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var array
 	 */
 	protected $dates = ['trial_ends_at', 'subscription_ends_at'];
-	
+
 	/**
 	 * Check if the user has admin rights or not.
 	 * 
@@ -54,4 +57,21 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		
 		return false;
 	}
+
+	/**
+	 * Prepare the model for event handlers
+	 * 
+	 * @return void
+	 */
+	public static function boot()
+	{
+		/**
+		 * When a new user is created, fire a relevant event.
+		 * 
+		 */
+		static::created(function($model){
+			event(new UserSignedUp($model->id));
+		});
+	}
+
 }
