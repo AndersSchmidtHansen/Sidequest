@@ -1,8 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use Auth;
-use App\ApplicationSetting;
 use App\Plan;
+use App\ApplicationSetting;
 use Illuminate\Support\Str;
 
 class HomeController extends Controller 
@@ -20,16 +19,6 @@ class HomeController extends Controller
 	*/
 
 	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
-
-	/**
 	 * Show the application dashboard to the user.
 	 *
 	 * @return Response
@@ -37,7 +26,7 @@ class HomeController extends Controller
 	public function getIndex()
 	{
 		$title = 'Dashboard';
-		$user = Auth::user();
+		$user = $this->user;
 		$plans = Plan::all();
 		
 		return view('home.index', compact('title', 'user', 'plans'));

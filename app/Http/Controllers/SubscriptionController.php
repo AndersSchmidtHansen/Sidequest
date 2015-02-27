@@ -1,20 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Auth;
-use Input;
 use Illuminate\Http\Request;
 
 class SubscriptionController extends Controller {
 
-  protected $user;
-
-  public function __construct()
-  {
-    $this->user = Auth::user();
-  }
-  
   /**
    * Handles subscribing the user to a plan for the first time.
    * 

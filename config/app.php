@@ -138,6 +138,7 @@ return [
 		'Illuminate\Html\HtmlServiceProvider',
 		'Laravel\Cashier\CashierServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
+		'Laracasts\Generators\GeneratorsServiceProvider',
 
 		/*
 		 * Application Service Providers...

@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers;
 
 use Log;
-use Auth;
 use Config;
 use Artisan;
 use Request;
@@ -25,14 +24,12 @@ class AdminController extends Controller {
   */
 
   protected $settings;
-  protected $user;
   protected $plan;
 
   public function __construct()
   {
     $this->middleware('admin');
     $this->settings = ApplicationSetting::findOrFail(1);
-    $this->user = Auth::user();
     $this->plan = new Plan;
   }
 
