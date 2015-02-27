@@ -6,55 +6,54 @@ Sidequest was created, and maintained by [Anders Schmidt Hansen](https://github.
 Sidequest can be considered a continuation of Laravel; where it stops, this layer on top of Laravel 5 takes things a couple of steps further. While it is currently a "work-in-progress", Sidequest aims to make the following available to the technical co-founder (and the rest of his team!):
 
 1. **A complete user management flow:**
-   * ![](https://img.shields.io/badge/Registering a new user-%E2%9C%94-green.svg?style=flat-square)
-   * ![](https://img.shields.io/badge/Logging in a user-%E2%9C%94-green.svg?style=flat-square)
-   * ![](https://img.shields.io/badge/Users can receive password reminders-%E2%9C%94-green.svg?style=flat-square)
-   * ![](https://img.shields.io/badge/Differentiating between admin and non admin users-%E2%9C%94-green.svg?style=flat-square)
-   * ![](https://img.shields.io/badge/Newly registered users receive a welcome email-%E2%9C%94-green.svg?style=flat-square)
-   * more to come...
+   * Registering a new user (✔)
+   * Logging in a user (✔)
+   * Sending password reminders to a user (✔)
+   * Differentiating between admin and non-admin users (✔)
+   * Sending newly registered users a welcome email (✔)
+   * more to come... 
 
 2. **A complete Stripe integration flow:**
-   * Signing a user up for a plan
-   * Charging a user's credit card
-   * Sending the user a receipt email
-   * Updating the user's credit card
-   * Swapping plans and upgrading a user's plan
-   * Cancelling a user's subscription
+   * Signing a user up for a plan (✔)
+   * Charging a user's credit card (✔) 
+   * Sending the user a receipt email (×)
+   * Updating the user's credit card (⌚)
+   * Swapping plans and upgrading a user's plan (✔)
+   * Cancelling a user's subscription (✔)
    * more to come...
 
 3. **A complete email delivery flow:**
-   * A pre-prepared and sane standard for e-mail layouts (using a variation of the HTML5 Email Boilerplate)
-   * A 'Thanks for signing up' e-mail, ready to send
+   * A pre-prepared and sane standard for e-mail layouts (using a variation of the HTML5 Email Boilerplate) (✔)
    * more to come...
 
 4. **A complete administrative flow:**
-   * A clean, administrative panel for maintaining the application
-   * A great place to have non-technical founders help out with stuff you as a technical co-founder shouldn't waste your time with
+   * A clean, administrative panel for maintaining the application (✔)
+   * A great place to have non-technical founders help out with stuff you as a technical co-founder shouldn't waste your time with (✔)
    * An application settings area where one can set and change...
-     * Application Name
-     * Shortcut icons & Favicon
-     * Publishable Stripe API key
-     * Google Analytics API key
-     * Google Site Verification Key
-     * Heap Analytics API key
-     * Olark (Customer Support) API key
-     * All images needed for making the site become web app enabled (using Apple Touch Images)
-     * Social Media App IDs for Facebook, Twitter and Google Plus & Play
-     * Company details such as the company logo, address, support e-mail etc.
+     * Application Name (✔)
+     * Shortcut icons & Favicon (✔)
+     * Publishable Stripe API key (✔)
+     * Google Analytics API key (✔)
+     * Google Site Verification Key (✔)
+     * Heap Analytics API key (✔)
+     * Olark (Customer Support) API key (✔)
+     * All images needed for making the site become web app enabled (using Apple Touch Images) (✔)
+     * Social Media App IDs for Facebook, Twitter and Google Plus & Play (✔)
+     * Company details such as the company logo, address, support e-mail etc. (✔)
      * more to come...
 
    * A "Plans" area where you can...
-     * quickly get an overview of your plans (great for your non-technical co-founders!)
-     * import subscription plans from Stripe
-     * cache the plans in your database to quickly and easily display them on your "/pricing" page
-     * add descriptions to plans
-     * add features to plans
-     * delete plans from cache
-     * delete plans from Stripe (which also deletes them from the cache)
+     * quickly get an overview of your plans (great for your non-technical co-founders!) (✔)
+     * import subscription plans from Stripe (✔)
+     * cache the plans in your database to quickly and easily display them on your "/pricing" page (✔)
+     * add descriptions to plans (✔)
+     * add features to plans (✔)
+     * delete plans from cache (✔)
+     * delete plans from Stripe (which also deletes them from the cache) (✔)
      * more to come...
 
    * A "Developer Zone" where you can...
-     * view production mode error logs (and clear the *laravel.log* file too)
+     * view production mode error logs (and clear the *laravel.log* file too) (✔)
      * more to come...
 
 
