@@ -28,7 +28,7 @@ class HomeController extends Controller
 		$title = 'Dashboard';
 		$user = $this->user;
 		$plans = Plan::all();
-		
+	
 		return view('home.index', compact('title', 'user', 'plans'));
 	}
 

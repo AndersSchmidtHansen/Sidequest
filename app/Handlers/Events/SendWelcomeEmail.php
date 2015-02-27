@@ -1,6 +1,6 @@
 <?php namespace App\Handlers\Events;
 
-use Mail;
+use Postman;
 use App\User;
 use App\ApplicationSetting;
 use App\Events\UserSignedUp;
@@ -32,15 +32,13 @@ class SendWelcomeEmail implements ShouldBeQueued {
 	 */
 	public function handle(UserSignedUp $event)
 	{
-		
+
 		$user = User::findOrFail($event->user_id);
 		$settings = $this->settings;
 
-		Mail::queue('emails.welcome', ['user' => $user, 'settings' => $settings], function($message) use ($user, $settings)
-		{
-		    $message->to($user->email, $user->name)->subject('Welcome to ' . $settings->name . '!');
-		});
-				
+		$postman = new Postman;
+		$postman->deliver('emails.welcome', ['user' => $user], $user, 'Welcome to ' . $settings->name . '!');
+		
 	}
 
 }

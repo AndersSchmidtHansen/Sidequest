@@ -200,6 +200,7 @@ return [
 		'Form'			=> 'Illuminate\Html\FormFacade',
 		'Html'			=> 'Illuminate\Html\HtmlFacade',
 		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
+		'Postman'		=> 'App\Services\Postman'
 
 	],
 
