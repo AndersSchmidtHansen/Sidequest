@@ -2,6 +2,7 @@
 
 use Log;
 use Auth;
+use Config;
 use Artisan;
 use Request;
 use App\Plan;

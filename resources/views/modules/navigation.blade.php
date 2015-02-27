@@ -1,7 +1,7 @@
 <nav role="navigation">
 
   @if( Request::is('home', 'home/*') )
-    <a href="/" class="logo">
+    <a href="{{ url('/') }}" class="logo">
       @include('modules.logo')
     </a>
     <strong>{{ Auth::user()->name }} ▾</strong>
@@ -14,7 +14,7 @@
     <a href="#">Support & Docs ▾</a>
 
     @if( Auth::guest() )
-    <a href="#">Sign Up Free</a>
+    <a href="#">Get started</a>
     <a href="#">Sign In</a>
     @elseif( Auth::check() )
     <a href="{{ url('/home') }}">Dashboard</a>

@@ -5,7 +5,8 @@ use App\ApplicationSetting;
 use App\Plan;
 use Illuminate\Support\Str;
 
-class HomeController extends Controller {
+class HomeController extends Controller 
+{
 
 	/*
 	|--------------------------------------------------------------------------

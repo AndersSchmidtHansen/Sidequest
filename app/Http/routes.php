@@ -12,7 +12,7 @@
 */
 
 // Static Pages
-get('/', 'StaticPageController@index');
+get('/', 'WelcomeController@index');
 get('about', 'StaticPageController@about');
 get('pricing', 'StaticPageController@pricing');
 get('contact', 'StaticPageController@contact');
@@ -30,8 +30,14 @@ Route::controllers([
 ]);
 
 // Email Testing Routes
-get('test/email', function(){ return view('emails.layout'); });
-get('test/email/password-reset', function(){ return view('emails.password'); });
+get('test/email', function(){ 
+  return view('emails.layout'); 
+});
+
+get('test/email/password-reset', function(){ 
+  return view('emails.password'); 
+});
+
 get('test/email/new-sign-up', function()  { 
   return view('emails.signup'); 
 });

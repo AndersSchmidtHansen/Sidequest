@@ -1,0 +1,1 @@
+{"version":3,"sources":["admin/admin.coffee"],"names":[],"mappings":"AAAA;AAAA,EAAA,CAAA,CAAE,SAAA,GAAA;WAEA,CAAA,CAAE,eAAF,CAAkB,CAAC,OAAnB,CAAA,EAFA;EAAA,CAAF,CAAA,CAAA;AAAA","file":"admin/admin.js","sourceRoot":"/source/","sourcesContent":["$ ->\n\n  $('[rel=tooltip]').tooltip()"]}

@@ -15,7 +15,7 @@ return [
 	|
 	*/
 
-	'driver' => 'smtp',
+	'driver' => env('MAIL_DRIVER', 'smtp'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
 	|
 	*/
 
-	'port' => 587,
+	'port' => env('MAIL_PORT', 587),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -55,8 +55,8 @@ return [
 	*/
 
 	'from' => [
-		'address' => env('EMAIL_GLOBAL_FROM_ADDRESS'), 
-		'name' 		=> env('EMAIL_GLOBAL_FROM_NAME')
+		'address' => env('MAIL_FROM_ADDRESS', null), 
+		'name' => env('MAIL_FROM_NAME', null)
 	],
 
 	/*
@@ -83,7 +83,7 @@ return [
 	|
 	*/
 
-	'username' => env('EMAIL_SERVER_USERNAME'),
+	'username' => env('MAIL_USERNAME'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -96,7 +96,7 @@ return [
 	|
 	*/
 
-	'password' => env('EMAIL_SERVER_PASSWORD'),
+	'password' => env('MAIL_PASSWORD'),
 
 	/*
 	|--------------------------------------------------------------------------
