@@ -5,7 +5,12 @@ Sidequest was created, and maintained by [Anders Schmidt Hansen](https://github.
 
 Sidequest can be considered a continuation of Laravel; where it stops, this layer on top of Laravel 5 takes things a couple of steps further. While it is currently a "work-in-progress", Sidequest aims to make the following available to the technical co-founder (and the rest of his team!):
 
-1. **A complete user management flow:**
+**Legend:**
+- (⌚) : Working on it / not yet fully complete
+- (✔) : Should work as intended
+- (×) : Not implemented / not working
+
+1. **A complete user management flow: (⌚)**
    * Registering a new user (✔)
    * Logging in a user (✔)
    * Sending password reminders to a user (✔)
@@ -13,21 +18,21 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Sending newly registered users a welcome email (✔)
    * more to come... 
 
-2. **A complete [Stripe](https://stripe.com/) integration flow:**
+2. **A complete [Stripe](https://stripe.com/) integration flow: (⌚)**
    * Signing a user up for a plan (✔)
    * Charging a user's credit card (✔) 
    * Sending the user a receipt email (×)
-   * Updating the user's credit card (⌚)
+   * Updating the user's credit card (×)
    * Swapping plans and upgrading a user's plan (✔)
    * Cancelling a user's subscription (✔)
    * more to come...
 
-3. **A complete email delivery flow:**
+3. **A complete email delivery flow: (⌚)**
    * A pre-prepared and sane standard for e-mail layouts (using a variation of the HTML5 Email Boilerplate) (✔)
    * A working integration with [Mandrill](https://mandrill.com/) (✔)
    * more to come...
 
-4. **A complete administrative flow:**
+4. **A complete administrative flow: (⌚)**
    * A clean, administrative panel for maintaining the application (✔)
    * A great place to have non-technical founders help out with stuff you as a technical co-founder shouldn't waste your time with (✔)
    * An application settings area where one can set and change...
@@ -57,6 +62,19 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
      * view production mode error logs (and clear the *laravel.log* file too) (✔)
      * more to come...
 
+5. **A complete social sharing flow: (⌚)**
+   * Facebook Open Graph meta tags ready (✔)
+   * Twitter Card meta tags ready (✔)
+   * Google Play meta tags ready (✔)
+   * Site description meta tags ready (✔)
+   * Site image meta tags ready (if images have been uploaded) (✔)
+   * more to come...
+
+6. **A complete web app enhanced experience: (⌚)**
+   * `apple-mobile-web-app-capable` and `mobile-web-app-capable` ready (✔)
+   * `app-title` ready and `app-status-bar` is set to be transparent (✔)
+   * Mandatory Apple Touch Images and Icons are loaded (✔)
+   * more to come...
 
 ## Installation (Currently only for testing, NOT PRODUCTION!)
 
