@@ -7,10 +7,10 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
 
 1. **A complete user management flow:**
    * ![](https://img.shields.io/badge/Registering a new user-%E2%9C%94-green.svg?style=flat-square)
-   * Logging in a user
-   * Sending password reminders to a user
-   * Differentiating between admin and non-admin users
-   * Sending newly registered users a welcome email
+   * ![](https://img.shields.io/badge/Logging in a user-%E2%9C%94-green.svg?style=flat-square)
+   * ![](https://img.shields.io/badge/Users can receive password reminders-%E2%9C%94-green.svg?style=flat-square)
+   * ![](https://img.shields.io/badge/Differentiating between admin and non-admin users-%E2%9C%94-green.svg?style=flat-square)
+   * ![](https://img.shields.io/badge/Newly registered users receive a welcome email-%E2%9C%94-green.svg?style=flat-square)
    * more to come...
 
 2. **A complete Stripe integration flow:**
