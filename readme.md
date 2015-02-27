@@ -10,6 +10,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
 - (✔) : Should work as intended
 - (×) : Not implemented / not working
 
+
 1. **A complete user management flow: (⌚)**
    * Registering a new user (✔)
    * Logging in a user (✔)
