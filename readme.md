@@ -13,7 +13,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Sending newly registered users a welcome email (✔)
    * more to come... 
 
-2. **A complete Stripe integration flow:**
+2. **A complete [Stripe](https://stripe.com/) integration flow:**
    * Signing a user up for a plan (✔)
    * Charging a user's credit card (✔) 
    * Sending the user a receipt email (×)
