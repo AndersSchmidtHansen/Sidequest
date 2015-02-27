@@ -8,7 +8,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
 **Legend:**
 - (⌚) = Working on it or not yet fully complete
 - (✔) = Should work as intended
-- (×) = Not implemented or not working
+- (×) = Not implemented or not working as it should (yet)
 
 
 1. **A complete user management flow: (⌚)**
