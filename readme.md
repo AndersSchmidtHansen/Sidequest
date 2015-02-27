@@ -6,10 +6,11 @@ Sidequest was created, and maintained by [Anders Schmidt Hansen](https://github.
 Sidequest can be considered a continuation of Laravel; where it stops, this layer on top of Laravel 5 takes things a couple of steps further. While it is currently a "work-in-progress", Sidequest aims to make the following available to the technical co-founder (and the rest of his team!):
 
 1. **A complete user management flow:**
-   * Registering a user
+   * Registering a new user ![](https://img.shields.io/badge/Status-%E2%9C%94-green.svg)
    * Logging in a user
    * Sending password reminders to a user
    * Differentiating between admin and non-admin users
+   * Sending newly registered users a welcome email
    * more to come...
 
 2. **A complete Stripe integration flow:**
