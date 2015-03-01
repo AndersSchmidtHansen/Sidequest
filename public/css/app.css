@@ -161,6 +161,8 @@ h1:first-of-type, h2:first-of-type {
     z-index: 100; }
   .page--admin label small {
     color: #7a7a7a; }
+  .page--admin .panel-group {
+    margin-bottom: 0; }
 
 .logger {
   min-height: 5rem;

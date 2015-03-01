@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider {
 	   * Share Application Settings throughout the app.
 	   * @var $app_settings
 	   */
-	  $app_settings = ApplicationSetting::firstOrFail();
+	  $app_settings = ApplicationSetting::findOrFail(1);
 	  View::share('app_settings', $app_settings);
 
 	}
