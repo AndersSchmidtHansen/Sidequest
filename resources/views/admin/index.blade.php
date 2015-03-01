@@ -1,9 +1,7 @@
 @extends('admin.layout')
 
 @section('content')
-  
-  <h1>{{ $title }}</h1>
-  
+    
   {!! Form::model($settings, ['url' => 'admin/update-settings', 'files' => true]) !!}
       
       {!! Html::panelOpen('<strong>Application Settings</strong>') !!}

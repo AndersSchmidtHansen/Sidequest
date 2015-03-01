@@ -1,15 +1,19 @@
 <?php namespace App\Http\Controllers;
 
 use Input;
+use Postman;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SubscriptionController extends Controller {
 
+  protected $postman;
+
   public function __construct()
   {
     $this->middleware('auth');
+    $this->postman = new Postman;
 
     parent::__construct();
   }
@@ -27,6 +31,8 @@ class SubscriptionController extends Controller {
       'email' => $this->user->email,
       'description' => $this->user->name
     ]);
+
+    $this->postman->deliver('emails.subscriptions.receipt', ['user' => $this->user], $this->user, 'Your subscription receipt');
 
     return redirect()->back()->with('notice', 'You are now subscribed!');
   }

@@ -111,46 +111,56 @@ h1:first-of-type, h2:first-of-type {
   margin-top: 0;
   margin-bottom: 1.618rem; }
 
-.page--admin aside {
-  background-color: #fff;
-  box-shadow: 3px 0 9px 0 rgba(0, 0, 0, 0.1);
-  height: 100%;
-  position: fixed;
-  width: 5.5rem; }
-  .page--admin aside nav {
-    height: 100%; }
-.page--admin main {
-  padding: 3rem 3rem 3rem 8.5rem;
-  width: 100%; }
-.page--admin .nav__item {
-  color: #393939;
-  display: block;
-  padding: 1.5rem 0;
-  transition: background-color .28s ease-in-out; }
-  .page--admin .nav__item.active {
-    background-color: #f45c0a;
-    color: #fcfcfc; }
-  .page--admin .nav__item:hover {
-    background-color: #f8f8ff;
-    color: #535353; }
-  .page--admin .nav__item.bottom {
-    bottom: 0;
+.page--admin {
+  background-color: #ebeef0; }
+  .page--admin aside {
+    background-color: #31373d;
+    box-shadow: 3px 0 9px 0 rgba(0, 0, 0, 0.1);
+    height: 100%;
+    position: fixed;
+    width: 5.5rem; }
+    .page--admin aside nav {
+      height: 100%; }
+  .page--admin header {
+    position: fixed;
+    top: 0;
     left: 0;
-    max-width: 100%;
-    position: absolute;
     right: 0;
-    z-index: 200; }
-.page--admin .full-height {
-  height: 100vh;
-  max-height: 100vh; }
-.page--admin .tooltip .tooltip-inner {
-  max-width: 250px;
-  min-width: 75px;
-  padding: .8rem 1rem; }
-.page--admin .top-layer {
-  z-index: 100; }
-.page--admin label small {
-  color: #7a7a7a; }
+    height: 5rem;
+    padding: 1.2rem 3rem 0rem 8.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 gainsboro; }
+    .page--admin header .header-title {
+      font-size: 2.4rem;
+      color: #4b4b4b; }
+  .page--admin main {
+    padding: 8rem 3rem 3rem 8.5rem;
+    width: 100%; }
+  .page--admin .nav__item {
+    color: #ebeef0;
+    display: block;
+    padding: 1.5rem 0;
+    transition: background-color .28s ease-in-out; }
+    .page--admin .nav__item.active, .page--admin .nav__item:hover {
+      background-color: #262a2f; }
+    .page--admin .nav__item.bottom {
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      position: absolute;
+      right: 0;
+      z-index: 200; }
+  .page--admin .full-height {
+    height: 100vh;
+    max-height: 100vh; }
+  .page--admin .tooltip .tooltip-inner {
+    max-width: 250px;
+    min-width: 75px;
+    padding: .8rem 1rem; }
+  .page--admin .top-layer {
+    z-index: 100; }
+  .page--admin label small {
+    color: #7a7a7a; }
 
 .logger {
   min-height: 5rem;

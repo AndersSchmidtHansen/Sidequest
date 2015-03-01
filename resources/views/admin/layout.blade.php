@@ -19,6 +19,10 @@
         </nav>
       </aside>
 
+      <header>
+        <h1 class="header-title">{{ $title }}</h1>
+      </header>
+
       <main>
       @yield('content')
       </main>

@@ -2164,16 +2164,16 @@
         },
         {
             "name": "laracasts/generators",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
-                "reference": "582022b7734a6e11b7b7ce6240795a96d571a101"
+                "reference": "d83213c6aacc925996457dddfb5f00988df57d17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/582022b7734a6e11b7b7ce6240795a96d571a101",
-                "reference": "582022b7734a6e11b7b7ce6240795a96d571a101",
+                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/d83213c6aacc925996457dddfb5f00988df57d17",
+                "reference": "d83213c6aacc925996457dddfb5f00988df57d17",
                 "shasum": ""
             },
             "require": {
@@ -2204,7 +2204,7 @@
                 "generators",
                 "laravel"
             ],
-            "time": "2015-02-26 20:42:41"
+            "time": "2015-02-28 14:43:38"
         },
         {
             "name": "phpdocumentor/reflection-docblock",

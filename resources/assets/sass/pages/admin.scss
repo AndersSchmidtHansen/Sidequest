@@ -5,6 +5,10 @@
  |
  */
 
+// Config
+$primary-color: #ebeef0;
+$secondary-color: #31373d;
+
 // Typography
 h1,
 h2 {
@@ -16,9 +20,10 @@ h2 {
 
 // Content
 .page--admin {
+  background-color: $primary-color;
 
   aside {
-    background-color: #fff;
+    background-color: $secondary-color;
     box-shadow: 3px 0 9px 0 rgba(0, 0, 0, .10);
     height: 100%;
     position: fixed;
@@ -29,26 +34,37 @@ h2 {
     }
   }
 
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    padding: 1.2rem 3rem 0rem 8.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 gainsboro;
+
+    .header-title {
+      font-size: 2.4rem;
+      color: #4b4b4b;
+    }
+  }
+
   main {
-    padding: 3rem 3rem 3rem 8.5rem;
+    padding: 8rem 3rem 3rem 8.5rem;
     width: 100%;
   }
 
 
   .nav__item {
-    color: #393939;
+    color: $primary-color;
     display: block;
     padding: 1.5rem 0;
     transition: background-color .28s ease-in-out;
 
-    &.active {
-      background-color: #f45c0a;
-      color: #fcfcfc;
-    }
-
+    &.active,
     &:hover {
-      background-color: #f8f8ff;
-      color: lighten(#393939, 10%);
+      background-color: darken($secondary-color, 5%);
     }
 
     &.bottom {
