@@ -79,9 +79,9 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
 
 7. **A complete "oh right, those legal pages..." flow**: (⌚)
    * A basic Privacy Policy page (✔)
-   * A basic Terms of Conditions page (✔)
+   * A basic Terms of Use page (✔)
    * A cookie policy notice that appears (and disappears) when a guest first visits the site (✔)
-   * Editing of before-mentioned content in the Administration Panel (⌚)
+   * Editing of Privacy Policy and Terms of Use content in the Administration Panel (✔)
    * more to come...
 
 ## Installation (Currently only for testing, NOT PRODUCTION!)
