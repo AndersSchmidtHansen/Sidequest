@@ -18,4 +18,16 @@
       {!! Html::panelClose() !!}
   {!! Form::close() !!}
 
+  {!! Form::model($settings, ['url' => 'admin/update-settings']) !!}
+      
+      {!! Html::panelOpen('<strong>Legal Mumbo Jumbo</strong>') !!}
+        {!! Html::panelBodyOpen() !!}
+
+          @include('admin.modules.terms-of-use')
+          @include('admin.modules.privacy-policy')
+              
+        {!! Html::panelBodyClose() !!}
+      {!! Html::panelClose() !!}
+  {!! Form::close() !!}  
+
 @endsection

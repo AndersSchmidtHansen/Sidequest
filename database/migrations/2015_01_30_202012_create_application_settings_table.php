@@ -44,6 +44,10 @@ class CreateApplicationSettingsTable extends Migration {
 			$table->string('payment_widget_button_text');
 			$table->string('payment_widget_purchase_button_text');
 			
+			// Legal Mumbo Jumbo
+			$table->text('legal_terms_of_use');
+			$table->text('legal_privacy_policy');
+
 			$table->timestamps();
 
 		});
