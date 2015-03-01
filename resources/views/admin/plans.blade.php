@@ -2,8 +2,6 @@
 
 @section('content')
 
-  <h1>{{ $title }}</h1>
-
   @if( count($plans) )
     <p>Changed something else than description and features? <a href="./import-subscription-plans">Re-import now</a>.</p>
     <div class="row">

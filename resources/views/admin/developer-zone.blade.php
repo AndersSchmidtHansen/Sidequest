@@ -2,8 +2,6 @@
 
 @section('content')
 
-  <h1>{{ $title }}</h1>
-
   {!! Html::panelOpen('<strong>Log</strong>', false) !!}
     {!! Html::panelBodyOpen(false) !!}
       <p><a href="./clear-logs">Clear log</a></p>
