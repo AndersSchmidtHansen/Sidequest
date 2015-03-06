@@ -145,6 +145,8 @@ h1:first-of-type, h2:first-of-type {
     transition: background-color .28s ease-in-out; }
     .page--admin .nav__item.active, .page--admin .nav__item:hover {
       background-color: #262a2f; }
+    .page--admin .nav__item.active {
+      box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15), inset 0 -1px 3px 0 rgba(0, 0, 0, 0.15); }
     .page--admin .nav__item.bottom {
       bottom: 0;
       left: 0;
