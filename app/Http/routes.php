@@ -18,6 +18,7 @@ get('pricing', 'StaticPageController@pricing');
 get('contact', 'StaticPageController@contact');
 get('terms-of-use', 'StaticPageController@termsOfUse');
 get('privacy-policy', 'StaticPageController@privacyPolicy');
+get('components', 'StaticPageController@components');
 
 // Authentication & Dynamic Page Management
 Route::controllers([

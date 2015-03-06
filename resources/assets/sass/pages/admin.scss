@@ -5,9 +5,14 @@
  |
  */
 
+// Imports 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+
 // Config
 $primary-color: #ebeef0;
 $secondary-color: #31373d;
+$heavy--box-shadow: 0 5px 5px 0 rgba(0,0,0,.05);
+$primary-font-stack: 'Roboto', sans-serif;
 
 // Typography
 h1,
@@ -21,6 +26,7 @@ h2 {
 // Content
 .page--admin {
   background-color: $primary-color;
+  font-family: $primary-font-stack;
 
   aside {
     background-color: $secondary-color;
@@ -34,19 +40,19 @@ h2 {
     }
   }
 
-  header {
+  .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 5rem;
-    padding: 1.2rem 3rem 0rem 8.5rem;
-    background-color: #fff;
-    box-shadow: 0 1px 0 0 gainsboro;
+    padding: 1.5rem 3rem 0rem 8.5rem;
+    background-color: $secondary-color;
+    box-shadow: $heavy--box-shadow;
 
-    .header-title {
-      font-size: 2.4rem;
-      color: #4b4b4b;
+    .header__title {
+      font-size: 2rem;
+      color: #fff;
     }
   }
 

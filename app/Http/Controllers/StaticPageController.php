@@ -61,5 +61,11 @@ class StaticPageController extends Controller {
     $title = 'Privacy Policy';
     return view('pages.privacy-policy', compact('title'));
   }
+
+  public function components()
+  {
+    $title = 'Components';
+    return view('pages.components', compact('title'));
+  }
   
 }

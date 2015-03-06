@@ -19,8 +19,8 @@
         </nav>
       </aside>
 
-      <header>
-        <h1 class="header-title">{{ $title }}</h1>
+      <header class="header">
+        <h1 class="header__title">{{ $title }}</h1>
       </header>
 
       <main>

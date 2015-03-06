@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 /*
  |--------------------------------------------------------------------------
  | Main Application Styles Manifest
@@ -112,7 +113,8 @@ h1:first-of-type, h2:first-of-type {
   margin-bottom: 1.618rem; }
 
 .page--admin {
-  background-color: #ebeef0; }
+  background-color: #ebeef0;
+  font-family: 'Roboto', sans-serif; }
   .page--admin aside {
     background-color: #31373d;
     box-shadow: 3px 0 9px 0 rgba(0, 0, 0, 0.1);
@@ -121,18 +123,18 @@ h1:first-of-type, h2:first-of-type {
     width: 5.5rem; }
     .page--admin aside nav {
       height: 100%; }
-  .page--admin header {
+  .page--admin .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 5rem;
-    padding: 1.2rem 3rem 0rem 8.5rem;
-    background-color: #fff;
-    box-shadow: 0 1px 0 0 gainsboro; }
-    .page--admin header .header-title {
-      font-size: 2.4rem;
-      color: #4b4b4b; }
+    padding: 1.5rem 3rem 0rem 8.5rem;
+    background-color: #31373d;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05); }
+    .page--admin .header .header__title {
+      font-size: 2rem;
+      color: #fff; }
   .page--admin main {
     padding: 8rem 3rem 3rem 8.5rem;
     width: 100%; }

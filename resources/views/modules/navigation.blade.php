@@ -15,7 +15,7 @@
 
     @if( Auth::guest() )
     <a href="#">Get started</a>
-    <a href="#">Sign In</a>
+    <a href="{{ url('/auth/login') }}">Sign In</a>
     @elseif( Auth::check() )
     <a href="{{ url('/home') }}">Dashboard</a>
     <a href="{{ url('/auth/logout') }}">Sign Out</a>
