@@ -5,6 +5,7 @@ use Postman;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Stripe, Stripe_Error;
 
 class SubscriptionController extends Controller {
 
@@ -12,6 +13,8 @@ class SubscriptionController extends Controller {
 
   public function __construct()
   {
+    Stripe::setApiVersion(config('services.stripe.api_version'));
+
     $this->middleware('auth');
     $this->postman = new Postman;
 

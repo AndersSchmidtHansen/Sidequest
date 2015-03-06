@@ -31,6 +31,7 @@ return [
 
 	'stripe' => [
 		'model'  => 'User',
+		'api_version' => '2015-02-10',
 		'secret' => env('SERVICE_STRIPE_SECRET_API_KEY', ''),
 	],
 

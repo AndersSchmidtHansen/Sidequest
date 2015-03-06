@@ -5,6 +5,7 @@ use Config;
 use Artisan;
 use Request;
 use App\Plan;
+use App\User;
 use App\Http\Requests;
 use App\ApplicationSetting;
 use App\Http\Controllers\Controller;
@@ -47,7 +48,8 @@ class AdminController extends Controller {
   public function getUsers()
   {
     $title = 'Users';
-    return view('admin.users', compact('title'));
+    $users = User::all();
+    return view('admin.users', compact('title', 'users'));
   }
 
   public function getPlans()
