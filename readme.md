@@ -23,7 +23,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Signing a user up for a plan (✔)
    * Charging a user's credit card (✔) 
    * Sending the user a receipt email (×)
-   * Updating the user's credit card (×)
+   * Updating the user's credit card (✔)
    * Swapping plans and upgrading a user's plan (✔)
    * Cancelling a user's subscription (✔)
    * more to come...
