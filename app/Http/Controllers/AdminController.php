@@ -48,8 +48,11 @@ class AdminController extends Controller {
   public function getUsers()
   {
     $title = 'Users';
-    $users = User::all();
-    return view('admin.users', compact('title', 'users'));
+    $users = User::where('admin', '=', 0)->paginate(15);
+    $total_users = User::where('admin', '=', 0)->count();
+    $total_active_subscribers = User::where('stripe_active', '=', 1)->count();
+    $total_non_subscribers = $total_users - $total_active_subscribers;
+    return view('admin.users', compact('title', 'users', 'total_users', 'total_active_subscribers', 'total_non_subscribers'));
   }
 
   public function getPlans()

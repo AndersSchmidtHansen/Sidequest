@@ -11,7 +11,7 @@
 // Config
 $primary-color: #ebeef0;
 $secondary-color: #31373d;
-$heavy--box-shadow: 0 5px 5px 0 rgba(0,0,0,.05);
+$heavy--box-shadow: 0 5px 5px 0 rgba(0,0,0,.15);
 $primary-font-stack: 'Roboto', sans-serif;
 
 // Typography
@@ -49,6 +49,7 @@ h2 {
     padding: 1.5rem 3rem 0rem 8.5rem;
     background-color: $secondary-color;
     box-shadow: $heavy--box-shadow;
+    z-index: 1;
 
     .header__title {
       font-size: 2rem;
@@ -135,6 +136,12 @@ h2 {
 
   }
 
+}
+
+.text {
+  &--faded {
+    opacity: .5;
+  }
 }
 
 // Helpers

@@ -41,6 +41,7 @@ class UserTableSeeder extends Seeder
 		];
 
 		User::create($data);
+
 	}
 }
 

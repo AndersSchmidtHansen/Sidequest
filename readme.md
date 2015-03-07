@@ -61,6 +61,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
 
    * A "Developer Zone" where you can...
      * view production mode error logs (and clear the *laravel.log* file too) (✔)
+     * have an integration to an external log management service, such as "Loggly" (×)
      * more to come...
 
 5. **A complete social sharing flow: (⌚)**

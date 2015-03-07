@@ -6,6 +6,7 @@
     </a>
     <strong>{{ Auth::user()->name }} ▾</strong>
     <a href="#">Help</a>
+    <a href="{{ url('/auth/logout') }}">Sign Out</a>
   @else
     <a href="/" class="logo">
       @include('modules.logo')

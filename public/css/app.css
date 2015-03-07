@@ -131,7 +131,8 @@ h1:first-of-type, h2:first-of-type {
     height: 5rem;
     padding: 1.5rem 3rem 0rem 8.5rem;
     background-color: #31373d;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05); }
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+    z-index: 1; }
     .page--admin .header .header__title {
       font-size: 2rem;
       color: #fff; }
@@ -175,6 +176,9 @@ h1:first-of-type, h2:first-of-type {
     margin-bottom: 1.618rem; }
   .logger .logger__line-number:after {
     content: ":"; }
+
+.text--faded {
+  opacity: .5; }
 
 .scrollable {
   overflow-y: auto; }
