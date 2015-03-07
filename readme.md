@@ -49,6 +49,10 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
      * Company details such as the company logo, address, support e-mail etc. (✔)
      * more to come...
 
+   * A "Users" area where you can...
+     * Get a paginated list of all your users (✔)
+     * View basic statistics of how many users you've got, how many that are plan subscribers and how many that are not (✔)
+
    * A "Plans" area where you can...
      * quickly get an overview of your plans (great for your non-technical co-founders!) (✔)
      * import subscription plans from Stripe (✔)
