@@ -35,4 +35,9 @@ return [
 		'secret' => env('SERVICE_STRIPE_SECRET_API_KEY', ''),
 	],
 
+	'bugsnag' => [
+	  'key' => '',
+	  'notify_release_stages' => ['production', 'staging']
+	]
+
 ];

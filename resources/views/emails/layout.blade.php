@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width" />
 
-      <title>{{ $email_title or $app_settings->name }}</title>
+      <title>{{ $email_title or '' }}</title>
 
       <style type="text/css">
 
@@ -99,7 +99,7 @@
                   <br />
 
                   <div>All the best,</div>
-                  <div style="font-weight:bold;">The {{ $app_settings->name }} Team</div>
+                  <div style="font-weight:bold;">The {{ $app_settings->name or '' }} Team</div>
               </td>
             </tr>
           </table> {{-- END CONTAINER TABLE --}}
@@ -113,13 +113,13 @@
 
                   <img src="{{ $email_footer_image_source or 'http://placehold.it/50x50/34495e/ffffff&text=Sidequest' }}" width="50" height="50" style="display:block; margin-bottom:25px;" />
                   
-                  <div style="font-weight:bold;">{{ $app_settings->name }}</div>
-                  @if ( $app_settings->company_address )
-                  <div>{{ $app_settings->company_address }}</div>
+                  <div style="font-weight:bold;">{{ $app_settings->name or '' }}</div>
+                  @if ( isset($app_settings->company_address) )
+                  <div>{{ $app_settings->company_address or '' }}</div>
                   @endif
                   <br />
-                  @if ( $app_settings->customer_support_email )
-                  <div>Need any help? Contact us at <a href="mailto:{{ $app_settings->customer_support_email }}" style="color:#3498db;">{{ $app_settings->customer_support_email }}</a></div>
+                  @if ( isset($app_settings->customer_support_email) )
+                  <div>Need any help? Contact us at <a href="mailto:{{ $app_settings->customer_support_email or '' }}" style="color:#3498db;">{{ $app_settings->customer_support_email or '' }}</a></div>
                   @endif
 
               </td>
@@ -132,10 +132,10 @@
 
     <div itemscope itemtype="http://schema.org/EmailMessage">
       <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="{{ $app_settings->name }}"/>
+        <meta itemprop="name" content="{{ $app_settings->name or '' }}"/>
         <link itemprop="url" href="{{ URL::full() }}"/>
-        @if( $app_settings->social_google_plus_id )
-        <link itemprop="url/googlePlus" href="https://plus.google.com/{{ $app_settings->social_google_plus_id }}" />
+        @if( isset($app_settings->social_google_plus_id) )
+        <link itemprop="url/googlePlus" href="https://plus.google.com/{{ $app_settings->social_google_plus_id or '' }}" />
         @endif
       </div>
     </div>

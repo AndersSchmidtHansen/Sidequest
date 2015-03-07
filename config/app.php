@@ -139,6 +139,7 @@ return [
 		'Laravel\Cashier\CashierServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
 		'Laracasts\Generators\GeneratorsServiceProvider',
+		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -200,6 +201,7 @@ return [
 		'Form'			=> 'Illuminate\Html\FormFacade',
 		'Html'			=> 'Illuminate\Html\HtmlFacade',
 		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
+		'Bugsnag' 	=> 'Bugsnag\BugsnagLaravel\BugsnagFacade',
 		'Postman'		=> 'App\Services\Postman'
 
 	],

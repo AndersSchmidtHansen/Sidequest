@@ -30,9 +30,7 @@ class AdminController extends Controller {
   public function __construct()
   {
     $this->middleware('admin');
-    $this->settings = ApplicationSetting::findOrFail(1);
     $this->plan = new Plan;
-
     parent::__construct();
   }
 

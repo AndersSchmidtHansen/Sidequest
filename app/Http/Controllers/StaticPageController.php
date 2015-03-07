@@ -3,7 +3,6 @@
 use App\Plan;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\ApplicationSetting;
 use Illuminate\Http\Request;
 use Illuminate\Cookie\CookieJar;
 
@@ -23,6 +22,7 @@ class StaticPageController extends Controller {
   public function __construct(CookieJar $cookieJar, Request $request)
   {
     $cookieJar->queue(cookie('hasSeenCookieNotice', true));
+    parent::__construct();
   }
  
   public function index()

@@ -12,13 +12,13 @@
 */
 
 // Static Pages
-get('/', 'WelcomeController@index');
-get('about', 'StaticPageController@about');
-get('pricing', 'StaticPageController@pricing');
-get('contact', 'StaticPageController@contact');
-get('terms-of-use', 'StaticPageController@termsOfUse');
+get('/',              'WelcomeController@index');
+get('about',          'StaticPageController@about');
+get('pricing',        'StaticPageController@pricing');
+get('contact',        'StaticPageController@contact');
+get('terms-of-use',   'StaticPageController@termsOfUse');
 get('privacy-policy', 'StaticPageController@privacyPolicy');
-get('components', 'StaticPageController@components');
+get('components',     'StaticPageController@components');
 
 // Authentication & Dynamic Page Management
 Route::controllers([

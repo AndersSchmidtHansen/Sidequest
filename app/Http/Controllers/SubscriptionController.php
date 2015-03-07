@@ -17,7 +17,6 @@ class SubscriptionController extends Controller {
 
     $this->middleware('auth');
     $this->postman = new Postman;
-
     parent::__construct();
   }
 
