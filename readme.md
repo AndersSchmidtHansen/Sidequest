@@ -25,7 +25,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Sending the user a receipt email (×)
    * Updating the user's credit card (✔)
    * Swapping plans and upgrading a user's plan (✔)
-   * Cancelling a user's subscription (✔)
+   * Cancelling a user's subscription, leaving them on a grace period (✔)
    * more to come...
 
 3. **A complete email delivery flow: (⌚)**
