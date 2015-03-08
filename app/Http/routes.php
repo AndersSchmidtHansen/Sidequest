@@ -25,7 +25,7 @@ Route::controllers([
 	'auth'         => 'Auth\AuthController',
 	'password'     => 'Auth\PasswordController',
   'admin'        => 'AdminController',
-  'user'         => 'UserController',
+  'home/your'    => 'UserController',
   'subscription' => 'SubscriptionController',
   'home'         => 'HomeController'
 ]);

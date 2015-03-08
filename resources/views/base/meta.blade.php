@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<meta name="csrf-token" content="{{ Session::token() }}"> 
 
 @if( isset($app_settings) and $app_settings->service_google_site_verification_key )
 <meta name="google-site-verification" content="{{ $app_settings->service_google_site_verification_key }}" />

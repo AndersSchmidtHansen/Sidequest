@@ -5,6 +5,7 @@
       @include('modules.logo')
     </a>
     <strong>{{ Auth::user()->name }} ▾</strong>
+    <a href="{{ url('/home/your/settings') }}">Settings</a>
     <a href="#">Help</a>
     <a href="{{ url('/auth/logout') }}">Sign Out</a>
   @else
