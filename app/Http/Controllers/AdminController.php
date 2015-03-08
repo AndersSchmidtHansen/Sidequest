@@ -64,7 +64,6 @@ class AdminController extends Controller {
   {
     $title = 'Developer Zone';
     $logs = file(storage_path() . '/logs/laravel.log');
-    
     return view('admin.developer-zone', compact('title', 'logs'));
   }
 
