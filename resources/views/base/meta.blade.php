@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 
-@if( $app_settings->service_google_site_verification_key )
+@if( isset($app_settings) and $app_settings->service_google_site_verification_key )
 <meta name="google-site-verification" content="{{ $app_settings->service_google_site_verification_key }}" />
 @endif
 
@@ -19,19 +19,19 @@
 --}}
 
 {{-- App IDs --}}
-@if( $app_settings->social_facebook_app_id )
+@if( isset($app_settings) and $app_settings->social_facebook_app_id )
 <meta property="fb:app_id" content="{{ $app_settings->social_facebook_app_id }}">
 @endif
-@if( $app_settings->social_twitter_app_id )
+@if( isset($app_settings) and $app_settings->social_twitter_app_id )
 <meta name="twitter:app:id:iphone" content="{{ $app_settings->social_twitter_app_id }}">
 <meta name="twitter:app:id:ipad" content="{{ $app_settings->social_twitter_app_id }}">
 @endif
-@if( $app_settings->social_google_play_app_id )
+@if( isset($app_settings) and $app_settings->social_google_play_app_id )
 <meta name="twitter:app:id:googleplay" content="{{ $app_settings->social_google_play_app_id }}">
 @endif
 
 {{-- App Name --}}
-@if( $app_settings->name )
+@if( isset($app_settings) and $app_settings->name )
 <meta property="og:site_name" content="{{ $app_settings->name }}">
 <meta name="twitter:app:name:iphone" content="{{ $app_settings->name }}">
 <meta name="twitter:app:name:ipad" content="{{ $app_settings->name }}">
@@ -43,8 +43,10 @@
 <meta name="twitter:url" content="{{ URL::full() }}">
 
 {{-- Current Page Title --}}
+@if( isset($app_settings) and $app_settings->name )
 <meta property="og:title" content="{{ $title or $app_settings->name }} @if(isset($title))— {{ $app_settings->name }} @endif">
 <meta name="twitter:title" content="{{ $title or $app_settings->name }} @if(isset($title))— {{ $app_settings->name }} @endif">
+@endif
 
 {{-- Current Page Description --}}
 @if( isset($description) )
@@ -63,7 +65,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:widgets:csp" content="on">
-<meta name="twitter:site" content="{{ $app_settings->social_twitter_handle }}">
+<meta name="twitter:site" content="{{ $app_settings->social_twitter_handle or '' }}">
 
 
 {{-- 
@@ -83,7 +85,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="{{ $app_settings->name }}">
+<meta name="apple-mobile-web-app-title" content="{{ $app_settings->name or '' }}">
 
 {{-- Apple Touch Images for iOS --}}
 <link rel="apple-touch-icon" 

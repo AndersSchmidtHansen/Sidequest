@@ -1,4 +1,4 @@
-@if( $app_settings->service_olark_api_key )
+@if( isset($app_settings) and $app_settings->service_olark_api_key )
 <!-- Olark Customer Support -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){

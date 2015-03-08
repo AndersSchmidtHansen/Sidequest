@@ -1,4 +1,4 @@
-@if( $app_settings->service_google_analytics_api_key )
+@if( isset($app_settings) and $app_settings->service_google_analytics_api_key )
 <!-- Google Analytics -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
