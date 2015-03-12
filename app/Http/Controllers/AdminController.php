@@ -71,7 +71,7 @@ class AdminController extends Controller {
   public function postUpdateSettings()
   {
 
-    $setting = $this->settings;
+    $setting = ApplicationSetting::find(1);
 
     $exceptions = [
       '_token',
