@@ -1,3 +1,8 @@
+# All contributions welcome
+Sidequest was built with an "everyone's invited" mindset, so please don't hesitate to submit pull requests, write issues and comments. Everyone is welcome to chip in and hack along. Let's work together as friends on making a helpful project. :)
+
+Also, @tshafer has forked Sidequest into an [alternative direction](https://github.com/tshafer/platform), so don't forget to check out what he's doing too. Might also be helpful!
+
 Sidequest - The (WIP) SaaS-in-a-box
 ===================================
 
