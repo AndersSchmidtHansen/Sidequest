@@ -138,6 +138,10 @@ To access the **BrowserSync UI**, go to [http://localhost:3001/](http://localhos
 
 **Remember:** Don't run `gulp watch` through a `homestead ssh` connection. That won't work. Just go to your local folder and run the command from there.
 
+### Jeffrey Way's Laravel 5 Generators
+
+I'm a huge fan of Way's generators for Laravel 5 and Sidequest would be lacking something if these were not also included right from the get-go. Read more about the "[Laravel 5 Generators - Extended here]"(https://github.com/laracasts/Laravel-5-Generators-Extended).
+
 ### [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar)
 
 Sidequest includes [Barry vd. Heuvel's](https://github.com/barryvdh) "Laravel Debugbar" to make debugging Laravel a bit easier. You can read more about it at the project's own page.
