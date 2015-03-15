@@ -1,5 +1,5 @@
 {!! Html::accordionOpen('General Settings', false, 'wrench') !!}
-{!! Form::textField('name', 'Application Name', null, ['class' => 'form-control']) !!}
+{!! Form::textField('name', 'Application Name', $settings->name, ['class' => 'form-control']) !!}
 
 <div class="form-group">
 {!! Form::label('application_shortcut_icon_196x196','Shortcut Icon .PNG (196x196)') !!}

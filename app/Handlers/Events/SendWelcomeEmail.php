@@ -21,7 +21,7 @@ class SendWelcomeEmail implements ShouldBeQueued {
 	 */
 	public function __construct()
 	{
-		$this->settings = ApplicationSetting::findOrFail(1);
+		$this->settings = ApplicationSetting::find(1);
 	}
 
 	/**
@@ -35,7 +35,7 @@ class SendWelcomeEmail implements ShouldBeQueued {
 
 		$user = User::findOrFail($event->user_id);
 		$settings = $this->settings;
-
+		
 		$postman = new Postman;
 		$postman->deliver('emails.welcome', ['user' => $user], $user, 'Welcome to ' . $settings->name . '!');
 		

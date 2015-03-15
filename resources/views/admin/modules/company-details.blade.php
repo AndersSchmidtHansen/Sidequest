@@ -6,7 +6,7 @@
   {!! Form::file('company_logo', ['accept' => 'image/svg']) !!}
   </div>
 
-  {!! Form::textField('company_address', 'Company Address', null, ['class' => 'form-control']) !!}
-  {!! Form::textField('customer_support_email', 'Customer Support Email', null, ['class' => 'form-control']) !!}
+  {!! Form::textField('company_address', 'Company Address', $settings->company_address, ['class' => 'form-control']) !!}
+  {!! Form::textField('customer_support_email', 'Customer Support Email', $settings->customer_support_email, ['class' => 'form-control']) !!}
 
 {!! Html::accordionClose() !!}

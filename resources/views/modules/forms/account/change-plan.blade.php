@@ -19,6 +19,6 @@
   </label>
 
   <div class="form-group">
-    {!! Form::submit('Upgrade') !!}
+    {!! Form::submit('Change plan') !!}
   </div>
 {!! Form::close() !!}

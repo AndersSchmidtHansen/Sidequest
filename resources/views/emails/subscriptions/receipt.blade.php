@@ -1,7 +1,7 @@
 @extends('emails.layout')
 
 @section('title')
-{{ $email_title or 'You have subscribed to a plan!' }}
+You have subscribed to a plan!
 @endsection
 
 @section('content')

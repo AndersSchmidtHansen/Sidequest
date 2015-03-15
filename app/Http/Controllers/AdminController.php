@@ -42,8 +42,8 @@ class AdminController extends Controller {
   {
     $title = 'Settings';
     $user = $this->user;
-    $settings = $this->settings;
-
+    $settings = $this->app_settings;
+    
     return view('admin.index', compact('title', 'settings', 'user'));
   }
 

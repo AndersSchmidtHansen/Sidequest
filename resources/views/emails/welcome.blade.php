@@ -1,7 +1,7 @@
 @extends('emails.layout')
 
 @section('title')
-{{ $email_title or 'Thanks for signing up!'}}
+Thanks for signing up!
 @endsection
 
 @section('content')

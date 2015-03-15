@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width" />
 
-      <title>{{ $email_title or '' }}</title>
+      <title>@yield('title')</title>
 
       <style type="text/css">
 
@@ -79,7 +79,7 @@
 
     <body>
 
-    <span style="display:none !important; color:#ffffff; font-size:1px; line-height:0; overflow:hidden; mso-hide:all;">{{ $email_preheader or 'Preheader text here' }}</span>
+    <span style="display:none !important; color:#ffffff; font-size:1px; line-height:0; overflow:hidden; mso-hide:all;">@yield('title')</span>
 
     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="wrappertable" style="table-layout:fixed;">
       <tr>
