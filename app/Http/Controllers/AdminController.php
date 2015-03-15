@@ -34,6 +34,10 @@ class AdminController extends Controller {
     parent::__construct();
   }
 
+
+  /**
+   * @return \Illuminate\View\View
+   */
   public function getIndex()
   {
     $title = 'Settings';
@@ -43,6 +47,10 @@ class AdminController extends Controller {
     return view('admin.index', compact('title', 'settings', 'user'));
   }
 
+
+  /**
+   * @return \Illuminate\View\View
+   */
   public function getUsers()
   {
     $title = 'Users';
@@ -53,6 +61,10 @@ class AdminController extends Controller {
     return view('admin.users', compact('title', 'users', 'total_users', 'total_active_subscribers', 'total_non_subscribers'));
   }
 
+
+  /**
+   * @return \Illuminate\View\View
+   */
   public function getPlans()
   {
     $title = 'Plans';
@@ -60,6 +72,10 @@ class AdminController extends Controller {
     return view('admin.plans', compact('title', 'plans'));
   }
 
+
+  /**
+   * @return \Illuminate\View\View
+   */
   public function getDeveloperZone()
   {
     $title = 'Developer Zone';
@@ -96,11 +112,13 @@ class AdminController extends Controller {
 
     $setting->save();
 
+
     /**
      * Handle uploading meta images such as shortcut icons,
      * Apple touch images and other assets.
-     * 
-     * @return void
+     *
+     * @param array $images
+     * @param       $destinationPath
      */
     function saveUploadedImages($images = [], $destinationPath)
     {
@@ -148,8 +166,8 @@ class AdminController extends Controller {
 
   /**
    * Handles importing Stripe plans into cache.
-   * 
-   * @return void
+   *
+   * @param \App\Http\Controllers\PlanController $plan
    */
   public function getImportSubscriptionPlans(PlanController $plan)
   {
@@ -157,10 +175,14 @@ class AdminController extends Controller {
     return redirect()->back();
   }
 
+
   /**
    * Handles updating a cached plan.
-   * 
-   * @return void
+   *
+   * @param \App\Http\Controllers\PlanController $plan
+   * @param null                                 $plan_id
+   *
+   * @return \Illuminate\Http\RedirectResponse
    */
   public function postUpdateCachedPlan(PlanController $plan, $plan_id = null)
   {
@@ -170,8 +192,11 @@ class AdminController extends Controller {
 
   /**
    * Handles deleting a cached plan.
-   * 
-   * @return void
+   *
+   * @param \App\Http\Controllers\PlanController $plan
+   * @param null                                 $plan_id
+   *
+   * @return \Illuminate\Http\RedirectResponse
    */
   public function postDeleteCachedPlan(PlanController $plan, $plan_id = null)
   {
@@ -181,8 +206,11 @@ class AdminController extends Controller {
 
   /**
    * Handles deleting a plan on Stripe.
-   * 
-   * @return void
+   *
+   * @param \App\Http\Controllers\PlanController $plan
+   * @param null                                 $plan_stripe_id
+   *
+   * @return \Illuminate\Http\RedirectResponse
    */
   public function postDeleteStripePlan(PlanController $plan, $plan_stripe_id = null)
   {
