@@ -98,6 +98,10 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Editing of Privacy Policy and Terms of Use content in the Administration Panel (✔)
    * more to come...
 
+8. **Maybe some startup relevant widgets:**
+   * A weekly growth calculator
+   * A cash burn rate calculator
+
 ## Installation (Currently only for testing, NOT PRODUCTION!)
 
 Getting started is straight-forward, especially if you have [Laravel Homestead](http://laravel.com/docs/master/homestead) installed. So assuming that you've got it set up, just do the following:
