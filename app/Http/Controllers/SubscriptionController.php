@@ -34,9 +34,7 @@ class SubscriptionController extends Controller {
       'description' => $this->user->name
     ]);
 
-    $this->postman->deliver('emails.subscriptions.receipt', ['user' => $this->user], $this->user, 'Your subscription receipt');
-
-    return redirect()->back()->with('notice', 'You are now subscribed!');
+    return redirect()->back()->with('notice', 'You are now subscribed! A receipt has been sent to your email');
   }
 
   /**
