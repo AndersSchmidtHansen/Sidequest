@@ -12,7 +12,7 @@
 */
 
 // Static Pages
-get('/',              'WelcomeController@index');
+get('/',              'StaticPageController@index');
 get('about',          'StaticPageController@about');
 get('pricing',        'StaticPageController@pricing');
 get('contact',        'StaticPageController@contact');

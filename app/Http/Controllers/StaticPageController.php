@@ -21,7 +21,7 @@ class StaticPageController extends Controller {
 
   public function __construct(CookieJar $cookieJar, Request $request)
   {
-    $cookieJar->queue(cookie('hasSeenCookieNotice', true));
+    $cookieJar->queue(cookie('hasSeenCookieNotice', 157680000));
     parent::__construct();
   }
  
