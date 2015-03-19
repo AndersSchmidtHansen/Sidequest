@@ -100,9 +100,14 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Editing of Privacy Policy and Terms of Use content in the Administration Panel (✔)
    * more to come...
 
-8. **Maybe some startup relevant widgets:**
-   * A weekly growth calculator
-   * A cash burn rate calculator
+8. **Relevant analytics for SaaS startups:** (⌚)
+   * An integration with the awesome [Keen.io](https://keen.io/), enabling... (✔)
+   * an Analytics page on the Admin Dashboard with... (✔)
+   * a "Weekly Growth rate" metric based on the weekly growth in revenue since the past week (✔)
+   * a "New Paying Customers" graph over the last 2 months (✔)
+   * a "Revenue per month" graph (✔)
+   * a "Today's revenue" metric (✔)
+   * a "Last 30 days' revenue" metric (✔)
 
 ## Installation (Currently only for testing, NOT PRODUCTION!)
 
