@@ -55,6 +55,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
      * Google Site Verification Key (✔)
      * Heap Analytics API key (✔)
      * Olark (Customer Support) API key (✔)
+     * Keen.io API keys (✔)
      * All images needed for making the site become web app enabled (using Apple Touch Images) (✔)
      * Social Media App IDs for Facebook, Twitter and Google Plus & Play (✔)
      * Company details such as the company logo, address, support e-mail etc. (✔)
