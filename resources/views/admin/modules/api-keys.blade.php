@@ -5,5 +5,7 @@
   {!! Form::textField('service_google_site_verification_key', 'Google Site Verification Key', $settings->service_google_site_verification_key, ['class' => 'form-control']) !!}
   {!! Form::textField('service_heap_analytics_api_key', 'Heap Analytics API Key', $settings->service_heap_analytics_api_key, ['class' => 'form-control']) !!}
   {!! Form::textField('service_olark_api_key', 'Olark API Key', $settings->service_olark_api_key, ['class' => 'form-control']) !!}
+  {!! Form::textField('service_keen_io_project_id', 'Keen.io Project ID', $settings->service_keen_io_project_id, ['class' => 'form-control']) !!}
+  {!! Form::textField('service_keen_io_read_key', 'Keen.io Read Key', $settings->service_keen_io_read_key, ['class' => 'form-control']) !!}
 
 {!! Html::accordionClose() !!}

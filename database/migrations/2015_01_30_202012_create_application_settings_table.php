@@ -30,6 +30,8 @@ class CreateApplicationSettingsTable extends Migration {
 			$table->string('service_heap_analytics_api_key');
 			$table->string('service_olark_api_key');
 			$table->string('service_bugsnag_api_key');
+			$table->string('service_keen_io_project_id');
+			$table->string('service_keen_io_read_key');
 
 			// Social Media Connections
 			$table->string('social_facebook_app_id');

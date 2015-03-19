@@ -83,6 +83,16 @@ class AdminController extends Controller {
     return view('admin.developer-zone', compact('title', 'logs'));
   }
 
+  /**
+   * @return \Illuminate\View\View
+   */
+  public function getAnalytics()
+  {
+    $title = 'Analytics';
+    $settings = $this->app_settings;
+    return view('admin.analytics', compact('title', 'settings'));
+  }  
+
 
   public function postUpdateSettings()
   {
