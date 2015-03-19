@@ -103,7 +103,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
 
 8. **Relevant analytics for SaaS startups:** (⌚)
    * An integration with the awesome [Keen.io](https://keen.io/), enabling... (✔)
-   * an Analytics page on the Admin Dashboard with... (✔)
+   * an Analytics page on the Admin Dashboard with... (✔, see [the setup guide here](https://github.com/AndersSchmidtHansen/LaravelSidequest/wiki/Setting-up-Keen.io-(with-Stripe)))
    * a "Weekly Growth rate" metric based on the weekly growth in revenue since the past week (✔)
    * a "New Paying Customers" graph over the last 2 months (✔)
    * a "Revenue per month" graph (✔)
