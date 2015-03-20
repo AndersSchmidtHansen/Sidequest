@@ -20,21 +20,28 @@
       'admin.modules.analytics.widget', [
       'widget' => 'todays-revenue',
       'title' => 'Todays\' revenue',
-      'col' => '4'
+      'col' => '3'
     ])
     @include(
       'admin.modules.analytics.widget', [
       'widget' => 'last-months-revenue',
       'title' => 'Last 30 days\' revenue',
-      'col' => '4'
+      'col' => '3'
     ])
 
     @include(
       'admin.modules.analytics.widget', [
       'widget' => 'growth-rate',
       'title' => 'Weekly Revenue Growth rate',
-      'col' => '4'
+      'col' => '3'
     ])
+
+    @include(
+      'admin.modules.analytics.widget', [
+      'widget' => 'total-customers',
+      'title' => 'Total Subscribed Customers',
+      'col' => '3'
+    ])    
   </div>
 
 @endsection

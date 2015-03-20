@@ -1,4 +1,4 @@
-<div class="col-sm-{{ $col or '6' }}">
+<div class="col-md-{{ $col or '6' }}">
 {!! Html::panelOpen("<strong>".$title."</strong>", false) !!}
   {!! Html::panelBodyOpen(false) !!}
   @if(isset($widget))

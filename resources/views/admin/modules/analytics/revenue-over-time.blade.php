@@ -24,7 +24,7 @@ Keen.ready(function(){
 
     var monthlyRevChart = new Keen.Dataviz()
       .el(document.getElementById('keen_chart_revenue_over_time'))
-      .chartType('areachart')   
+      .chartType('areachart')
       .chartOptions({
         chartArea: {
           left: "8%",

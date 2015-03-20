@@ -38,6 +38,7 @@ Keen.ready(function(){
       .chartOptions({
           suffix: '%'
       })
+      .colors(['#8e44ad'])
       .prepare(); // start spinner
 
     // ===============================

@@ -27,6 +27,7 @@ Keen.ready(function(){
       .chartOptions({
           prefix: '$'
       })
+      .colors(["#3498db"])
       .prepare(); // start spinner
 
     // ===============================
@@ -37,7 +38,7 @@ Keen.ready(function(){
         // if (err) throw(err);
         revMetric
           .parseRawData({ result: Math.round(response.result/100) })
-          .title('earned')
+          .title('last 30 days')
           .render();
     });
 });

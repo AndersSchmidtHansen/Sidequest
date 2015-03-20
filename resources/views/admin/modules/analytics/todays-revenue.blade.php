@@ -27,6 +27,7 @@ Keen.ready(function(){
       .chartOptions({
           prefix: '$'
       })
+      .colors(["#27ae60"])
       .prepare(); // start spinner
 
     // ===============================
