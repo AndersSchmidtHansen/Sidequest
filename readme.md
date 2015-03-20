@@ -109,6 +109,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * a "Revenue per month" graph (✔)
    * a "Today's revenue" metric (✔)
    * a "Last 30 days' revenue" metric (✔)
+   * a "Total paying customers" metric (✔)
 
 ## Installation (Currently only for testing, NOT PRODUCTION!)
 
