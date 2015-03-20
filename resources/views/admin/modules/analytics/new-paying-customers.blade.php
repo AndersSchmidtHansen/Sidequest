@@ -19,21 +19,38 @@ Keen.ready(function(){
         }]
     });
 
+    var newPayingCustomersChart = new Keen.Dataviz()
+      .el(document.getElementById('keen_chart_new_paying_customers'))
+      .chartType('areachart')
+      .chartOptions({
+        chartArea: {
+          left: "8%",
+          top: "2%",
+          height: "88%",
+          bottom: "0%",
+          width: "92%"
+        },  
+        hAxis: {
+          slantedText: true,
+          slantedTextAngle: 45
+        },
+        legend: { position: 'none' },
+      })
+      .height(450)
+      .prepare(); // start spinner
+
     // ===============================
-    // Run query and draw the result
+    // Run query and handle the result
     // ===============================
 
-    client.draw(countNewPayingCustomers, document.getElementById('keen_chart_new_paying_customers'), {
-        chartType: 'areachart',
-        title: 'New Paying Customers (' + timeframe + ')',
-        chartOptions: {
-            hAxis: {
-              slantedText: true,
-              slantedTextAngle: 45
-            },
-            legend: { position: 'none' }
-        },
-        height: 450
+    client.run(countNewPayingCustomers, function(err, response){
+        
+        if (err) throw(err);
+        
+        newPayingCustomersChart
+          .parseRequest(this)
+          .title(false)
+          .render();
     });
 
 });  

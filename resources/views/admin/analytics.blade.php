@@ -6,12 +6,12 @@
     @include(
       'admin.modules.analytics.widget', [
       'widget' => 'new-paying-customers', 
-      'title' => 'New Paying Customers'
+      'title' => 'New Paying Customers (Last 2 months)'
     ])  
     @include(
       'admin.modules.analytics.widget', [
       'widget' => 'revenue-over-time',
-      'title' => 'Revenue over time in Dollars'
+      'title' => 'Revenue over time (Last 2 months)'
     ])
   </div>
 
@@ -32,7 +32,7 @@
     @include(
       'admin.modules.analytics.widget', [
       'widget' => 'growth-rate',
-      'title' => 'Weekly Growth rate',
+      'title' => 'Weekly Revenue Growth rate',
       'col' => '4'
     ])
   </div>

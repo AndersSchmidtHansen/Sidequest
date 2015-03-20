@@ -8,7 +8,7 @@ Keen.ready(function(){
 
     var revSeries = new Keen.Query('sum', {
         eventCollection: 'Stripe_Events',
-        timeframe: 'this_6_months',
+        timeframe: 'this_2_months',
         targetProperty: 'data.object.amount',
         interval: 'monthly',
         filters: [{
@@ -24,8 +24,15 @@ Keen.ready(function(){
 
     var monthlyRevChart = new Keen.Dataviz()
       .el(document.getElementById('keen_chart_revenue_over_time'))
-      .chartType('areachart')
+      .chartType('areachart')   
       .chartOptions({
+        chartArea: {
+          left: "8%",
+          top: "2%",
+          height: "88%",
+          bottom: "0%",
+          width: "92%"
+        },
         hAxis: {
           slantedText: true,
           slantedTextAngle: 45
@@ -45,7 +52,7 @@ Keen.ready(function(){
         
         monthlyRevChart
           .parseRequest(this)
-          .title('Revenue per month in Dollars')
+          .title(false)
           .call(function(){
               this.dataset.updateColumn(1, function(value, index, column){
                 return value / 100;
