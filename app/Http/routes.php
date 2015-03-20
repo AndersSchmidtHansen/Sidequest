@@ -40,5 +40,5 @@ get('test/email/password-reset', function(){
 });
 
 get('test/email/new-sign-up', function()  { 
-  return view('emails.signup'); 
+  return view('emails.welcome')->with('app_settings', App\ApplicationSetting::find(1)); 
 });

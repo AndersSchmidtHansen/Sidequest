@@ -90,9 +90,9 @@
             <tr>
               <td align="center" valign="top" id="containercell">
 
-                  <img src="{{ $email_header_image_source or 'http://placehold.it/600x200/34495e/ffffff&text=Sidequest' }}" width="600" height="200" style="display:block; margin-bottom:45px;" />
-
-                  <h1 style="color:#404040 !important;">@yield('title')</h1>
+                  <div style="width:600px; height:200px; background-color:#34495e;">
+                     <h1 style="color:#fff !important; margin: 0; margin-top:90px; display:inline-block;">@yield('title')</h1>
+                  </div>
 
                   @yield('content')
 
@@ -111,7 +111,7 @@
 
                   <br /><br />
 
-                  <img src="{{ $email_footer_image_source or 'http://placehold.it/50x50/34495e/ffffff&text=Sidequest' }}" width="50" height="50" style="display:block; margin-bottom:25px;" />
+                  <img src="{{ $app_settings->apple_touch_icon_152x152 or 'http://placehold.it/152x152/34495e/ffffff&text=Sidequest' }}" width="152" height="152" style="display:block; margin-bottom:25px;" />
                   
                   <div style="font-weight:bold;">{{ $app_settings->name or '' }}</div>
                   @if ( isset($app_settings->company_address) )
