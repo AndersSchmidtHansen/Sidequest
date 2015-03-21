@@ -148,7 +148,7 @@ Getting started is straight-forward, especially if you have [Laravel Homestead](
 8. Hit the green "Save" button.
 9. Open "Company Details" and fill out your address and support email. If you already have a logo, great, upload it and hit "Save" again.
 10. Open your local `.env` file and fill out your "Stripe Secret Key", your "MAIL" details (from Mandrill) and "Mandrill Secret Key", and finally your "Bugsnag Secret Key".
-X. The development version of your project should now be ready. You can fill out further details if you want, but this should be enough to get you started.
+11. The development version of your project should now be ready. You can fill out further details if you want, but this should be enough to get you started.
 
 
 ### Steps after you're ready to push a live version
@@ -156,19 +156,20 @@ X. The development version of your project should now be ready. You can fill out
 1. Get a [Google Analytics account](http://www.google.com/analytics/).
 2. Get an [Olark account](https://www.olark.com/signup/create_new_account/).
 
+**Important:** Test, test, test and test again. Check everything.
+
 
 ### Getting your project online (the dreaded production version)
-Details are on the way...
+To be honest, the simplest way to get this kind of Laravel project online is to host it on [Laravel Forge](https://forge.laravel.com/). This isn't an ad or anything, honestly, but unless you're very comfortable at setting a Laravel project up on a server, I'd strongly recommend just following [this series of setup guides](https://laracasts.com/series/server-management-with-forge) and get things out there.
 
-
-
-
-
+**Important:** Test, test, test and test again. Check everything (again).
 
 
 ### How do I get Stripe ready?
 
 Grab your `secret` and `publishable` API keys from your Stripe Dashboard. Add the `secret` one to your `.env` file and the `publishable` goes into the administrative panel. After hitting `Save` (and you have a subscription plan defined, of course), you should be good to go.
+
+**Important:** You need SSL for your site when charging customers. It also sends a serious signal to your potential customers that your site is secure. [Laravel Forge](https://forge.laravel.com/) makes this super easy, so if you just want to get going, then use that solution.
 
 
 ## For Developers
