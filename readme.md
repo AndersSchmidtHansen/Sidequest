@@ -126,7 +126,42 @@ Getting started is straight-forward, especially if you have [Laravel Homestead](
 9. Exit your `ssh` (the Virtual Machine), go to your folder and run `gulp watch`.
 10. You're golden.
 
-11. (Optional): Log in with username `admin@sidequest.io` and password `secret` (remember to delete this user or change it when going online!), navigate to `admin/` and play around.
+
+### Steps before configuring your project
+
+1. Get a [Stripe account](https://dashboard.stripe.com/register).
+2. Get a [Heap Analytics account](https://heapanalytics.com/). *Remember to grab the development-version key, by clicking on the "click here" link at the install page*
+3. Get a [Keen.io account](https://keen.io/signup). **Note:** I recommend creating a new project called **development** to keep this separate from **production** when testing.
+
+
+### Configuring the development version of your project
+
+1. Log in with username `admin@sidequest.io` and password `secret` (remember to delete this user or change it when going online!), navigate to [http://localhost:3000/admin](http://localhost:3000/admin).
+2. Now it's time to fill out your **Application Settings**...
+3. Click on "General Settings" and change the **Application Name** to whatever your project is named.
+4. IF you already have Shortcut Icons and Favicons ready in the needed dimensions, upload those. Otherwise, continue.
+5. Click on "API Keys" and start out by adding your **Publishable Stripe API key**. [How do I find this?](https://support.stripe.com/questions/where-do-i-find-my-api-keys)
+6. Next, add your development-version **Heap Analytics API key**.
+7. Finally, add your **Keen.io Project ID** and **Keen.io Read Key**. [How do I find this?](https://keen.io/docs/getting-started-guide/#project-setup)
+8. Hit the green "Save" button.
+9. Open "Company Details" and fill out your address and support email. If you already have a logo, great, upload it and hit "Save" again.
+10. The development version of your project should now be ready. You can fill out further details if you want, but this should be enough to get you started.
+
+
+### Steps after you're ready to push a live version
+
+1. Get a [Google Analytics account](http://www.google.com/analytics/).
+2. Get an [Olark account](https://www.olark.com/signup/create_new_account/).
+
+
+### Getting your project online (the dreaded production version)
+Details are on the way...
+
+
+
+
+
+
 
 ### How do I get Stripe ready?
 
