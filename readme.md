@@ -6,9 +6,7 @@ Also, @tshafer has forked Sidequest into an [alternative direction](https://gith
 Sidequest - The (WIP) SaaS-in-a-box
 ===================================
 
-[![Latest Version](https://img.shields.io/github/release/AndersSchmidtHansen/LaravelSidequest.svg?style=flat-square)](https://github.com/AndersSchmidtHansen/LaravelSidequest/releases)
-
-[![Is it ready?](https://img.shields.io/badge/ready%20for%20production-nope%20nope%20nope-red.svg?style=flat-square)](https://img.shields.io/badge/ready%20for%20production-nope%20nope%20nope-red.svg?style=flat-square)
+[![Latest Version](https://img.shields.io/github/release/AndersSchmidtHansen/LaravelSidequest.svg?style=flat-square)](https://github.com/AndersSchmidtHansen/LaravelSidequest/releases) [![Is it ready?](https://img.shields.io/badge/ready%20for%20production-nope%20nope%20nope-red.svg?style=flat-square)](https://img.shields.io/badge/ready%20for%20production-nope%20nope%20nope-red.svg?style=flat-square)
 
 Sidequest was created, and maintained by [Anders Schmidt Hansen](https://github.com/AndersSchmidtHansen), in order to provide the fastest way possible from an idea to a functional SaaS (Software as a Service) product. It focuses on more than just the developer, it focuses on the entire team behind the SaaS. It aims to become *"what I wish I had available when I first started [Pitcherific](http://pitcherific.com/)"*, and a little bit more.
 
