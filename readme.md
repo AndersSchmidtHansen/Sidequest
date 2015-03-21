@@ -165,9 +165,11 @@ To be honest, the simplest way to get this kind of Laravel project online is to 
 **Important:** Test, test, test and test again. Check everything (again).
 
 
-### How do I get Stripe ready?
+### How do I get Stripe ready for live transactions?
 
-Grab your `secret` and `publishable` API keys from your Stripe Dashboard. Add the `secret` one to your `.env` file and the `publishable` goes into the administrative panel. After hitting `Save` (and you have a subscription plan defined, of course), you should be good to go.
+After being authenticated by Stripe, grab your live `secret` and `publishable` API keys from your Stripe Dashboard. Add the `secret` one to your `.env` file and the `publishable` goes into the administrative panel. After hitting `Save` (and you have a subscription plan defined, of course), you should be good to go.
+
+Note, this is not necessary in development.
 
 **Important:** You need SSL for your site when charging customers. It also sends a serious signal to your potential customers that your site is secure. [Laravel Forge](https://forge.laravel.com/) makes this super easy, so if you just want to get going, then use that solution.
 
