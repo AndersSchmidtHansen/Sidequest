@@ -3,16 +3,20 @@
 <div class="form-group">
   <label>
     <div>Card Number</div>
-    <input type="text" size="20" data-stripe="number" />
+    <input type="text" class="cc-num" type="tel" data-stripe="number" class="cc-num" placeholder="•••• •••• •••• ••••" autocompletetype="cc-number" required="required" />
   </label>
 </div>
 
 <div class="form-group">
   <label>
     <div>CVC</div>
-    <input type="text" size="4" data-stripe="cvc" />
+    <input type="tel" class="cc-cvc" placeholder="CVC" size="4" autocompletetype="cc-cvc" required="required" />
   </label>
 </div>
 
-{!! Form::selectMonth('exp_month', null, ['data-stripe' => 'exp-month']) !!}
-{!! Form::selectRange('exp_year', 2015, 2030, null, ['data-stripe' => 'exp-year']) !!}
+<div class="form-group">
+  <label>
+    <div>Expires</div>
+    <input type="tel" class="cc-exp" placeholder="MM / YY" size="5" autocompletetype="cc-exp" data-stripe="exp-month" data-stripe="exp-year" required="required" />
+  </label>
+</div>

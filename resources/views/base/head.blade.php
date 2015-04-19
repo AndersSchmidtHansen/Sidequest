@@ -5,6 +5,7 @@
   @include('base.meta')
 
   <link href="/css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('/css/vendor.css') }}">
 
   <!-- Fonts -->
   

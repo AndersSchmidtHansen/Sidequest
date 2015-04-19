@@ -1,0 +1,9 @@
+{
+  "name": "Sidequest",
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "jquery.payment": "~1.2.3"
+  }
+}

@@ -1,6 +1,15 @@
-<script src="https://js.stripe.com/v2/"></script> 
+<script src="https://js.stripe.com/v2/"></script>
 <script>
   $(document).ready(function(){
+
+    var enableJqueryPayments = function() {
+      $('input.cc-num').payment('formatCardNumber');
+      $('input.cc-exp').payment('formatCardExpiry');
+      $('input.cc-cvc').payment('formatCardCVC');
+    };
+
+    enableJqueryPayments();
+
     var form              = $('[role="payment-form"]'),
         stripeApiKey      = form.attr('data-gateway-publishable-key'),
         submit            = form.find('[role="submit"]'),
