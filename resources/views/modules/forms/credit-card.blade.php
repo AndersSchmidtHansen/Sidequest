@@ -10,7 +10,7 @@
       data-stripe="number"
       placeholder="•••• •••• •••• ••••" 
       autocomplete="cc-number" 
-      required="required" 
+      required 
     />
 
   </label>
@@ -26,7 +26,7 @@
       placeholder="CVC" 
       size="4" 
       autocomplete="off" 
-      required="required" 
+      required
     />
 
   </label>
@@ -37,12 +37,12 @@
     <div>Expires</div>
     
     <input 
-      type="tel" 
+      type="text" 
       class="cc-exp" 
       placeholder="MM/YY" 
       size="6" 
       autocomplete="cc-exp" 
-      required="required" 
+      required
     />
   
   </label>
