@@ -4,8 +4,8 @@
 
     var enableJqueryPayments = function() {
       $('input.cc-num').payment('formatCardNumber');
-      $('input.cc-exp').payment('formatCardExpiry');
       $('input.cc-cvc').payment('formatCardCVC');
+      $('input.cc-exp').payment('formatCardExpiry');
     };
 
     enableJqueryPayments();

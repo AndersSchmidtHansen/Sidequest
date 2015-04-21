@@ -3,20 +3,47 @@
 <div class="form-group">
   <label>
     <div>Card Number</div>
-    <input type="text" class="cc-num" type="tel" data-stripe="number" class="cc-num" placeholder="•••• •••• •••• ••••" autocompletetype="cc-number" required="required" />
+    
+    <input 
+      type="tel"
+      class="cc-num" 
+      data-stripe="number"
+      placeholder="•••• •••• •••• ••••" 
+      autocomplete="cc-number" 
+      required="required" 
+    />
+
   </label>
 </div>
 
 <div class="form-group">
   <label>
     <div>CVC</div>
-    <input type="tel" class="cc-cvc" placeholder="CVC" size="4" autocompletetype="cc-cvc" required="required" />
+    
+    <input 
+      type="tel" 
+      class="cc-cvc" 
+      placeholder="CVC" 
+      size="4" 
+      autocomplete="off" 
+      required="required" 
+    />
+
   </label>
 </div>
 
 <div class="form-group">
   <label>
     <div>Expires</div>
-    <input type="tel" class="cc-exp" placeholder="MM / YY" size="5" autocompletetype="cc-exp" data-stripe="exp-month" data-stripe="exp-year" required="required" />
+    
+    <input 
+      type="tel" 
+      class="cc-exp" 
+      placeholder="MM/YY" 
+      size="6" 
+      autocomplete="cc-exp" 
+      required="required" 
+    />
+  
   </label>
 </div>
