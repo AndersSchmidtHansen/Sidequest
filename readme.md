@@ -8,7 +8,7 @@ Sidequest - The (WIP) SaaS-in-a-box
 
 [![Latest Version](https://img.shields.io/github/release/AndersSchmidtHansen/LaravelSidequest.svg?style=flat-square)](https://github.com/AndersSchmidtHansen/LaravelSidequest/releases) [![Is it ready?](https://img.shields.io/badge/ready%20for%20production-nope%20nope%20nope-red.svg?style=flat-square)](https://img.shields.io/badge/ready%20for%20production-nope%20nope%20nope-red.svg?style=flat-square)
 
-Sidequest was created, and maintained by [Anders Schmidt Hansen](https://github.com/AndersSchmidtHansen), in order to provide the fastest way possible from an idea to a functional SaaS (Software as a Service) product. It focuses on more than just the developer, it focuses on the entire team behind the SaaS. It aims to become *"what I wish I had available when I first started [Pitcherific](http://pitcherific.com/)"*, and a little bit more.
+Sidequest was created, and actively maintained by [Anders Schmidt Hansen](https://github.com/AndersSchmidtHansen), in order to provide the fastest way possible from an idea to a functional SaaS (Software as a Service) product. It focuses on more than just the developer, it focuses on the entire team behind the SaaS. It aims to become *"what I wish I had available when I first started [Pitcherific](http://pitcherific.com/)"*, and a little bit more.
 
 **Too long, don't wanna read? Watch a (somewhat random) video tour of a few parts of Sidequest. No Audio!**
 
@@ -17,6 +17,7 @@ Sidequest was created, and maintained by [Anders Schmidt Hansen](https://github.
 Sidequest can be considered a continuation of Laravel; where it stops, this layer on top of Laravel 5 takes things a couple of steps further. While it is currently a "work-in-progress", Sidequest aims to make the following available to the technical co-founder (and the rest of his team!):
 
 **Legend:**
+- :bulb: = Proposed idea or enhancement
 - (⌚) = Working on it or not yet fully complete
 - (✔) = Should work as intended
 - (×) = Not implemented or not working as it should (yet)
@@ -28,6 +29,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Sending password reminders to a user (✔)
    * Differentiating between admin and non-admin users (✔)
    * Sending newly registered users a welcome email (✔)
+   * Easily turn some users into testers (can access paywalled features freely for a limited time period) (⌚)
    * more to come... 
 
 2. **A complete [Stripe](https://stripe.com/) integration flow: (⌚)**
@@ -37,11 +39,15 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Updating the user's credit card (✔)
    * Swapping plans and upgrading a user's plan (✔)
    * Cancelling a user's subscription, leaving them on a grace period (✔)
+   * Simple coupon / discount / "get a month free" handling (:bulb:)
    * more to come...
 
-3. **A complete email delivery flow: (⌚)**
+
+3. **A complete email delivery & communications flow: (⌚)**
    * A pre-prepared and sane standard for e-mail layouts (using a variation of the HTML5 Email Boilerplate) (✔)
    * A working integration with [Mandrill](https://mandrill.com/) (✔)
+   * Sending mass/bulk email updates, probably with a Mailchimp integration of some sort (:bulb:)
+   * Easily update users on new feature changes (will either be with transactional emails or push notifications) (:bulb:)
    * more to come...
 
 4. **A complete administrative flow: (⌚)**
