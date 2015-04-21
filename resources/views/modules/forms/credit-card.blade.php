@@ -9,7 +9,7 @@
       class="cc-num" 
       data-stripe="number"
       placeholder="•••• •••• •••• ••••" 
-      autocomplete="cc-number" 
+      autocomplete="cc-number"
       required 
     />
 
@@ -22,10 +22,11 @@
     
     <input 
       type="tel" 
-      class="cc-cvc" 
-      placeholder="CVC" 
+      class="cc-cvc"
+      data-stripe="cvc" 
+      placeholder="•••" 
       size="4" 
-      autocomplete="off" 
+      autocomplete="off"
       required
     />
 
@@ -37,13 +38,16 @@
     <div>Expires</div>
     
     <input 
-      type="text" 
+      type="tel" 
       class="cc-exp" 
-      placeholder="MM/YY" 
+      placeholder="•• / ••" 
       size="6" 
       autocomplete="cc-exp" 
       required
     />
+
+    <input type="hidden" data-stripe="exp-month">
+    <input type="hidden" data-stripe="exp-year">    
   
   </label>
 </div>

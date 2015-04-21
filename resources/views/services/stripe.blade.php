@@ -19,6 +19,11 @@
 
     $(submit).on('click', function(e){
       e.preventDefault();
+
+      cardExpiryData    = $('input.cc-exp').payment('cardExpiryVal')
+      $('input[data-stripe="exp-month"]').val(parseInt(cardExpiryData.month));
+      $('input[data-stripe="exp-year"]').val(parseInt(cardExpiryData.year));
+
       $(this)
       .attr('disabled', 'disabled')
       .text('Just one moment...');
