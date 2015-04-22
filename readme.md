@@ -129,8 +129,9 @@ Getting started is straight-forward, especially if you have [Laravel Homestead](
 6. Run `php artisan migrate`.
 7. Run `php artisan db:seed`.
 8. Run `php artisan key:generate`.
-9. Exit your `ssh` (the Virtual Machine), go to your folder and run `gulp watch`.
-10. You're golden.
+9. Rename `.env.example` to `.env`.
+10. Exit your `ssh` (the Virtual Machine), go to your folder and run `gulp watch`.
+11. You're golden.
 
 
 ### Steps before configuring your project (holy moses...)
