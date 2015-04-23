@@ -5,7 +5,13 @@
 
 	<body>
 		@include('modules.warnings.cookies')
-		@include('modules.navigation')
+		
+		<header class="navbar navbar-static-top" role="banner">
+			<div class="container-fluid">
+				@include('modules.navigation')
+			</div>
+		</header>
+		
 		@include('modules.sessions.notice')
 
 		@yield('content')

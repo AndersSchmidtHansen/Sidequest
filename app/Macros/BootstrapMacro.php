@@ -49,6 +49,16 @@
     return $html;
   });
 
+  $html->macro('navbarItem', function($route = '', $title = '', $class = '', $active = 'active')
+  {
+    $html = "";
+    $active = Request::is(ltrim($route, '/')) ? $active : '';
+
+    $html .= "<li class='$active'><a href='" . url($route) . "' class='$class'>$title</a><li>";
+
+    return $html;
+  });
+
   /*
   |--------------------------------------------------------------------------
   | Panel
