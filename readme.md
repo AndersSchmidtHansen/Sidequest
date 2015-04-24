@@ -196,6 +196,9 @@ To access the **BrowserSync UI**, go to [http://localhost:3001/](http://localhos
 
 **Remember:** Don't run `gulp watch` through a `homestead ssh` connection. That won't work. Just go to your local folder and run the command from there.
 
+### Twitter Bootstrap
+Both the consumer-facing and admin-facing ends of Sidequest includes Twitter Bootstrap. Some things have already been set up. Mind you, given the fact that it's an impossible task to pre-prepare a front-end and at the same time not force the developer / front-ender to strip all of it away, I've decided to pre-style a few modules and add more utility classes instead of supplying a ready-to-use front-end (which doesn't really exist in reality).
+
 ### Jeffrey Way's Laravel 5 Generators
 
 I'm a huge fan of Way's generators for Laravel 5 and Sidequest would be lacking something if these were not also included right from the get-go. Read more about the "[Laravel 5 Generators - Extended here]"(https://github.com/laracasts/Laravel-5-Generators-Extended).
