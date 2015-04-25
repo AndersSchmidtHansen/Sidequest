@@ -30,6 +30,30 @@ Route::controllers([
   'home'         => 'HomeController'
 ]);
 
+
+// Public API Layer
+Route::group(array('prefix' => 'api/v1'), function()
+{
+
+  get('greeting', function()
+  {
+    return "Hello from V1 API";
+  });
+  
+});
+
+// Private API Layer
+Route::group(array('middleware' => 'admin', 'prefix' => 'api/admin/v1'), function()
+{
+
+  get('greeting', function()
+  {
+    return "Hello from Admin V1 API";
+  });
+
+});
+
+
 // Email Testing Routes
 get('test/email', function(){ 
   return view('emails.layout'); 

@@ -9,6 +9,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Plan</th>
+      <th>Tester?</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
       <td>{{ $user->name }}</td>
       <td>{{ $user->email }}</td>
       <td>{{ ucfirst($user->getStripePlan()) }}</td>
+      <td><input type="checkbox" id="CheckboxTesterAccess" name="cb-tester-access"></td>
     </tr>
   @endforeach
 
