@@ -1,0 +1,16 @@
+/*
+ |--------------------------------------------------------------------------
+ | Utilities - Layout
+ |--------------------------------------------------------------------------
+ |
+ */
+
+.u-headless > header,
+.u-footless > footer {
+  display: none;
+}
+
+.u-center-vertically {
+  top: 50%;
+  transform: translateY(-50%);
+}

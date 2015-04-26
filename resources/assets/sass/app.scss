@@ -44,7 +44,8 @@
   'utilities/variables',
   'utilities/functions',
   'utilities/mixins',
-  'utilities/placeholders';
+  'utilities/placeholders',
+  'utilities/layout';
 
 /*
  |--------------------------------------------------------------------------
@@ -61,7 +62,8 @@
 
  @import
   'base/reset',
-  'base/typography';
+  'base/typography',
+  'base/base';
 
 /*
  |--------------------------------------------------------------------------

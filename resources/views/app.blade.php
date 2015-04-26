@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" role="document">
+<html lang="en-us" role="document">
 
 	@include('base.head')
 
-	<body>
+	<body class="@yield('page-class')">
 		@include('modules.warnings.cookies')
 		
 		<header class="navbar navbar-static-top" role="banner">
