@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76c97af9bbb074f00c3e2ac706ecfefb",
+    "hash": "1fb7a2609205848fae200a3235a53d2b",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -723,16 +723,16 @@
         },
         {
             "name": "laravel/cashier",
-            "version": "v3.0.4",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/cashier.git",
-                "reference": "b17a86e22de95baea172664d03c52673cf2ae247"
+                "reference": "1326b42abc5b5c01abf9324efbb67f9ad486d42c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/cashier/zipball/b17a86e22de95baea172664d03c52673cf2ae247",
-                "reference": "b17a86e22de95baea172664d03c52673cf2ae247",
+                "url": "https://api.github.com/repos/laravel/cashier/zipball/1326b42abc5b5c01abf9324efbb67f9ad486d42c",
+                "reference": "1326b42abc5b5c01abf9324efbb67f9ad486d42c",
                 "shasum": ""
             },
             "require": {
@@ -776,7 +776,7 @@
                 "laravel",
                 "stripe"
             ],
-            "time": "2015-02-25 15:46:15"
+            "time": "2015-03-25 15:00:35"
         },
         {
             "name": "laravel/framework",

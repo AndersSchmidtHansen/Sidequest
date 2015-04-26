@@ -16,7 +16,6 @@
     @if( Request::is('home', 'home/*') )
       {!! Html::navbarItem('', Auth::user()->name) !!}
       {!! Html::navbarItem('home/your/settings', 'Settings') !!}
-      {!! Html::navbarItem('auth/logout', 'Sign out') !!}
     @else
       {!! Html::navbarItem('pricing', 'Pricing') !!}
       {!! Html::navbarItem('', 'Docs') !!}

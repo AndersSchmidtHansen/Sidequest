@@ -8,15 +8,15 @@
     {!! Form::open(['url' => '/auth/register', 'role' => 'form']) !!}
 
       <div class="form-group">
-        <input type="email" class="form-control input-lg" name="email" value="{{ old('email') }}" placeholder="Email" required>
+        <input type="email" class="form-control input-lg" name="email" value="{{ old('email') }}" placeholder="Email" autocomplete="off" required>
       </div>
 
       <div class="form-group">
-        <input type="password" class="form-control input-lg" name="password" placeholder="Password" required>
+        <input type="password" class="form-control input-lg" name="password" placeholder="Password" autocomplete="off" required>
       </div>
 
       <div class="form-group">
-        <input type="password" class="form-control input-lg" name="password_confirmation" placeholder="Confirm password" required>
+        <input type="password" class="form-control input-lg" name="password_confirmation" placeholder="Confirm password" autocomplete="off" required>
       </div>
       
       <div class="form-group">

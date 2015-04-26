@@ -22,7 +22,7 @@ class SubscriptionController extends Controller {
   }
 
   /**
-   * Handles subscribing the user to a plan for the first time.
+   * Handles subscribing the user to a plan for the first tim.e
    * 
    * @return void
    */
@@ -31,7 +31,7 @@ class SubscriptionController extends Controller {
     $this->user
     ->subscription(Input::get('plan'))
     ->create(Input::get('token'),[
-      'email' => $this->user->email,
+      'email'       => $this->user->email,
       'description' => $this->user->name
     ]);
 

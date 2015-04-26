@@ -202,6 +202,7 @@ return [
 		'Html'			=> 'Illuminate\Html\HtmlFacade',
 		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
 		'Bugsnag' 	=> 'Bugsnag\BugsnagLaravel\BugsnagFacade',
+		'Carbon' 		=> 'Carbon\Carbon',
 		'Postman'		=> 'App\Services\Postman'
 
 	],
