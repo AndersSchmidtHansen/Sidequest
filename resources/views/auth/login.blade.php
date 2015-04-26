@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('page-title')
+Login -
+@endsection
+
 @section('content')
-	@include('modules.forms.login')
+  @include('modules.forms.login')
 @endsection

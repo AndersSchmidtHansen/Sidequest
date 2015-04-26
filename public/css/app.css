@@ -23,6 +23,12 @@
  | Example: @import 'vendors/bootstrap';
  |
  */
+/**
+ * Panel Component
+ */
+.panel-slim {
+  max-width: 32rem; }
+
 /*
  |--------------------------------------------------------------------------
  | Utilities

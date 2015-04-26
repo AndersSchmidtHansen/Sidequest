@@ -16,7 +16,7 @@
     @if( Request::is('home', 'home/*') )
       {!! Html::navbarItem('', Auth::user()->name) !!}
       {!! Html::navbarItem('home/your/settings', 'Settings') !!}
-      {!! Html::navbarItem('auth/logout', 'Sign Out') !!}
+      {!! Html::navbarItem('auth/logout', 'Sign out') !!}
     @else
       {!! Html::navbarItem('pricing', 'Pricing') !!}
       {!! Html::navbarItem('', 'Docs') !!}
@@ -35,9 +35,9 @@
 
   <ul class="nav navbar-nav navbar-right">
     @if( Auth::guest() )
-      {!! Html::navbarItem('auth/login', 'Sign In') !!}
+      {!! Html::navbarItem('auth/login', 'Sign in') !!}
     @else
-      {!! Html::navbarItem('auth/logout', 'Sign Out') !!}
+      {!! Html::navbarItem('auth/logout', 'Sign out') !!}
     @endif
   </ul>
   
