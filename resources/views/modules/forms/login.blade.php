@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-default btn-block btn-primary">Sign in to your account</button>
+      <button type="submit" class="btn btn-default btn-block btn-primary btn-lg"><small>Sign in to your account</small></button>
 
     {!! Form::close() !!}
   
