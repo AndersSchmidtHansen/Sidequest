@@ -1,6 +1,6 @@
 @include('errors.check')
 
-<div class="panel panel-default panel-slim center-block">
+<div class="panel panel-default panel-slim center-block u-center-vertically">
   <div class="panel-heading text-center"><strong>Create your {{ $app_settings->name }} account.</strong></div>
   <div class="panel-body">
 
