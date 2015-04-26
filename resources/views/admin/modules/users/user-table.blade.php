@@ -9,7 +9,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Plan</th>
-      <th>Tester?</th>
+      <th class="text-center">Tester?</th>
     </tr>
   </thead>
   <tbody>
@@ -19,7 +19,32 @@
       <td>{{ $user->name }}</td>
       <td>{{ $user->email }}</td>
       <td>{{ ucfirst($user->getStripePlan()) }}</td>
-      <td><input type="checkbox" id="CheckboxTesterAccess" name="cb-tester-access"></td>
+      <td class="text-center">
+        @if( !$user->readyForBilling() && $user->stripeIsActive() )
+
+          <input 
+           type="checkbox" 
+           class="cb-tester-access" 
+           name="cb-tester-access"
+
+           data-type="post"
+           data-uri="api/v1/users/{{ $user->id }}/toggleTesterStatus"
+           checked
+           >
+
+        @else
+        
+          <input 
+           type="checkbox" 
+           class="cb-tester-access" 
+           name="cb-tester-access"
+
+           data-type="post"
+           data-uri="api/v1/users/{{ $user->id }}/toggleTesterStatus"
+           >
+  
+        @endif
+      </td>
     </tr>
   @endforeach
 

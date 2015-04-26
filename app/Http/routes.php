@@ -31,28 +31,17 @@ Route::controllers([
 ]);
 
 
-// Public API Layer
+// API Layer
 Route::group(array('prefix' => 'api/v1'), function()
 {
 
-  get('greeting', function()
-  {
-    return "Hello from V1 API";
-  });
-  
-});
+  // Additional User Routes
+  post('users/{user}/toggleTesterStatus', 'SubscriptionController@toggleTesterStatus', ['middleware' => 'admin']);
 
-// Private API Layer
-Route::group(array('middleware' => 'admin', 'prefix' => 'api/admin/v1'), function()
-{
-
-  get('greeting', function()
-  {
-    return "Hello from Admin V1 API";
-  });
+  // Default User Resource Routes
+  Route::resource('users', 'UserController');
 
 });
-
 
 // Email Testing Routes
 get('test/email', function(){ 

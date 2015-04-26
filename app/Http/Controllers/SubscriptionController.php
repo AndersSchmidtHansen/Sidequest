@@ -2,6 +2,7 @@
 
 use Input;
 use Postman;
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -85,6 +86,38 @@ class SubscriptionController extends Controller {
     $this->user->subscription($input)->swap();
     
     return redirect()->back();
+  }
+
+  /**
+   * Toggles an individual user's tester status
+   * on and off. Useful for getting early 
+   * feedback and for beta testers.
+   * 
+   * It basically just toggles stripeIsActive
+   * between true and false. If they already
+   * have a subscription though, nothing
+   * happens.
+   * 
+   * @param  int $id ID of the individual user
+   */
+  function toggleTesterStatus($id)
+  {
+    $user = User::find($id);
+
+    if( !$user->readyForBilling() ) {
+      if( $user->stripeIsActive() ){
+        $user->setStripeIsActive(false);
+        $user->save();
+        return response()->json(['status' => 200, 'message' => 'User no longer has Tester status.']);    
+      }
+
+      $user->setStripeIsActive();
+      $user->save();
+      return response()->json(['status' => 200, 'message' => 'User succesfully upgraded to tester.']);
+    }
+
+    return response()->json(['status' => 401, 'message' => 'User already has a subscription. Aborting.']);
+
   }
 
 }

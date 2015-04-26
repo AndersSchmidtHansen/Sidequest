@@ -9,14 +9,4 @@ use Illuminate\Http\Request;
 class UserController extends Controller {
   //
   
-  function getSettings()
-  {
-    return view('user.edit');
-  }
-
-  function postUpdatePassword()
-  {
-    
-  }
-
 }
