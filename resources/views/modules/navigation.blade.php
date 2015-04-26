@@ -15,7 +15,6 @@
   <ul class="nav navbar-nav">
     @if( Request::is('home', 'home/*') )
       {!! Html::navbarItem('', Auth::user()->name) !!}
-      {!! Html::navbarItem('home/your/settings', 'Settings') !!}
     @else
       {!! Html::navbarItem('pricing', 'Pricing') !!}
       {!! Html::navbarItem('', 'Docs') !!}
@@ -36,7 +35,19 @@
     @if( Auth::guest() )
       {!! Html::navbarItem('auth/login', 'Sign in') !!}
     @else
-      {!! Html::navbarItem('auth/logout', 'Sign out') !!}
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Your account <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Account Settings</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Send Feedback...</a></li>
+          <li><a href="#">Send Invites...</a></li>
+          <li class="divider"></li>
+          <li>{!! Html::navbarItem('auth/logout', 'Sign out') !!}</li>
+        </ul>
+      </li>
+
     @endif
   </ul>
   

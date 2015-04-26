@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1fb7a2609205848fae200a3235a53d2b",
+    "hash": "583e45512383cc23e45627c5c216c88f",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -988,6 +988,52 @@
             "time": "2015-03-29 14:01:43"
         },
         {
+            "name": "mailchimp/mailchimp",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/mailchimp/mailchimp-api-php.git",
+                "reference": "7ac99b5ac746d5875c5c350ad7e3b83674c83ec1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/mailchimp/mailchimp-api-php/get/7ac99b5ac746d5875c5c350ad7e3b83674c83ec1.zip",
+                "reference": "7ac99b5ac746d5875c5c350ad7e3b83674c83ec1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mailchimp": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MailChimp Devs",
+                    "email": "api@mailchimp.com",
+                    "homepage": "http://mailchimp.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API client library for the MailChimp bulk email as a service platform",
+            "homepage": "https://bitbucket.org/mailchimp/mailchimp-api-php",
+            "keywords": [
+                "api",
+                "email"
+            ],
+            "time": "2014-10-30 20:38:12"
+        },
+        {
             "name": "maximebf/debugbar",
             "version": "v1.10.4",
             "source": {
@@ -1360,6 +1406,37 @@
                 "shell"
             ],
             "time": "2015-03-26 18:43:54"
+        },
+        {
+            "name": "skovmand/mailchimp-laravel",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skovmand/mailchimp-laravel.git",
+                "reference": "daa271009de155c1bc144433ac69778b70d3e645"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skovmand/mailchimp-laravel/zipball/daa271009de155c1bc144433ac69778b70d3e645",
+                "reference": "daa271009de155c1bc144433ac69778b70d3e645",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.0.*",
+                "mailchimp/mailchimp": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Skovmand\\Mailchimp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A minimal service provider to set up and use the Mailchimp PHP library in Laravel 5",
+            "time": "2015-02-18 06:36:31"
         },
         {
             "name": "stripe/stripe-php",

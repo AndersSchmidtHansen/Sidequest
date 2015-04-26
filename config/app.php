@@ -140,6 +140,7 @@ return [
 		'Barryvdh\Debugbar\ServiceProvider',
 		'Laracasts\Generators\GeneratorsServiceProvider',
 		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
+		'Skovmand\Mailchimp\MailchimpServiceProvider',
 
 		/*
 		 * Application Service Providers...
