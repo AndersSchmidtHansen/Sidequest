@@ -39,7 +39,7 @@
 
   <div class="panel panel-default panel-slim center-block">
     <div class="panel-body text-center">
-      Don't have an account? <a href="/auth/register">Sign up</a>
+      Don't have an account? <a href="/auth/register">Sign up</a>.
     </div>
   </div>
 </div>
