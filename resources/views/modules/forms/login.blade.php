@@ -1,10 +1,10 @@
-@include('errors.check')
-
 <div class="u-center-vertically">
   <div class="panel panel-default panel-slim center-block">
     <div class="panel-heading text-center"><strong>Welcome back!</strong></div>
     <div class="panel-body">
-
+      
+      @include('errors.check')
+      
       {!! Form::open(['url' => '/auth/login', 'role' => 'form']) !!}
       
         <div class="form-group">
