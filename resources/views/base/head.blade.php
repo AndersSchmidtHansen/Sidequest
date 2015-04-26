@@ -1,7 +1,7 @@
 <head>
   <title>
     @yield('page-title')
-    @if( isset($app_settings)) {{ $title or $app_settings->name }} @endif
+    @if( isset($app_settings->name)) {{ $title or $app_settings->name }} @endif
     @if( isset($title) )| {{ $app_settings->name or '' }} @endif
   </title>
   @include('base.meta')
