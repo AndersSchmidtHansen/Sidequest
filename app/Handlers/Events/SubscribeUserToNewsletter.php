@@ -33,20 +33,25 @@ class SubscribeUserToNewsletter implements ShouldBeQueued {
   public function handle(UserSignedUp $event)
   {
 
-    $user = User::findOrFail($event->user_id);
     $settings = $this->settings;
-    
-    $mailing_list = new Mailchimp(env('SERVICE_MAILCHIMP_SECRET_API_KEY', ''));
-    
-    $mailing_list->call('lists/subscribe', array(
-      'id'                => $settings->mailing_list_id,
-      'email'             => array('email'=> $user->email),
-      'merge_vars'        => array('FNAME'=>'', 'LNAME'=>''),
-      'double_optin'      => false,
-      'update_existing'   => true,
-      'replace_interests' => false,
-      'send_welcome'      => false,
-    ));
+
+    // Only add the user to a mailing list if
+    // the list actually exists. Otherwise
+    // we do nothing.
+    if( isset($settings->mailing_list_id) ) {
+      $user = User::findOrFail($event->user_id);
+      $mailing_list = new Mailchimp(env('SERVICE_MAILCHIMP_SECRET_API_KEY', ''));
+      
+      $mailing_list->call('lists/subscribe', array(
+        'id'                => $settings->mailing_list_id,
+        'email'             => array('email'=> $user->email),
+        'merge_vars'        => array('FNAME'=>'', 'LNAME'=>''),
+        'double_optin'      => false,
+        'update_existing'   => true,
+        'replace_interests' => false,
+        'send_welcome'      => false,
+      ));
+    }
 
   }
 }
