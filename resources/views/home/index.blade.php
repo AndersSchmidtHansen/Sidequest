@@ -15,7 +15,6 @@
   @endif
 
 @else
-  <p>Looks like you're not subscribed. Why not join now?</p>
   @include('modules.forms.join')
 @endif
 

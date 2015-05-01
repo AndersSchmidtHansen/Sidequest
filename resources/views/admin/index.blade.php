@@ -2,9 +2,9 @@
 
 @section('content')
   
-  <div class="container">
+  
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6">
         {!! Form::model($settings, ['url' => 'admin/update-settings', 'files' => true]) !!}
             {!! Html::panelOpen('<strong>Application Settings</strong>') !!}
               {!! Html::panelBodyOpen() !!}
@@ -17,7 +17,7 @@
             {!! Html::panelClose() !!}
         {!! Form::close() !!}
       </div>
-      <div class="col-md-6">
+      <div class="col-sm-6">
         {!! Form::model($settings, ['url' => 'admin/update-settings', 'files' => true]) !!}
             {!! Html::panelOpen('<strong>Social & Mobile Settings</strong>') !!}
               {!! Html::panelBodyOpen() !!}
@@ -29,7 +29,8 @@
             {!! Html::panelClose() !!}
         {!! Form::close() !!}
       </div>
-</div>
+    </div>
+
 
 
   {!! Form::model($settings, ['url' => 'admin/update-settings']) !!}

@@ -14,7 +14,7 @@
   
   <ul class="nav navbar-nav">
     @if( Request::is('home', 'home/*') )
-      {!! Html::navbarItem('', Auth::user()->name) !!}
+      
     @else
       {!! Html::navbarItem('pricing', 'Pricing') !!}
       {!! Html::navbarItem('', 'Docs') !!}
@@ -26,9 +26,6 @@
       @endif
     @endif
 
-    @if( Auth::check() and Auth::user()->isAdmin() )
-      {!! Html::navbarItem('admin', 'Admin') !!}
-    @endif
   </ul>
 
   <ul class="nav navbar-nav navbar-right">
@@ -43,6 +40,12 @@
           <li class="divider"></li>
           <li><a href="#">Send Feedback...</a></li>
           <li><a href="#">Send Invites...</a></li>
+
+          @if( Auth::check() and Auth::user()->isAdmin() )
+            <li class="divider"></li>
+            {!! Html::navbarItem('admin', 'Admin Dashboard') !!}
+          @endif
+
           <li class="divider"></li>
           <li>{!! Html::navbarItem('auth/logout', 'Sign out') !!}</li>
         </ul>
