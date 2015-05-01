@@ -18,6 +18,7 @@ class CreateApplicationSettingsTable extends Migration {
 
 			// General Settings
 			$table->string('name');
+			$table->string('mailing_list_id');
 
 			// Company Details
 			$table->string('customer_support_email');

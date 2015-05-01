@@ -140,7 +140,6 @@ return [
 		'Barryvdh\Debugbar\ServiceProvider',
 		'Laracasts\Generators\GeneratorsServiceProvider',
 		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
-		'Skovmand\Mailchimp\MailchimpServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -204,8 +203,8 @@ return [
 		'Debugbar' 	=> 'Barryvdh\Debugbar\Facade',
 		'Bugsnag' 	=> 'Bugsnag\BugsnagLaravel\BugsnagFacade',
 		'Carbon' 		=> 'Carbon\Carbon',
-		'Postman'		=> 'App\Services\Postman'
-
+		'Postman'		=> 'App\Services\Postman',
+		'Mailchimp' => 'Drewm\MailChimp'
 	],
 
 ];
