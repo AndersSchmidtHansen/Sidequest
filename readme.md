@@ -42,11 +42,11 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Simple coupon / discount / "get a month free" handling (:bulb:)
    * more to come...
 
-
 3. **A complete email delivery & communications flow: (⌚)**
    * A pre-prepared and sane standard for e-mail layouts (using a variation of the HTML5 Email Boilerplate) (✔)
-   * A working integration with [Mandrill](https://mandrill.com/) (✔)
-   * Sending mass/bulk email updates, probably with a Mailchimp integration of some sort (:bulb:)
+   * A working integration with [Mandrill](https://mandrill.com/) for transactional emails (✔)
+   * Signing a new user up for a Mailchimp List (✔) 
+   * Sending bulk email updates with Mailchimp (✔)
    * Easily update users on new feature changes (will either be with transactional emails or push notifications) (:bulb:)
    * more to come...
 
