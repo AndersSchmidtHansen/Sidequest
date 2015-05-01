@@ -29,7 +29,7 @@ Sidequest can be considered a continuation of Laravel; where it stops, this laye
    * Sending password reminders to a user (✔)
    * Differentiating between admin and non-admin users (✔)
    * Sending newly registered users a welcome email (✔)
-   * Easily turn some users into testers (can access paywalled features freely for a limited time period) (⌚)
+   * Easily turn some users into testers (can access paywalled features freely for a limited time period) (✔)
    * more to come... 
 
 2. **A complete [Stripe](https://stripe.com/) integration flow: (⌚)**
