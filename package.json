@@ -3,6 +3,8 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "laravel-elixir": "*",
-    "laravel-elixir-browser-sync": "^0.1.2"
+    "laravel-elixir-browser-sync": "^0.1.2",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.8"
   }
 }

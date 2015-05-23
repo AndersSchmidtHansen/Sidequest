@@ -6,7 +6,7 @@
 	<body class="@yield('page-class')">
 		@include('modules.warnings.cookies')
 		
-		<header class="navbar navbar-static-top" role="banner">
+		<header class="navbar navbar-static-top {{ $headerClass or '' }}" role="banner">
 			<div class="container-fluid">
 				@include('modules.navigation')
 			</div>
