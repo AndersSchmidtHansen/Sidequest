@@ -10,7 +10,6 @@
               {!! Html::panelBodyOpen() !!}
 
                     @include('admin.modules.general-settings')
-                    @include('admin.modules.api-keys')
                     @include('admin.modules.company-details')
                     
               {!! Html::panelBodyClose() !!}

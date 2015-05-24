@@ -17,8 +17,6 @@
 {!! Form::label('application_favicon_png_32x32','Favicon .PNG (32x32)') !!}
 {!! Html::fileExists('img/application_favicon_png_32x32.png') !!}
 {!! Form::file('application_favicon_png_32x32', ['accept' => 'image/png']) !!}
-</div>
-
-{!! Form::textField('mailing_list_id', 'Mailing List ID (<a href="https://polkaspots.zendesk.com/hc/en-us/articles/201070513-Where-can-I-find-my-MailChimp-API-key-and-List-ID" target="_blank">Show me where to find this</a>)', $settings->mailing_list_id, ['class' => 'form-control']) !!} 
+</div> 
 
 {!! Html::accordionClose() !!}

@@ -92,7 +92,17 @@ class AdminController extends Controller {
     $settings = $this->app_settings;
     $total_customers = User::where('stripe_active', '=', 1)->where('admin', '=', 0)->count();
     return view('admin.analytics', compact('title', 'settings', 'total_customers'));
-  }  
+  }
+
+  /**
+   * @return \Illuminate\View\View
+   */
+  public function getEngineRoom()
+  {
+    $title = 'Engine Room';
+    $settings = $this->app_settings;
+    return view('admin.engine-room', compact('title', 'settings')); 
+  }
 
 
   public function postUpdateSettings()
