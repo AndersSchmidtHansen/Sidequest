@@ -52,10 +52,28 @@
 
                 <p>Enables live chat customer support on your site.</p>
 
-                {!! Form::textField('service_olark_api_key', 'Olark API Key', $settings->service_olark_api_key, ['class' => 'form-control']) !!}                                                
+                {!! Form::textField('service_olark_api_key', 'API Key', $settings->service_olark_api_key, ['class' => 'form-control']) !!}                                                
               {!! Html::panelBodyClose() !!}
             {!! Html::panelClose() !!}
         {!! Form::close() !!}        
+
+        {{-- Mandrill --}}
+        {!! Form::model($settings, ['url' => 'admin/update-settings']) !!}
+            {!! Html::panelOpen('<strong>Mandrill</strong>') !!}
+              {!! Html::panelBodyOpen() !!}
+
+                <p>Handles sending targeted, personalized, and automated one-to-one transactional emails.</p>
+
+                {!! Form::textField(
+                  'service_mandrill_api_key_secret', 
+                  'Secret API Key <span class="text-muted">(set in .env)</span>', 
+                  env('SERVICE_MANDRILL_SECRET_API_KEY'), 
+                  ['class' => 'form-control', 'disabled' => 'disabled']) 
+                !!}
+
+              {!! Html::panelBodyClose() !!}
+            {!! Html::panelClose() !!}
+        {!! Form::close() !!}  
 
       </div>
       <div class="col-sm-6">
@@ -100,12 +118,30 @@
 
                 <p>Use one powerful analytics API for data collection and analysis. This makes the Analytics page in this admin work.</p>
 
-                {!! Form::textField('service_keen_io_project_id', 'Keen.io Project ID', $settings->service_keen_io_project_id, ['class' => 'form-control']) !!}
+                {!! Form::textField('service_keen_io_project_id', 'Project ID', $settings->service_keen_io_project_id, ['class' => 'form-control']) !!}
 
-                {!! Form::textField('service_keen_io_read_key', 'Keen.io Read Key', $settings->service_keen_io_read_key, ['class' => 'form-control']) !!}                                                
+                {!! Form::textField('service_keen_io_read_key', 'Read Key', $settings->service_keen_io_read_key, ['class' => 'form-control']) !!}                                                
               {!! Html::panelBodyClose() !!}
             {!! Html::panelClose() !!}
         {!! Form::close() !!}         
+
+        {{-- Bugsnag --}}
+        {!! Form::model($settings, ['url' => 'admin/update-settings']) !!}
+            {!! Html::panelOpen('<strong>Bugsnag</strong>') !!}
+              {!! Html::panelBodyOpen() !!}
+
+                <p>Handles detecting and diagnosing crashes in your applications</p>
+
+                {!! Form::textField(
+                  'service_bugsnag_api_key_secret', 
+                  'Secret API Key <span class="text-muted">(set in .env)</span>', 
+                  env('SERVICE_BUGSNAG_SECRET_API_KEY'), 
+                  ['class' => 'form-control', 'disabled' => 'disabled']) 
+                !!}
+
+              {!! Html::panelBodyClose() !!}
+            {!! Html::panelClose() !!}
+        {!! Form::close() !!} 
 
       </div>
     </div>  

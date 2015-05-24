@@ -149,7 +149,7 @@ Getting started is straight-forward, especially if you have [Laravel Homestead](
 2. Now it's time to fill out your **Application Settings**...
 3. Click on "General Settings" and change the **Application Name** to whatever your project is named.
 4. IF you already have Shortcut Icons and Favicons ready in the needed dimensions, upload those. Otherwise, continue.
-5. Click on "API Keys" and start out by adding your **Publishable Stripe API key**. [How do I find this?](https://support.stripe.com/questions/where-do-i-find-my-api-keys)
+5. Go to the "Engine Room" page and start out by adding your **Publishable Stripe API key**. [How do I find this?](https://support.stripe.com/questions/where-do-i-find-my-api-keys)
 6. Next, add your development-version **Heap Analytics API key**.
 7. Finally, add your **Keen.io Project ID** and **Keen.io Read Key**. [How do I find this?](https://keen.io/docs/getting-started-guide/#project-setup)
 8. Hit the green "Save" button.
