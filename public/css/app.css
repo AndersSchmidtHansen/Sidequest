@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 /*
  |--------------------------------------------------------------------------
  | Main Application Styles Manifest
@@ -37,6 +36,7 @@
 /**
  * Navbar
  */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 .navbar-brand {
   z-index: 1; }
 
@@ -66,7 +66,8 @@
  |--------------------------------------------------------------------------
  |
  */
-.u-headless > header, .u-footless > footer {
+.u-headless > header,
+.u-footless > footer {
   display: none; }
 
 .u-center-vertically {
@@ -97,11 +98,14 @@ html {
   box-sizing: border-box;
   position: relative; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   position: relative; }
 
-html, body {
+html,
+body {
   height: 100%; }
 
 /*
@@ -152,13 +156,14 @@ html, body {
  |--------------------------------------------------------------------------
  |
  */
-h1:first-of-type, h2:first-of-type {
+h1:first-of-type,
+h2:first-of-type {
   margin-top: 0;
   margin-bottom: 1.618rem; }
 
 .page--admin {
   background-color: #ebeef0;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
   .page--admin aside {
     background-color: #31373d;
     box-shadow: 3px 0 9px 0 rgba(0, 0, 0, 0.1);
@@ -187,8 +192,9 @@ h1:first-of-type, h2:first-of-type {
     color: #ebeef0;
     display: block;
     padding: 1.5rem 0;
-    transition: background-color .28s ease-in-out; }
-    .page--admin .nav__item.active, .page--admin .nav__item:hover {
+    transition: background-color 0.28s ease-in-out; }
+    .page--admin .nav__item.active,
+    .page--admin .nav__item:hover {
       background-color: #262a2f; }
     .page--admin .nav__item.active {
       box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.15), inset 0 -1px 3px 0 rgba(0, 0, 0, 0.15); }
@@ -205,7 +211,7 @@ h1:first-of-type, h2:first-of-type {
   .page--admin .tooltip .tooltip-inner {
     max-width: 250px;
     min-width: 75px;
-    padding: .8rem 1rem; }
+    padding: 0.8rem 1rem; }
   .page--admin .top-layer {
     z-index: 100; }
   .page--admin label small {

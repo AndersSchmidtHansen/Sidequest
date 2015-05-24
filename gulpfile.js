@@ -1,6 +1,7 @@
 var elixir = require('laravel-elixir');
 
 require('laravel-elixir-browser-sync');
+require('laravel-elixir-bower');
 
 /*
  |--------------------------------------------------------------------------
@@ -15,15 +16,7 @@ require('laravel-elixir-browser-sync');
 
 elixir(function(mix) {
     mix
-    .styles([
-      '../assets/bower/fontawesome/css/font-awesome.min.css',
-      '../assets/bower/bootstrap/dist/css/bootstrap.min.css',
-    ], 'public/css/vendor.css')
-    .scripts([
-      '../assets/bower/jquery/dist/jquery.js',
-      '../assets/bower/bootstrap/dist/js/bootstrap.js',
-      '../assets/bower/jquery.payment/lib/jquery.payment.js'
-    ], 'public/js/vendor.js' )    
+    .bower()  
     .sass('app.scss')
     .coffee()
     .browserSync([
