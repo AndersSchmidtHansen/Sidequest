@@ -223,3 +223,6 @@ Your mileage will probably vary, and that's cool, but Sidequest is not meant to 
 ## Can I help out?
 
 Of course you can! Anyone interested can help out, especially if you're a part of the digital startup scene (technical and non-technical founders) and a developer, front-ender, designer, marketer and so forth. Drop me a note on Twitter ([@lichine](https://twitter.com/lichine)) and let's talk about it.
+
+## What about the license?
+Sidequest is just Laravel with some extra work added on to it. Therefore, this project is licensed under the [MIT license](http://opensource.org/licenses/MIT).
